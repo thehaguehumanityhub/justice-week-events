@@ -1,38 +1,59 @@
 {
- "updated": "2026-09-16",
+ "updated": "2026-09-24",
  "events": [
   {
    "id": "e01",
-   "title": "Exhibition Visit - Antonis Pittas. Blue on the beauty of De Stijl and the strength of NATO",
-   "host": "Kunstmuseum Den Haag",
-   "date": "",
-   "start": "",
-   "end": "",
+   "title": "International Law as a Compass for Foreign Policy",
+   "host": "Advisory Committe on Public International Law - University of Tilburg",
+   "date": "2026-11-16",
+   "start": "16:00",
+   "end": "19:00",
    "venue": "",
    "format": "In-person",
    "tags": [
-    "Business & Human Rights",
-    "Democracy & Authoritarianism",
-    "Visual Arts, Culture & Politics"
+    "International Law & Accountability",
+    "Access to Justice",
+    "Universal Jurisdiction"
    ],
    "audience": [
-    "General Public",
-    "Students/Youth",
+    "Civil Society Practitioners",
     "Policymakers/Diplomats",
-    "Academics/Researchers",
-    "Civil Society Practitioners"
+    "Students/Youth"
    ],
-   "description": "Visit an intriguing exhibition at Kunstmuseum Den Haag about aesthetics and politics, in this case the visual identity of NATO en modern art by Piet Mondrian, Gerrit Rietveld and others",
+   "description": "What role does international law have in forming the Dutch State's foreign policy?  Members of the Advisory Committee on Public Internation Law will  present their thoughts on this question in light of The Netherlands sustained presence as  a proponent of international law. The panel will discuss the following questions: how do current geopolitical developments affect or even threaten the rule-based order and how does The Netherlands position itself in this context?\nThe panel is organised in a town hall debate-format where panel members will give short pitches/introductions and actively engage with questions from a lay and expert audience.  The aim is to have an informed and stimulating debate on the current state of international law and how it impacts the position of the Netherlands and The Hague as capital of peace and justice.",
    "register": "",
-   "contact": "info@kunstmuseum.nl"
+   "contact": ""
   },
   {
    "id": "e02",
+   "title": "Making Human Rights Law Work: Building new alliances between business, finance & civil society",
+   "host": "European Center for Non-Profit Law (ECNL), ABN AMRO",
+   "date": "2026-11-16",
+   "start": "17:00",
+   "end": "19:00",
+   "venue": "",
+   "format": "Hybrid",
+   "tags": [
+    "Business & Human Rights",
+    "International Law & Accountability",
+    "Environmental & Climate Law"
+   ],
+   "audience": [
+    "Policymakers/Diplomats",
+    "Legal Professionals",
+    "Civil Society Practitioners"
+   ],
+   "description": "Human rights and environmental due diligence laws increasingly require companies and financial institutions to identify, prevent and address adverse human rights impacts. Effective implementation depends on access to reliable, independent information from civil society organisations, journalists, trade unions, researchers and affected communities. However, as civic space faces growing restrictions worldwide, this vital information ecosystem is becoming more vulnerable. This session examines why shrinking civic space is not only a civil society issue, but also a business, banking and justice concern. Bringing together representatives from business, finance, civil society and policy, it will highlight practical examples of cross-sector collaboration, including the Dutch KYC (Know Your Customer) standard to reduce NGO de-risking and research on conducting human rights due diligence in restrictive contexts. Participants will explore how new partnerships can strengthen accountability and help translate human rights laws into effective practice.",
+   "register": "",
+   "contact": ""
+  },
+  {
+   "id": "e03",
    "title": "Justice has no Passport: A Global Conversation on Universal Jurisdiction",
-   "host": "",
-   "date": "",
-   "start": "",
-   "end": "",
+   "host": "FIBGAR",
+   "date": "2026-11-17",
+   "start": "10:00",
+   "end": "12:00",
    "venue": "",
    "format": "Online",
    "tags": [
@@ -43,22 +64,41 @@
    "audience": [
     "General Public",
     "Students/Youth",
-    "Policymakers/Diplomats",
-    "Legal Professionals",
-    "Academics/Researchers",
-    "Civil Society Practitioners"
+    "Legal Professionals"
    ],
-   "description": "Join us for a virtual conversation on universal jurisdiction, one of the most powerful, yet still underused and often misunderstood, tools for holding perpetrators of the world’s gravest crimes accountable.\nBringing together speakers with diverse regional and professional perspectives, the discussion will explore how universal jurisdiction has evolved, the challenges it faces today, and the role it can play in advancing accountability and international justice in a global order under increasing strain.\nThe conversation is open to anyone interested in the fight against impunity and the future of international justice—including legal professionals, students, policymakers, and civil society actors.\nAt a time when the international justice system is facing unprecedented pressure, this session offers an opportunity to hear directly from practitioners working across different contexts to strengthen universal jurisdiction and renew its promise as a tool for justice.",
+   "description": "A virtual conversation on universal jurisdiction. One of the most powerful, yet still underused and often misunderstood, tools for holding perpetrators of the world’s gravest crimes accountable.\nBringing together speakers with diverse regional and professional perspectives, the discussion will explore how universal jurisdiction has evolved, the challenges it faces today, and the role it can play in advancing accountability and international justice in a global order under increasing strain.\nThe conversation is open to anyone interested in the fight against impunity and the future of international justice—including legal professionals, students, policymakers, and civil society actors.\nAt a time when the international justice system is facing unprecedented pressure, this session offers an opportunity to hear directly from practitioners working across different contexts to strengthen universal jurisdiction and renew its promise as a tool for justice.",
    "register": "https://wkf.ms/4yw1aqI",
    "contact": "contacto@fibgar.org"
   },
   {
-   "id": "e03",
-   "title": "Screening of the documentary movie \"Surviving Genocide – The Rohingya Quest for Justice\", followed by a discussion",
-   "host": "",
-   "date": "",
-   "start": "",
-   "end": "",
+   "id": "e04",
+   "title": "Scaling People-Centred Justice with AI",
+   "host": "Hope Behind Bars Africa, HiiL",
+   "date": "2026-11-18",
+   "start": "13:00",
+   "end": "15:00",
+   "venue": "Hague Institute for Innovation of Law (HiiL) office",
+   "format": "Hybrid",
+   "tags": [
+    "International Law & Accountability",
+    "Access to Justice"
+   ],
+   "audience": [
+    "Legal Professionals",
+    "Academics/Researchers",
+    "Students/Youth"
+   ],
+   "description": "Millions of people across Africa first encounter the justice system not in a courtroom, but at a police station, a checkpoint, or through a phone screen. In Nigeria alone, an estimated 25 million people face legal problems every year, and more than 14 million cannot get the help they need. AI-powered tools are opening new possibilities for delivering legal information, guidance and support at scale and closer to the point of need but scaling them responsibly raises real questions about reliability, privacy, bias, accountability and human oversight.\n\nThis interactive session brings together experiences from Nigeria (Justice Padi AI), Tunisia and Niger with justice practitioners, policymakers and technology partners to explore what these emerging models teach us about expanding access to justice across different legal, institutional and infrastructure contexts. Participants will hear a moderated panel discussion and country snapshots, then step into the \"From Prototype to Scale-Up\" simulation, a board game in which teams take on the role of decision-makers deploying an AI-powered justice solution, navigating real dilemmas around data governance, ethics, institutional resistance, financing and political constraints.\n\nCome for a candid look at what it really takes to move AI-for-justice tools from prototype to sustainable scale, and leave with practical considerations for responsible design, human oversight and institutional collaboration.",
+   "register": "",
+   "contact": "info@hiil.org"
+  },
+  {
+   "id": "e05",
+   "title": "Film Screening: Surviving Genocide – The Rohingya Quest for Justice",
+   "host": "Legal Action Worldwide (LAW)",
+   "date": "2026-11-19",
+   "start": "14:00",
+   "end": "16:00",
    "venue": "",
    "format": "In-person",
    "tags": [
@@ -68,40 +108,140 @@
    ],
    "audience": [
     "General Public",
-    "Students/Youth",
     "Policymakers/Diplomats",
-    "Legal Professionals",
-    "Academics/Researchers",
     "Civil Society Practitioners"
    ],
-   "description": "Brief Background on the Event: In January 2026, the International Court of Justice (ICJ) held a full-merits hearing in The Gambia v. Myanmar case for the breach of the 1948 Genocide Convention. The merit hearings marked the first full ICJ genocide hearing in more than a decade.  Legal Action Worldwide (LAW) accompanied a delegation of victims and witnesses comprising Rohingya men, women, and hijra (transgender) from the camps in Cox’s Bazar, Bangladesh, to be both present in the court and to testify in closed sessions. In-person witness testimony is exceptionally rare at the ICJ and the testimony of the witnesses was considered to be very powerful. The ICJ decision on this case is anticipated to be in the last quarter of 2026.\nDescription of activity and Impact: A screening of a documentary movie, featuring victims and witnesses’ stories and their role in international justice process – and what it means to them and their community. The screening will be followed by a discussion about the first genocide case in decades; potential outcome and the role of victims and witnesses, in particular, the realities and significance of having victim voices before the ICJ - a state-based court and in international justice processes more broadly. The discussion will also broadly highlight the positive impact of international law at a time that international law and justice institutions are under attack.\nSynopsis of the movie: Yousuf, Salma*, and Monaira* survived the Myanmar military's 2017 genocide. They were tortured, sexually abused, witnessed killings, and endured forced displacement. For the past nine years, they have been at the forefront of the fight for justice, accountability, and reparations for the atrocities committed against the Rohingya. For the first time, a camera from LAW follows a man, a woman and a hijra (transgender) from the world’s largest refugee camps in Cox's Bazar to the world's highest court in The Hague, the ICJ.\nThis short and poignant documentary offers a unique window into what international legal proceedings mean in practice for the people they are designed to serve. Looking into both technical and humane aspects, the film highlights the importance of the full inclusion of victims in legal processes. It shows what can be achieved when frontline organisations work hand in hand with UN mechanisms and states to support the most vulnerable people. Moving between the front and back stages of the first genocide case in nearly two decades, “Surviving Genocide – The Rohingya Quest for Justice” is a powerful testament to hope and the impact of collective action against hatred and impunity.",
+   "description": "A screening of a documentary movie, featuring victims and witnesses’ stories and their role in international justice process – and what it means to them and their community. The screening will be followed by a discussion about the first genocide case in decades and potential outcome and the role of victims and witnesses. The documentary focuses on the realities and significance of having victim voices before the International Court of Justice (ICJ). The discussion will also broadly highlight the positive impact of international law at a time that international law and justice institutions are under attack.\n\nThis short and poignant documentary offers a unique window into what international legal proceedings mean in practice for the people they are designed to serve. Looking into both technical and humane aspects, the film highlights the importance of the full inclusion of victims in legal processes. It shows what can be achieved when frontline organisations work hand in hand with UN mechanisms and states to support the most vulnerable people. Moving between the front and back stages of the first genocide case in nearly two decades, “Surviving Genocide – The Rohingya Quest for Justice” is a powerful testament to hope and the impact of collective action against hatred and impunity.",
    "register": "",
-   "contact": "Christen@legalactionworldwide.org or info@legalactionworldwide.org"
+   "contact": "info@legalactionworldwide.org"
   },
   {
-   "id": "e04",
-   "title": "Making human rights law work: building new alliances between business, finance & civil society",
-   "host": "",
-   "date": "",
-   "start": "",
-   "end": "",
-   "venue": "",
+   "id": "e06",
+   "title": "The Proposal for an International Anti-Corruption Court: Renewing the Promise of Justice, 80 Years On",
+   "host": "Integrity Initiatives International Europe - III Europe",
+   "date": "2026-11-19",
+   "start": "14:00",
+   "end": "16:00",
+   "venue": "The Hague Humanity Hub",
    "format": "Hybrid",
    "tags": [
-    "Business & Human Rights",
     "International Law & Accountability",
-    "Environmental & Climate Law"
+    "Democracy & Authoritarianism"
+   ],
+   "audience": [
+    "Policymakers/Diplomats",
+    "Legal Professionals",
+    "Civil Society Practitioners"
+   ],
+   "description": "Eighty years ago, the International Court of Justice (CIJ) opened in The Hague to settle disputes between countries. In the decades since, the international community has built new courts to hold individuals accountable for the gravest crimes, from war crimes to genocide. But one crime that does enormous damage still has no international court: grand corruption. Grand corruption, the theft of public money by those at the very top of government, drains hundreds of billions from public budgets every year, funds repression, and erodes people's trust in the institutions meant to protect them. Yet when national courts are unwilling or unable to act, there is often nowhere else to turn.\n\nThis session explores a proposal to change that: an International Anti-Corruption Court (IACC), a new court that would hold senior officials criminally accountable and help return stolen assets to the people they were taken from.\nYou'll hear from a senior official of the International Court of Justice, who will introduce the proposal and reflect on lessons from the Court's 80 years of experience; a former international criminal prosecutor who helped draft the treaty for the IACC; and two human rights defenders who have challenged authoritarian governments in Myanmar and Russia, who will explain how corruption keeps such regimes in power and what real accountability could mean for people on the ground. A moderator from The Hague municipality will guide the conversation, asking why this matters for the city and for governments elsewhere.\n\nhe panel will be followed by an open Q&A. Join us for a lively, accessible conversation about how justice can keep pace with the challenges of our time",
+   "register": "https://www.eventbrite.co.uk/e/tickets-the-proposal-for-an-international-anti-corruption-court-2001877856558?aff=oddtdtcreator",
+   "contact": "info@iiieurope.org"
+  },
+  {
+   "id": "e07",
+   "title": "Nuremberg Academy Dialogue: The United Nations and the Nuremberg Principles",
+   "host": "International Nuremberg Principles Academy",
+   "date": "2026-11-20",
+   "start": "18:00",
+   "end": "19:30",
+   "venue": "",
+   "format": "Online",
+   "tags": [
+    "International Law & Accountability",
+    "Democracy & Authoritarianism",
+    "Universal Jurisdiction"
    ],
    "audience": [
     "General Public",
-    "Policymakers/Diplomats",
     "Legal Professionals",
-    "Academics/Researchers",
+    "Academics/Researchers"
+   ],
+   "description": "To mark the 80th anniversary of the United Nations (UN) and the International Military Tribunal at Nuremberg, the International Nuremberg Principles Academy will convene a high-level webinar bringing together leading scholars and legal practitioners.\n\nThe second Nuremberg Academy Dialogue will examine the foundational role of the United Nations and the International Law Commission in formulating the Nuremberg Principles and consider how these principles still matter today. It will explore how the principles recognised following the Nuremberg trials have shaped international criminal law and continue to inform accountability efforts for core international crimes, alongside current developments in the field. \n\nParticipants will hear from leading experts, including Ambassador David Scheffer, Senior Fellow at the Council on Foreign Relations, Professor of Practice at Arizona State University and former US Ambassador-at-Large for War Crimes Issues, and Professor Dr Cécile Aptel, Principal Advisor, UN International, Impartial and Independent Mechanism on Syria, and Professor of Practice of International Law, The Fletcher School, Tufts University. Chaired by Dr Viviane Dittrich, Deputy Director of the International Nuremberg Principles Academy.",
+   "register": "https://www.nurembergacademy.org/public-discourse/events/detail/1599-nuremberg-academy-dialogue-the-united-nations-and-the-nuremberg-principles",
+   "contact": "registration@nurembergacademy.org"
+  },
+  {
+   "id": "e08",
+   "title": "Renewing the Memories #1 - Blue Island Screening & Discussion",
+   "host": "Stichting NowHere",
+   "date": "2026-11-20",
+   "start": "18:30",
+   "end": "20:30",
+   "venue": "Stichting NowHere",
+   "format": "In-person",
+   "tags": [
+    "Democracy & Authoritarianism"
+   ],
+   "audience": [
+    "General Public",
     "Civil Society Practitioners"
    ],
-   "description": "Human rights and environmental due diligence laws increasingly require companies and financial institutions to identify, prevent and address adverse human rights impacts. Effective implementation depends on access to reliable, independent information from civil society organisations, journalists, trade unions, researchers and affected communities. However, as civic space faces growing restrictions worldwide, this vital information ecosystem is becoming more vulnerable. This session examines why shrinking civic space is not only a civil society issue, but also a business, banking and justice concern. Bringing together representatives from business, finance, civil society and policy, it will highlight practical examples of cross-sector collaboration, including the Dutch KYC (Know Your Customer) standard to reduce NGO de-risking and research on conducting human rights due diligence in restrictive contexts. Participants will explore how new partnerships can strengthen accountability and help translate human rights laws into effective practice.",
+   "description": "Renewing the Memories #1 presents a screening of Blue Island (2022), directed by Chan Tze-woon. Blending documentary interviews with re-enactments, the film brings together the personal memories of different generations and connects them with key moments in Hong Kong’s history.\nBy revisiting experiences of political upheaval, resistance, migration and loss, the film asks how memories can be preserved and passed on when public narratives are being reshaped or erased. It invites us to consider remembrance as an essential part of the continuing pursuit of peace and justice.\nAfter the screening, director Chan Tze-woon will join us online for a live Q&A and discussion.",
+   "register": "https://nowherenl.myshopify.com/products/event-1120",
+   "contact": "nowhere.netherlands@gmail.com"
+  },
+  {
+   "id": "e09",
+   "title": "Blue on the beauty of De Stijl and the strength of NATO - Exhibit",
+   "host": "Kunsmuseum Den Haag",
+   "date": "",
+   "start": "",
+   "end": "",
+   "venue": "Kunstmuseum The Hague",
+   "format": "In-person",
+   "tags": [
+    "Business & Human Rights",
+    "Democracy & Authoritarianism",
+    "Visual Arts, Culture & Politics"
+   ],
+   "audience": [
+    "General Public",
+    "Students/Youth",
+    "Policymakers/Diplomats"
+   ],
+   "description": "Visit an intriguing exhibition at Kunstmuseum Den Haag about aesthetics and politics, focusing  on the visual identity of NATO and modern art by Piet Mondrian, Gerrit Rietveld and artists.",
    "register": "",
-   "contact": "maria@ecnl.org"
+   "contact": "info@kunstmuseum.nl"
+  },
+  {
+   "id": "e10",
+   "title": "Renewing the Memories #2 - The Taoyuan Airport Incident Screening & Discussion",
+   "host": "Stichting NowHere",
+   "date": "",
+   "start": "",
+   "end": "",
+   "venue": "Stichting NowHere",
+   "format": "In-person",
+   "tags": [
+    "Democracy & Authoritarianism"
+   ],
+   "audience": [
+    "General Public",
+    "Civil Society Practitioners"
+   ],
+   "description": "Renewing the Memories #2 presents The Taoyuan Airport Incident (1986), filmed by Taiwan’s Green Team during the final years of martial law. Through this historical recording, the screening explores how independent images can challenge official narratives, preserve suppressed memories and contribute to the pursuit of democracy and justice.",
+   "register": "https://nowherenl.myshopify.com/products/event-1121",
+   "contact": "nowhere.netherlands@gmail.com"
+  },
+  {
+   "id": "e11",
+   "title": "Renewing the Memories #3 - Three Castrated Goats - Screening & Discussion",
+   "host": "Stichting NowHere",
+   "date": "",
+   "start": "",
+   "end": "",
+   "venue": "Stichting NowHere",
+   "format": "In-person",
+   "tags": [
+    "Democracy & Authoritarianism"
+   ],
+   "audience": [
+    "General Public",
+    "Civil Society Practitioners"
+   ],
+   "description": "Set in rural Shaanxi during China’s strict COVID restrictions, \"Three Castrated Goats\" follows a man who returns home to collect three goats but becomes trapped by quarantine rules. Through dark humour and absurdity, the film reveals how systems of control enter everyday life and affect ordinary people. The film offers another perspective on censorship and the people responsible for enforcing it. Together, the two works invite reflection on freedom of expression, collective memory and life within systems of control. Director Ye Xingyu will join us online for a live Q&A after the screening.",
+   "register": "https://nowherenl.myshopify.com/products/event-1122",
+   "contact": "nowhere.netherlands@gmail.com"
   }
  ]
 }
