@@ -69,6 +69,7 @@ Name the Shortcoder snippet `jw-programme`, then put this on the page:
       "title": "Justice has no Passport",
       "host": "Baltasar Garzón International Foundation",
       "date": "2026-11-17",
+      "end_date": "",
       "start": "15:00",
       "end": "16:30",
       "venue": "",
@@ -84,7 +85,8 @@ Name the Shortcoder snippet `jw-programme`, then put this on the page:
 ```
 
 Every field is optional except `id` and `title`. Empty values degrade gracefully:
-no `date` shows "Date to follow" and sorts to the bottom in both directions, no `host`
+`end_date` is only for activities running over several days, such as an exhibition: set it to the
+last day and the row reads "16–20 Nov". Leave it empty for a single-day activity. No `date` shows "Date to follow" and sorts to the bottom in both directions, no `host`
 shows "Host to be confirmed", no `register` shows a dashed "Registration opens soon"
 button in place of the live one. You can hand-edit this file for one-off corrections.
 

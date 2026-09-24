@@ -162,14 +162,38 @@
     var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s||"");
     return m ? new Date(+m[1], +m[2]-1, +m[3]) : null;
   }
+  function endDate(e){                 // only for activities running over several days
+    var d = parseDate(e.date), x = parseDate(e.end_date);
+    return d && x && x > d ? x : null;
+  }
+  function dayLabel(d){
+    return DAYS[d.getDay()].slice(0,3) + " " + d.getDate() + " " + MONTHS[d.getMonth()].slice(0,3);
+  }
   function dateLabel(e){
     var d = parseDate(e.date);
     if(!d) return null;
-    return DAYS[d.getDay()].slice(0,3) + " " + d.getDate() + " " + MONTHS[d.getMonth()].slice(0,3);
+    var x = endDate(e);
+    if(!x) return dayLabel(d);
+    return x.getMonth() === d.getMonth()
+      ? d.getDate() + "–" + x.getDate() + " " + MONTHS[d.getMonth()].slice(0,3)     // 16–20 Nov
+      : d.getDate() + " " + MONTHS[d.getMonth()].slice(0,3) + " – " + dayLabel(x).slice(4);
+  }
+  function longDateLabel(e){           // for the expanded panel: Mon 16 – Fri 20 Nov
+    var d = parseDate(e.date), x = endDate(e);
+    if(!d) return null;
+    if(!x) return dayLabel(d);
+    return (x.getMonth() === d.getMonth() ? dayLabel(d).slice(0, -4) : dayLabel(d)) + " – " + dayLabel(x);
   }
   function timeLabel(e){
     if(!e.start) return "";
     return e.end ? e.start + "–" + e.end : e.start;
+  }
+  function subLabel(e){                // second line under the date: times, or the days a run covers
+    var t = timeLabel(e);
+    var d = parseDate(e.date), x = endDate(e);
+    if(!x) return t;
+    var days = DAYS[d.getDay()].slice(0,3) + "–" + DAYS[x.getDay()].slice(0,3);
+    return t ? days + ", " + t : days;
   }
 
   function buildChips(row, values, active, cls){
@@ -196,7 +220,7 @@
 
     var dl = dateLabel(e);
     var dateEl = el("span","thjw-date" + (dl ? "" : " is-tbc"), dl || "Date to follow");
-    if(dl && timeLabel(e)) dateEl.appendChild(el("span","thjw-time", timeLabel(e)));
+    if(dl && subLabel(e)) dateEl.appendChild(el("span","thjw-time", subLabel(e)));
 
     var titleWrap = el("div","thjw-titlewrap");
     titleWrap.appendChild(el("p","thjw-title", e.title));
@@ -240,7 +264,8 @@
       dlst.appendChild(el("dt", null, label));
       dlst.appendChild(el("dd", null, value));
     }
-    var when = dl ? (dl + (timeLabel(e) ? ", " + timeLabel(e) : "")) : "To be confirmed";
+    var ll = longDateLabel(e);
+    var when = ll ? (ll + (timeLabel(e) ? ", " + timeLabel(e) : "")) : "To be confirmed";
     pair("When", when);
     // Format is already shown as a badge on the row, so it is not repeated here.
     pair("Where", e.venue || (e.format === "Online" ? "Online" : "Venue to be confirmed"));
@@ -293,7 +318,9 @@
       if(!da && !db) r = a.title.localeCompare(b.title);
       else if(!da) return 1;            // undated always last, both directions
       else if(!db) return -1;
-      else r = da - db || (a.start||"").localeCompare(b.start||"") || a.title.localeCompare(b.title);
+      else r = da - db
+            || (endDate(a) ? 1 : 0) - (endDate(b) ? 1 : 0)   // multi-day runs after that day's single events
+            || (a.start||"").localeCompare(b.start||"") || a.title.localeCompare(b.title);
     } else if(sortKey === "host"){
       r = (a.host||"￿").localeCompare(b.host||"￿") || a.title.localeCompare(b.title);
     } else {

@@ -14,7 +14,7 @@ EXAMPLE_TITLE = "Justice has no Passport: A Global Conversation on Universal Jur
 EXAMPLE_ORG   = "Baltasar Garzón International Foundation"
 
 HEAD = {  # template header -> field
- "organisation name":"host", "activity title":"title", "date":"date",
+ "organisation name":"host", "activity title":"title", "date":"date", "end date":"end_date",
  "start time":"start", "end time":"end", "venue or address":"venue",
  "format":"format", "topic 1":"t1", "topic 2":"t2", "topic 3":"t3",
  "audience 1":"a1", "audience 2":"a2", "audience 3":"a3",
@@ -29,6 +29,10 @@ def txt(v):
     if isinstance(v, datetime.date): return v.strftime("%Y-%m-%d")
     if isinstance(v, datetime.time): return v.strftime("%H:%M")
     return str(v).strip()
+
+def end_date(start, end):
+    """Keep an end date only when it falls after the start: a multi-day activity."""
+    return end if start and end > start else ""
 
 def read(path):
     wb = load_workbook(path, data_only=True)
@@ -56,6 +60,7 @@ def read(path):
           "title": title,
           "host": g("host"),
           "date": g("date"),
+          "end_date": end_date(g("date"), g("end_date")),
           "start": g("start"),
           "end": g("end"),
           "venue": g("venue"),
@@ -73,7 +78,7 @@ def main(paths):
     for p in paths: events += read(p)
     events.sort(key=lambda e: (e["date"] == "", e["date"], e["start"], e["title"]))
     for i, e in enumerate(events, 1): e["id"] = "e%02d" % i
-    order = ["id","title","host","date","start","end","venue","format","tags","audience",
+    order = ["id","title","host","date","end_date","start","end","venue","format","tags","audience",
              "description","register","contact"]
     events = [{k: e[k] for k in order} for e in events]
     json.dump({"updated": datetime.date.today().isoformat(), "events": events},

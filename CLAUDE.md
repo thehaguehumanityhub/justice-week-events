@@ -82,7 +82,7 @@ single most common way an update appears to have failed.
 
 ```json
 { "updated": "2026-09-16",
-  "events": [ { "id": "e01", "title": "...", "host": "...", "date": "2026-11-17",
+  "events": [ { "id": "e01", "title": "...", "host": "...", "date": "2026-11-17", "end_date": "",
                 "start": "15:00", "end": "16:30", "venue": "", "format": "Online",
                 "tags": ["..."], "audience": ["..."], "description": "...",
                 "register": "https://...", "contact": "info@example.org" } ] }
@@ -92,6 +92,10 @@ Only `id` and `title` are required. Everything else degrades deliberately:
 
 - No `date`: renders "Date to follow" and sorts to the bottom **in both
   directions**, rather than floating to the top when the sort reverses.
+- No `end_date`, or one not after `date`: a single-day activity. A later
+  `end_date` makes it a run, shown as "16–20 Nov" with the weekdays beneath, and
+  sorted after that first day's single events. The template's optional
+  "End date" column feeds it.
 - No `host`: renders "Host to be confirmed" in italics.
 - No `register`: renders a dashed, non-clickable "Registration opens soon"
   rather than a dead button. Only a real URL becomes a button; an email address
