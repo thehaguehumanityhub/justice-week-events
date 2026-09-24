@@ -6,6 +6,10 @@
 Several files can be passed at once: colleagues can each return their own copy and the
 activities are merged into one programme, sorted by date. Rows still carrying the grey
 example are skipped, as are rows with no title.
+
+The programme is rebuilt from scratch on every run, so pass every file, not just the new one.
+If the result would hold fewer activities than the current events.json, nothing is written
+and the missing titles are listed. Add --allow-fewer when removing activities on purpose.
 """
 import sys, json, re, datetime
 from openpyxl import load_workbook
@@ -73,9 +77,27 @@ def read(path):
         })
     return out
 
-def main(paths):
+def dropped(events):
+    """Titles in the current events.json that the new programme would lose."""
+    try:
+        old = json.load(open("events.json", encoding="utf-8"))["events"]
+    except (OSError, ValueError, KeyError):
+        return None
+    if len(events) >= len(old): return None
+    new = {e["title"] for e in events}
+    return [e["title"] for e in old if e.get("title") not in new]
+
+def main(paths, allow_fewer=False):
     events = []
     for p in paths: events += read(p)
+    gone = dropped(events)
+    if gone is not None and not allow_fewer:
+        print("Not written: this would publish %d activities, fewer than the current programme."
+              % len(events))
+        for t in gone: print("  would disappear: %s" % t[:70])
+        print("Did you pass every file? Run it on ~/Downloads/thjw/*.xlsx.\n"
+              "If you are removing activities on purpose, add --allow-fewer.")
+        raise SystemExit(1)
     events.sort(key=lambda e: (e["date"] == "", e["date"], e["start"], e["title"]))
     for i, e in enumerate(events, 1): e["id"] = "e%02d" % i
     order = ["id","title","host","date","end_date","start","end","venue","format","tags","audience",
@@ -92,5 +114,6 @@ def main(paths):
         print("  no registration link (%d): %s" % (len(nolink), "; ".join(nolink)))
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2: raise SystemExit(__doc__)
-    main(sys.argv[1:])
+    args = [a for a in sys.argv[1:] if a != "--allow-fewer"]
+    if not args: raise SystemExit(__doc__)
+    main(args, allow_fewer=len(args) < len(sys.argv) - 1)

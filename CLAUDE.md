@@ -73,6 +73,11 @@ prints which activities lack a date and which lack a registration link: that
 output is the chase list, and is worth surfacing to Giovanni rather than
 swallowing.
 
+It rebuilds the programme from scratch on every run, so it must be given every
+file, not just the newest. As a guard, it refuses to write a programme with
+fewer activities than the current `events.json` and lists what would vanish.
+`--allow-fewer` overrides that when activities are being removed on purpose.
+
 **The purge is not optional.** jsDelivr holds a branch URL for twelve hours at
 the edge and seven days in the visitor's browser. Without the purge an update
 simply does not appear, and the page looks broken rather than stale. This is the
