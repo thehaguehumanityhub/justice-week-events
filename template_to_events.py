@@ -14,6 +14,8 @@ and the missing titles are listed. Add --allow-fewer when removing activities on
 import sys, json, re, datetime
 from openpyxl import load_workbook
 
+VERSION = "1.1.0"  # keep in step with CHANGELOG.md and the widget
+
 EXAMPLE_TITLE = "Justice has no Passport: A Global Conversation on Universal Jurisdiction"
 EXAMPLE_ORG   = "Baltasar Garzón International Foundation"
 
@@ -114,6 +116,7 @@ def main(paths, allow_fewer=False):
         print("  no registration link (%d): %s" % (len(nolink), "; ".join(nolink)))
 
 if __name__ == "__main__":
+    if "--version" in sys.argv: raise SystemExit("template_to_events.py " + VERSION)
     args = [a for a in sys.argv[1:] if a != "--allow-fewer"]
     if not args: raise SystemExit(__doc__)
     main(args, allow_fewer=len(args) < len(sys.argv) - 1)

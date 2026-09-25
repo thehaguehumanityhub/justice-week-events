@@ -17,6 +17,7 @@ inputs and are deliberately never committed.
 | `template_to_events.py` | Turns filled-in Excel templates into `events.json`. The normal path. |
 | `gen_events.py` | Turns a Google Form `.xlsx` export into `events.json`. Legacy, kept in case the form is used again. |
 | `PROGRAMME.md` | Human-facing notes: the Shortcoder snippet and the update ritual. |
+| `CHANGELOG.md` | What changed in each version of the widget, script and template. |
 
 Sibling repo `thehaguehumanityhub/thjw` holds the co-hosting organisations logo
 grid, a separate widget on the same page. Same delivery method, different data.
@@ -124,23 +125,61 @@ in `~/Downloads/thjw/`.
 corrupt `.git`. The Cowork folder Giovanni connects is in iCloud; this repo
 deliberately is not.
 
-## Current state, as of 24 September 2026
+## Versioning
 
-- `events.json` on `main` holds **4 activities**, dated 2026-09-16. These are the
-  original sample rows.
-- Giovanni generated **11 activities** from colleague submissions on 23 September,
-  but that commit never landed: git stopped on an unset author identity, and the
-  subsequent push prompted for HTTPS credentials, which GitHub no longer accepts.
-  Check `git status` and `git log` on his machine before assuming anything is
-  missing upstream. The work is probably staged and uncommitted, not lost.
-- Of those 11: three had no date, five had no registration link. Both are
-  expected states and publish safely.
-- **The widget is not on any page yet.** The `jw-programme` shortcode has not been
-  added in WordPress. Only the organisations grid from the sibling repo is live.
-  Publishing programme updates achieves nothing visible until that is done.
-- Git authentication on at least one MacBook is unresolved. `gh auth login` is
-  the recommended fix, since it configures the credential helper once, on each
-  machine separately.
+The code carries a semantic version: `events-embed.html` (a header comment and
+`data-version` on the root element), `VERSION` in `template_to_events.py`
+(`--version` prints it) and `CHANGELOG.md`. Keep all three in step. Each
+release is a git tag (`v1.1.0`), pushed with `git push --tags`.
+
+Bump the version when the widget, the script or the Excel template changes:
+patch for fixes, minor for anything new but backward compatible (1.1.0 added
+`end_date`), major if an old `events.json` or an old template would stop
+working. Programme updates to `events.json` are never versioned; `git log
+events.json` is their history.
+
+After a widget release, purge `events-embed.html` as well as `events.json`. To
+check which widget a visitor is getting, inspect `#thjw-events` on the live page
+and read its `data-version`.
+
+## Submissions: one master file
+
+The script reads `~/Downloads/thjw/*.xlsx`, and today that folder holds a single
+master workbook, `events calendar template.xlsx`, with every activity. Keep it
+that way. New submissions arrive on the v2 template
+(`~/Downloads/THJW-2026-activity-template-v2.xlsx`); their rows are copied into
+the master and the colleague's copy is archived, not left in the folder, where
+it would duplicate activities. Small edits arrive by email in plain words and
+are made in the master. Never edit `events.json` by hand: the next run
+overwrites it.
+
+**Edit the master through Excel, not openpyxl.** The workbook's dropdowns are
+stored as an Excel extension that openpyxl cannot read and silently deletes on
+save. Driving Excel with `osascript` keeps them; openpyxl is fine for reading.
+Back the file up before editing it, since it is not in git.
+
+The master's Topics dropdown still has the original 15 topics. The v2 template
+adds Artificial Intelligence and Anti-Corruption; add them to the master's
+Lists sheet (and widen the Topic 1 to 3 validation range) before using them there.
+
+## Current state, as of 25 September 2026
+
+- Widget and script are at **1.1.0**. `events.json` holds **11 activities**,
+  all dated. The Kunstmuseum exhibition runs 16 to 20 November. NowHere's
+  screenings #2 and #3 fall on 21 and 22 November, after Justice Week, and
+  that is intended.
+- Chase list: five activities still lack a registration link (Advisory
+  Committee, ECNL, HiiL, Legal Action Worldwide, Kunstmuseum).
+- Giovanni reported the WordPress embed working on 24 September. Confirm the
+  `jw-programme` shortcode is on the live Justice Week page, not only a draft,
+  before relying on it.
+- The MacBook with `~/Developer/justice-week-events` is authenticated through
+  `gh` as `thehaguehumanityhub`, with a noreply commit email. The other MacBook
+  is not yet: it needs `gh auth login` and `git config --global user.name` and
+  `user.email`. Its clone holds a staged 11-activity `events.json` from
+  23 September that is now obsolete: discard it
+  (`git restore --staged events.json && git checkout events.json`) and
+  `git pull`, rather than committing it.
 
 ## Open questions worth raising
 
@@ -150,6 +189,11 @@ could pull, regenerate, commit, push and purge on a schedule, and the page would
 stay current with nobody opening a terminal. Worth building only once the data
 source stops being "people email me files".
 
-Two typos exist in the intake vocabulary, corrected on display by the scripts:
-*Authoritarism* to Authoritarianism, and *Policmakers* to Policymakers. Fixing
-them at the source removes the patch.
+Anti-Corruption overlaps with Corruption & Rule of Law, and Artificial
+Intelligence with Technology & Digital Rights. Hosts will split between them,
+and so will the filters. Worth merging or renaming before many submissions use
+them.
+
+The legacy Google Form had two typos in its vocabulary, *Authoritarism* and
+*Policmakers*, which `gen_events.py` corrects on the way in. The Excel template
+spells both correctly, so `template_to_events.py` needs no such patch.
