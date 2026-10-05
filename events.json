@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-25",
+ "updated": "2026-10-05",
  "events": [
   {
    "id": "e01",
@@ -146,6 +146,30 @@
   },
   {
    "id": "e07",
+   "title": "Roundtable on ICJ Jurisprudence",
+   "host": "Columbia Society of International Law & Columbia Journal of Transnational Law",
+   "date": "2026-11-19",
+   "end_date": "",
+   "start": "14:00",
+   "end": "15:30",
+   "venue": "",
+   "format": "Hybrid",
+   "tags": [
+    "International Law & Accountability",
+    "Women & Gender",
+    "Access to Justice"
+   ],
+   "audience": [
+    "General Public",
+    "Students/Youth",
+    "Academics/Researchers"
+   ],
+   "description": "Hosted by the Columbia Society of International Law and the Columbia Journal of Transnational Law, the session brings together two professors of international law and a group of Columbia Law students and looks at specific ICJ decisions and the questions scholars have not yet fully answered about them.",
+   "register": "",
+   "contact": ""
+  },
+  {
+   "id": "e08",
    "title": "The Proposal for an International Anti-Corruption Court: Renewing the Promise of Justice, 80 Years On",
    "host": "Integrity Initiatives International Europe - III Europe",
    "date": "2026-11-19",
@@ -168,7 +192,7 @@
    "contact": "info@iiieurope.org"
   },
   {
-   "id": "e08",
+   "id": "e09",
    "title": "Nuremberg Academy Dialogue: The United Nations and the Nuremberg Principles",
    "host": "International Nuremberg Principles Academy",
    "date": "2026-11-20",
@@ -192,7 +216,7 @@
    "contact": "registration@nurembergacademy.org"
   },
   {
-   "id": "e09",
+   "id": "e10",
    "title": "Renewing the Memories #1 - Blue Island Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-20",
@@ -213,7 +237,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e10",
+   "id": "e11",
    "title": "Renewing the Memories #2 - The Taoyuan Airport Incident Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-21",
@@ -234,7 +258,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e11",
+   "id": "e12",
    "title": "Renewing the Memories #3 - Three Castrated Goats - Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-22",

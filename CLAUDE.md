@@ -5,8 +5,8 @@ Programme listing for The Hague Justice Week 2026, embedded on
 
 Owner: Giovanni, Communications and Marketing Manager, The Hague Humanity Hub.
 He works from two MacBooks. This repo is the only shared state between them.
-Nothing lives outside git except the filled-in `.xlsx` submissions, which are
-inputs and are deliberately never committed.
+Nothing lives outside git except the programme workbook, which partners edit on
+SharePoint and which is downloaded as an input and deliberately never committed.
 
 ## What is in here
 
@@ -142,34 +142,45 @@ After a widget release, purge `events-embed.html` as well as `events.json`. To
 check which widget a visitor is getting, inspect `#thjw-events` on the live page
 and read its `data-version`.
 
-## Submissions: one master file
+## Submissions: one SharePoint workbook
 
-The script reads `~/Downloads/thjw/*.xlsx`, and today that folder holds a single
-master workbook, `events calendar template.xlsx`, with every activity. Keep it
-that way. New submissions arrive on the v2 template
-(`~/Downloads/THJW-2026-activity-template-v2.xlsx`); their rows are copied into
-the master and the colleague's copy is archived, not left in the folder, where
-it would duplicate activities. Small edits arrive by email in plain words and
-are made in the master. Never edit `events.json` by hand: the next run
-overwrites it.
+All partners edit a single Excel workbook on the Hub's SharePoint, built from
+the v2 template. It is the one source of truth for the programme. Giovanni
+periodically downloads it into `~/Downloads/thjw/`, **replacing** the previous
+download, and the update loop runs on that one file.
 
-**Edit the master through Excel, not openpyxl.** The workbook's dropdowns are
-stored as an Excel extension that openpyxl cannot read and silently deletes on
-save. Driving Excel with `osascript` keeps them; openpyxl is fine for reading.
-Back the file up before editing it, since it is not in git.
+- The folder must hold exactly one workbook: the latest download. A second copy
+  (`… (1).xlsx`, or an older download) duplicates every activity. Check
+  `ls ~/Downloads/thjw/` before running the script.
+- Never move rows between files locally and never edit `events.json` by hand.
+  Corrections go into the SharePoint workbook, by the partner or by Giovanni,
+  and arrive with the next download.
+- The downloaded file is a copy. Editing it locally changes nothing upstream and
+  is lost on the next download.
+- Before publishing, compare the new programme with the live one by title
+  (new, changed, missing, duplicated) and report it to Giovanni. A drop in count
+  is caught by the script's guard; a duplicate is not.
+- The workbook's Topics dropdown comes from the v2 template, so it includes
+  Artificial Intelligence and Anti-Corruption.
 
-The master's Topics dropdown still has the original 15 topics. The v2 template
-adds Artificial Intelligence and Anti-Corruption; add them to the master's
-Lists sheet (and widen the Topic 1 to 3 validation range) before using them there.
+If a local workbook ever has to be edited, do it through Excel (`osascript`),
+not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
+silently deletes on save. Excel automation is fragile (it hung once on
+5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 25 September 2026
+## Current state, as of 5 October 2026
 
-- Widget and script are at **1.1.0**. `events.json` holds **11 activities**,
-  all dated. The Kunstmuseum exhibition runs 16 to 20 November. NowHere's
-  screenings #2 and #3 fall on 21 and 22 November, after Justice Week, and
-  that is intended.
-- Chase list: five activities still lack a registration link (Advisory
-  Committee, ECNL, HiiL, Legal Action Worldwide, Kunstmuseum).
+- Widget and script are at **1.1.0**. `events.json` holds **12 activities**,
+  all dated, published from the SharePoint workbook. The Kunstmuseum
+  exhibition runs 16 to 20 November. NowHere's screenings #2 and #3 fall on
+  21 and 22 November, after Justice Week, and that is intended.
+- On 5 October the original 11 activities were moved from a local workbook into
+  the SharePoint file, which until then held only the Columbia roundtable. The
+  local `events calendar template.xlsx` is retired.
+- Chase list: six activities lack a registration link (Advisory Committee,
+  ECNL, HiiL, Legal Action Worldwide, Kunstmuseum, Columbia). Columbia also has
+  no public contact, and as a hybrid event with no venue it shows "Venue to be
+  confirmed".
 - Giovanni reported the WordPress embed working on 24 September. Confirm the
   `jw-programme` shortcode is on the live Justice Week page, not only a draft,
   before relying on it.
@@ -183,11 +194,11 @@ Lists sheet (and widen the Topic 1 to 3 validation range) before using them ther
 
 ## Open questions worth raising
 
-Whether the programme should eventually come from a live Google Sheet rather
-than emailed spreadsheets. If it does, an n8n job on Giovanni's Unraid server
-could pull, regenerate, commit, push and purge on a schedule, and the page would
-stay current with nobody opening a terminal. Worth building only once the data
-source stops being "people email me files".
+Whether to automate the download. The programme already lives in one shared
+SharePoint workbook, so an n8n job on Giovanni's Unraid server could fetch it
+through Microsoft Graph, regenerate, commit, push and purge on a schedule, and
+the page would stay current with nobody opening a terminal. The trade-off:
+partner edits would go live without Giovanni reviewing the changes first.
 
 Anti-Corruption overlaps with Corruption & Rule of Law, and Artificial
 Intelligence with Technology & Digital Rights. Hosts will split between them,
