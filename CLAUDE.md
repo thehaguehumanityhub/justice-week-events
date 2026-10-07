@@ -156,7 +156,9 @@ download, and the update loop runs on that one file.
   Corrections go into the SharePoint workbook, by the partner or by Giovanni,
   and arrive with the next download.
 - The downloaded file is a copy. Editing it locally changes nothing upstream and
-  is lost on the next download.
+  is lost on the next download. Small fixes there are fine for an urgent publish
+  (openpyxl is acceptable on this throwaway copy), but the same fix must also be
+  made in SharePoint.
 - Before publishing, compare the new programme with the live one by title
   (new, changed, missing, duplicated) and report it to Giovanni. A drop in count
   is caught by the script's guard; a duplicate is not.
@@ -168,19 +170,25 @@ not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
 silently deletes on save. Excel automation is fragile (it hung once on
 5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 5 October 2026
+## Current state, as of 7 October 2026
 
-- Widget and script are at **1.1.0**. `events.json` holds **12 activities**,
+- Widget and script are at **1.1.0**. `events.json` holds **15 activities**,
   all dated, published from the SharePoint workbook. The Kunstmuseum
   exhibition runs 16 to 20 November. NowHere's screenings #2 and #3 fall on
   21 and 22 November, after Justice Week, and that is intended.
 - On 5 October the original 11 activities were moved from a local workbook into
   the SharePoint file, which until then held only the Columbia roundtable. The
   local `events calendar template.xlsx` is retired.
-- Chase list: six activities lack a registration link (Advisory Committee,
-  ECNL, HiiL, Legal Action Worldwide, Kunstmuseum, Columbia). Columbia also has
-  no public contact, and as a hybrid event with no venue it shows "Venue to be
-  confirmed".
+- Chase list: eight activities lack a registration link (Advisory Committee,
+  ECNL, HiiL, Legal Action Worldwide, Kunstmuseum, Columbia, Weeramantry
+  centenary, Jeune Fille). Columbia also has no public contact. Columbia and
+  Jeune Fille are hybrid with no venue, so they show "Venue to be confirmed".
+- Two public contacts are individual addresses, published on 7 October with
+  the hosts' confirmation: `arthur@judicap.com` (Weeramantry centenary) and
+  `cwinfotsing@yahoo.fr` (Jeune Fille).
+- On 7 October three typos were fixed in the local download only (FIBGAR
+  "moderatod", "Ministy", "excercise"). Unless they were also fixed in
+  SharePoint, the next download brings them back: check, and re-fix if so.
 - Giovanni reported the WordPress embed working on 24 September. Confirm the
   `jw-programme` shortcode is on the live Justice Week page, not only a draft,
   before relying on it.
