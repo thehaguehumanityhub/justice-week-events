@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-05",
+ "updated": "2026-10-07",
  "events": [
   {
    "id": "e01",
@@ -93,12 +93,36 @@
     "Students/Youth",
     "Legal Professionals"
    ],
-   "description": "A virtual conversation on universal jurisdiction. One of the most powerful, yet still underused and often misunderstood, tools for holding perpetrators of the world’s gravest crimes accountable.\nBringing together speakers with diverse regional and professional perspectives, the discussion will explore how universal jurisdiction has evolved, the challenges it faces today, and the role it can play in advancing accountability and international justice in a global order under increasing strain.\nThe conversation is open to anyone interested in the fight against impunity and the future of international justice—including legal professionals, students, policymakers, and civil society actors.\nAt a time when the international justice system is facing unprecedented pressure, this session offers an opportunity to hear directly from practitioners working across different contexts to strengthen universal jurisdiction and renew its promise as a tool for justice.",
+   "description": "A virtual conversation on universal jurisdiction. One of the most powerful, yet still underused and often misunderstood, tools for holding perpetrators of the world’s gravest crimes accountable.\nBringing together speakers with diverse regional and professional perspectives, the discussion will explore how universal jurisdiction has evolved, the challenges it faces today, and the role it can play in advancing accountability and international justice in a global order under increasing strain.\nThe conversation is open to anyone interested in the fight against impunity and the future of international justice—including legal professionals, students, policymakers, and civil society actors.\nAt a time when the international justice system is facing unprecedented pressure, this session offers an opportunity to hear directly from practitioners working across different contexts to strengthen universal jurisdiction and renew its promise as a tool for justice.\n\nMeet the Speakers:\n\n- Tomas Kevin Manguel, Professor of International Criminal Law at the University of Buenos Aires and Legal Adviser at StraLi\n\n- Marie Wilmet, Marie Skłodowska-Curie Fellow, Université libre de Bruxelles\n\n- Atilla Kisla, Human rights lawyer, International Justice Cluster Lead at Southern Africa Litigation Centre (SALC)\n\n- Priya Pillai, PhD, International lawyer, and executive director of the Asia Justice Coalition\n\nThe session will be moderated by Alessia Schiavon, Executive Director FIBGAR",
    "register": "https://wkf.ms/4yw1aqI",
    "contact": "contacto@fibgar.org"
   },
   {
    "id": "e05",
+   "title": "One World, One Home, One Law for All: Commemoration Centenary ICJ Judge and Vice-President Christopher Weeramantry (17.11.1926)",
+   "host": "Judicap in co-operation with Sri Lanka Embassy",
+   "date": "2026-11-17",
+   "end_date": "",
+   "start": "14:00",
+   "end": "16:30",
+   "venue": "Embassy of Sri Lanka",
+   "format": "Hybrid",
+   "tags": [
+    "International Law & Accountability",
+    "Environmental & Climate Law",
+    "Universal Jurisdiction"
+   ],
+   "audience": [
+    "General Public",
+    "Academics/Researchers",
+    "Civil Society Practitioners"
+   ],
+   "description": "Even a century after the establishment of the World Court in 1920, one of the greatest challenges facing international law remains that of bringing the world’s diverse cultures and legal traditions into harmony. Several judges have made exceptional contributions to this endeavour. A prominent figure in recent decades was Christopher Weeramantry of Sri Lanka (ICJ judge, 1991–2000). Throughout his life, he sought common ground among the world’s major religions and emphasized the moral convictions that unite humanity. His principled position in the 1996 advisory proceedings on the legality of the threat or use of nuclear weapons remains as relevant as ever. At the gathering at the Embassy of Sri Lanka, the judge’s former colleagues and students will discuss the significance and feasibility of Weeramantry’s ideas in an era of growing polarisation and the erosion of international law.",
+   "register": "",
+   "contact": "arthur@judicap.com"
+  },
+  {
+   "id": "e06",
    "title": "Scaling People-Centred Justice with AI",
    "host": "Hope Behind Bars Africa, HiiL",
    "date": "2026-11-18",
@@ -121,7 +145,55 @@
    "contact": "info@hiil.org"
   },
   {
-   "id": "e06",
+   "id": "e07",
+   "title": "Judging International Justice - featuring Judge Hilary Charlesworth of the International Court of Justice, in conversation with Professor Anna Spain Bradley of UCLA Law",
+   "host": "UCLA Law's The Promise Institute for Human Rights (Europe)",
+   "date": "2026-11-18",
+   "end_date": "",
+   "start": "18:00",
+   "end": "19:30",
+   "venue": "T.M.C. Asser Institute",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Access to Justice",
+    "Universal Jurisdiction"
+   ],
+   "audience": [
+    "General Public",
+    "Policymakers/Diplomats",
+    "Legal Professionals"
+   ],
+   "description": "Join us for this annual event featuring Judge Hilary Charlesworth of the International Court of Justice in discussion with Professor Anna Spain Bradley, MacArthur Foundation Chair in International Justice and Human Rights at UCLA School of Law. The discussion will center on the evolving role of international adjudication and international law in the world today. This lecture series furthers the mission of The Promise Institute and UCLA by supporting public education and engagement with international justice and human rights.",
+   "register": "https://www.eventbrite.nl/e/judging-international-justice-featuring-icj-judge-hilary-charlesworth-tickets-2001372967421",
+   "contact": "uclapromiseeurope@law.ucla.edu"
+  },
+  {
+   "id": "e08",
+   "title": "Jeune Fille, Droit et Souveraineté Économique en Afrique",
+   "host": "Cameroon Ministry of Justice, Reknow Femmes D'Expertise",
+   "date": "2026-11-19",
+   "end_date": "",
+   "start": "10:00",
+   "end": "12:00",
+   "venue": "",
+   "format": "Hybrid",
+   "tags": [
+    "Business & Human Rights",
+    "Children & Youth Rights",
+    "Access to Justice"
+   ],
+   "audience": [
+    "General Public",
+    "Policymakers/Diplomats",
+    "Civil Society Practitioners"
+   ],
+   "description": "Bringing together young people, legal professionals, economic actors, civil society, and more, this session will examine the barriers that limit girls' ability to access and exercise their rights, as well as the role of the law in turning rights into real opportunities. Through expert perspectives, real life experiences, and candid discussions, participants will explore the connection between girls' empowerment, sustainable development, and economic sovereignty. Join us for this interactive session exploring how girls' access to rights can contribute to their individual and collective autonomy as well as Africa's broader economic sovereignty.",
+   "register": "",
+   "contact": "cwinfotsing@yahoo.fr"
+  },
+  {
+   "id": "e09",
    "title": "Film Screening: Surviving Genocide – The Rohingya Quest for Justice",
    "host": "Legal Action Worldwide (LAW)",
    "date": "2026-11-19",
@@ -145,7 +217,7 @@
    "contact": "info@legalactionworldwide.org"
   },
   {
-   "id": "e07",
+   "id": "e10",
    "title": "Roundtable on ICJ Jurisprudence",
    "host": "Columbia Society of International Law & Columbia Journal of Transnational Law",
    "date": "2026-11-19",
@@ -169,7 +241,7 @@
    "contact": ""
   },
   {
-   "id": "e08",
+   "id": "e11",
    "title": "The Proposal for an International Anti-Corruption Court: Renewing the Promise of Justice, 80 Years On",
    "host": "Integrity Initiatives International Europe - III Europe",
    "date": "2026-11-19",
@@ -192,7 +264,7 @@
    "contact": "info@iiieurope.org"
   },
   {
-   "id": "e09",
+   "id": "e12",
    "title": "Nuremberg Academy Dialogue: The United Nations and the Nuremberg Principles",
    "host": "International Nuremberg Principles Academy",
    "date": "2026-11-20",
@@ -216,7 +288,7 @@
    "contact": "registration@nurembergacademy.org"
   },
   {
-   "id": "e10",
+   "id": "e13",
    "title": "Renewing the Memories #1 - Blue Island Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-20",
@@ -237,7 +309,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e11",
+   "id": "e14",
    "title": "Renewing the Memories #2 - The Taoyuan Airport Incident Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-21",
@@ -258,7 +330,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e12",
+   "id": "e15",
    "title": "Renewing the Memories #3 - Three Castrated Goats - Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-22",
