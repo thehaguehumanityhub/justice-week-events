@@ -170,25 +170,32 @@ not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
 silently deletes on save. Excel automation is fragile (it hung once on
 5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 7 October 2026
+## Current state, as of 8 October 2026
 
-- Widget and script are at **1.1.0**. `events.json` holds **15 activities**,
-  all dated, published from the SharePoint workbook. The Kunstmuseum
-  exhibition runs 16 to 20 November. NowHere's screenings #2 and #3 fall on
-  21 and 22 November, after Justice Week, and that is intended.
+- Widget and script are at **1.1.0**. `events.json` holds **17 activities**,
+  published from the SharePoint workbook. The Kunstmuseum exhibition runs 16 to
+  20 November. Three activities fall outside 16 to 20 November on purpose or
+  pending confirmation: Verhalenhuis (Sat 14 Nov) and NowHere #2 and #3 (21 and
+  22 Nov, intended).
 - On 5 October the original 11 activities were moved from a local workbook into
-  the SharePoint file, which until then held only the Columbia roundtable. The
-  local `events calendar template.xlsx` is retired.
-- Chase list: eight activities lack a registration link (Advisory Committee,
-  ECNL, HiiL, Legal Action Worldwide, Kunstmuseum, Columbia, Weeramantry
-  centenary, Jeune Fille). Columbia also has no public contact. Columbia and
-  Jeune Fille are hybrid with no venue, so they show "Venue to be confirmed".
-- Two public contacts are individual addresses, published on 7 October with
-  the hosts' confirmation: `arthur@judicap.com` (Weeramantry centenary) and
-  `cwinfotsing@yahoo.fr` (Jeune Fille).
-- On 7 October three typos were fixed in the local download only (FIBGAR
-  "moderatod", "Ministy", "excercise"). Unless they were also fixed in
-  SharePoint, the next download brings them back: check, and re-fix if so.
+  the SharePoint file. The local `events calendar template.xlsx` is retired.
+- Chase list: eight activities lack a registration link (ECNL, HiiL, Legal
+  Action Worldwide, Kunstmuseum, Columbia, Weeramantry centenary, Jeune Fille,
+  Verhalenhuis). Columbia has no public contact. Columbia and Jeune Fille are
+  hybrid with no venue.
+- Individual contact addresses: `arthur@judicap.com` and `cwinfotsing@yahoo.fr`
+  are published with the hosts' confirmation (7 October).
+  `emmylou.aben@pitztop.eu` (Verhalenhuis) and `l.derijck@probonoconnect.nl`
+  (Pro Bono Connect legal clinic) were held back on 8 October pending the same
+  confirmation, by clearing them in the local download only.
+- Pending SharePoint clean-up, each re-applied locally on every download until
+  done: the old CAVV row ("Advisory Committee … University of Tilburg",
+  superseded by the CAVV resubmission with the same title) must be deleted, and
+  three typos fixed (FIBGAR "moderatod by  Alessia", "Ministy", "excercise").
+  Check for all of these on the next download.
+- Clearing a cell in the download with openpyxl does not remove its hyperlink,
+  and the script then reads the hyperlink target (`mailto:…`) back as the value.
+  Clear `cell.hyperlink` too.
 - Giovanni reported the WordPress embed working on 24 September. Confirm the
   `jw-programme` shortcode is on the live Justice Week page, not only a draft,
   before relying on it.
