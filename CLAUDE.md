@@ -174,20 +174,19 @@ silently deletes on save. Excel automation is fragile (it hung once on
 
 - Widget and script are at **1.1.0**. `events.json` holds **17 activities**,
   published from the SharePoint workbook. The Kunstmuseum exhibition runs 16 to
-  20 November. Three activities fall outside 16 to 20 November on purpose or
-  pending confirmation: Verhalenhuis (Sat 14 Nov) and NowHere #2 and #3 (21 and
-  22 Nov, intended).
+  20 November. Three activities fall outside 16 to 20 November, all intended:
+  Verhalenhuis (Sat 14 Nov) and NowHere #2 and #3 (21 and 22 Nov).
 - On 5 October the original 11 activities were moved from a local workbook into
   the SharePoint file. The local `events calendar template.xlsx` is retired.
 - Chase list: eight activities lack a registration link (ECNL, HiiL, Legal
   Action Worldwide, Kunstmuseum, Columbia, Weeramantry centenary, Jeune Fille,
   Verhalenhuis). Columbia has no public contact. Columbia and Jeune Fille are
   hybrid with no venue.
-- Individual contact addresses: `arthur@judicap.com` and `cwinfotsing@yahoo.fr`
-  are published with the hosts' confirmation (7 October).
+- Individual contact addresses, all published with the hosts' confirmation:
+  `arthur@judicap.com` and `cwinfotsing@yahoo.fr` (7 October),
   `emmylou.aben@pitztop.eu` (Verhalenhuis) and `l.derijck@probonoconnect.nl`
-  (Pro Bono Connect legal clinic) were held back on 8 October pending the same
-  confirmation, by clearing them in the local download only.
+  (Pro Bono Connect legal clinic) (8 October). They are in SharePoint as
+  entered, so they need no local handling.
 - Pending SharePoint clean-up, each re-applied locally on every download until
   done: the old CAVV row ("Advisory Committee … University of Tilburg",
   superseded by the CAVV resubmission with the same title) must be deleted, and
