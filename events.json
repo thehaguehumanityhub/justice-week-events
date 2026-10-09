@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08",
+ "updated": "2026-10-09",
  "events": [
   {
    "id": "e01",
@@ -51,6 +51,54 @@
   },
   {
    "id": "e03",
+   "title": "Justice and Redress for Survivors of Conflict-Related Sexual Violence at the International Court of Justice.\n\nPanel 1 — Redress for Survivors at the ICJ: Implementation of the DRC v. Uganda Reparations Order",
+   "host": "Mukwege Foundation",
+   "date": "2026-11-16",
+   "end_date": "",
+   "start": "10:00",
+   "end": "13:00",
+   "venue": "The Hague Humanity Hub",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Women & Gender",
+    "Access to Justice"
+   ],
+   "audience": [
+    "Students/Youth",
+    "Policymakers/Diplomats",
+    "Civil Society Practitioners"
+   ],
+   "description": "During The Hague Justice Week the Dr. Denis Mukwege Foundation will convene three expert panel discussions confronting a question survivors of conflict-related sexual violence (CRSV) force us to ask honestly: does international law, and the international justice system built to enforce it, actually change survivors’ lives in practice?  \n\nIn panel 1 experts will examine whether Congolese victims and communities have received the compensation the Court intended, and the role of victims, civil society, and the international community in ensuring tangible redress.",
+   "register": "",
+   "contact": "info@mukwegefoundation.org"
+  },
+  {
+   "id": "e04",
+   "title": "Justice and Redress for Survivors of Conflict-Related Sexual Violence at the International Court of Justice.  \n\nPanel 2 — Justice for Survivors at the ICJ: The Gambia v. Myanmar Case",
+   "host": "Mukwege Foundation",
+   "date": "2026-11-16",
+   "end_date": "",
+   "start": "14:00",
+   "end": "17:00",
+   "venue": "The Hague Humanity Hub",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Women & Gender",
+    "Access to Justice"
+   ],
+   "audience": [
+    "Students/Youth",
+    "Policymakers/Diplomats",
+    "Civil Society Practitioners"
+   ],
+   "description": "During The Hague Justice Week  the Dr. Denis Mukwege Foundation will convene three expert panel discussions confronting a question survivors of conflict-related sexual violence  force us to ask honestly: does international law, and the international justice system built to enforce it, actually change survivors’ lives in practice? Not as an abstract legal question, but as a tangible reality for survivors in the Democratic Republic of Congo, Myanmar, and throughout the world — people whose pain has continued for years, and whose right to justice has been delayed even longer.\n\nWith judgment expected in late 2026 in The Gambia v. Myanmar Case, this panel explores the legal significance of  conflict-related sexual violence as an underlying act of genocide, survivors’ own expectations of justice, and whether the case can advance peace amid Myanmar’s ongoing civil war.",
+   "register": "",
+   "contact": "info@mukwegefoundation.org"
+  },
+  {
+   "id": "e05",
    "title": "International Law as a Compass for Foreign Policy",
    "host": "Advisory Committee on Public International Law (CAVV)",
    "date": "2026-11-16",
@@ -73,7 +121,7 @@
    "contact": "CAVV@minbuza.nl"
   },
   {
-   "id": "e04",
+   "id": "e06",
    "title": "Making Human Rights Law Work: Building new alliances between business, finance & civil society",
    "host": "European Center for Non-Profit Law (ECNL), ABN AMRO",
    "date": "2026-11-16",
@@ -97,7 +145,31 @@
    "contact": ""
   },
   {
-   "id": "e05",
+   "id": "e07",
+   "title": "Justice and Redress for Survivors of Conflict-Related Sexual Violence at the International Court of Justice.\n\nPanel 3 — Beyond the Courtroom: Survivor-Led Advocacy and the Future of Justice for Conflict-Related Sexual Violence (Closing Panel)",
+   "host": "Mukwege Foundation",
+   "date": "2026-11-17",
+   "end_date": "",
+   "start": "10:00",
+   "end": "12:00",
+   "venue": "ZZIIN Stadspaleis",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Women & Gender",
+    "Access to Justice"
+   ],
+   "audience": [
+    "Students/Youth",
+    "Policymakers/Diplomats",
+    "Civil Society Practitioners"
+   ],
+   "description": "During The Hague Justice Week the Dr. Denis Mukwege Foundation will convene three expert panel discussions confronting a question survivors of conflict-related sexual violence (CRSV) force us to ask honestly: does international law, and the international justice system built to enforce it, actually change survivors’ lives in practice? Not as an abstract legal question, but as a tangible reality for survivors in the Democratic Republic of Congo, Myanmar, and throughout the world — people whose pain has continued for years, and whose right to justice has been delayed even longer.    \n\nClosing The Hague Justice Week, this panel draws together the findings of the DRC v. Uganda and Gambia v. Myanmar panels to ask what comes next. It spotlights the Mukwege Foundation’s and SEMA’s tools for translating legal obligations into survivor-centred practice — including the Guidebook on State Obligations for Conflict-Related Sexual Violence and SEMA’s Call to Action — and considers what “80 years and beyond” of international law must look like if it is to deliver, in practice as much as in principle, on its promise to survivors.",
+   "register": "",
+   "contact": "info@mukwegefoundation.org"
+  },
+  {
+   "id": "e08",
    "title": "Justice has no Passport: A Global Conversation on Universal Jurisdiction",
    "host": "FIBGAR",
    "date": "2026-11-17",
@@ -121,7 +193,7 @@
    "contact": "contacto@fibgar.org"
   },
   {
-   "id": "e06",
+   "id": "e09",
    "title": "Scaling People-Centred Justice with AI",
    "host": "Hope Behind Bars Africa, HiiL",
    "date": "2026-11-18",
@@ -144,7 +216,7 @@
    "contact": "info@hiil.org"
   },
   {
-   "id": "e07",
+   "id": "e10",
    "title": "Legal Clinic for Civil Societal Organizations",
    "host": "Pro Bono Connect",
    "date": "2026-11-18",
@@ -166,7 +238,7 @@
    "contact": "l.derijck@probonoconnect.nl"
   },
   {
-   "id": "e08",
+   "id": "e11",
    "title": "One World, One Home, One Law for All: Commemoration Centenary ICJ Judge and Vice-President Christopher Weeramantry (17.11.1926)",
    "host": "Judicap in co-operation with Sri Lanka Embassy",
    "date": "2026-11-18",
@@ -190,7 +262,7 @@
    "contact": "arthur@judicap.com"
   },
   {
-   "id": "e09",
+   "id": "e12",
    "title": "Judging International Justice - featuring Judge Hilary Charlesworth of the International Court of Justice, in conversation with Professor Anna Spain Bradley of UCLA Law",
    "host": "UCLA Law's The Promise Institute for Human Rights (Europe)",
    "date": "2026-11-18",
@@ -214,7 +286,7 @@
    "contact": "uclapromiseeurope@law.ucla.edu"
   },
   {
-   "id": "e10",
+   "id": "e13",
    "title": "Jeune Fille, Droit et Souveraineté Économique en Afrique",
    "host": "Cameroon Ministry of Justice, Reknow Femmes D'Expertise",
    "date": "2026-11-19",
@@ -238,7 +310,7 @@
    "contact": "cwinfotsing@yahoo.fr"
   },
   {
-   "id": "e11",
+   "id": "e14",
    "title": "Film Screening: Surviving Genocide – The Rohingya Quest for Justice",
    "host": "Legal Action Worldwide (LAW)",
    "date": "2026-11-19",
@@ -262,7 +334,7 @@
    "contact": "info@legalactionworldwide.org"
   },
   {
-   "id": "e12",
+   "id": "e15",
    "title": "Roundtable on ICJ Jurisprudence",
    "host": "Columbia Society of International Law & Columbia Journal of Transnational Law",
    "date": "2026-11-19",
@@ -286,7 +358,7 @@
    "contact": ""
   },
   {
-   "id": "e13",
+   "id": "e16",
    "title": "The Proposal for an International Anti-Corruption Court: Renewing the Promise of Justice, 80 Years On",
    "host": "Integrity Initiatives International Europe - III Europe",
    "date": "2026-11-19",
@@ -309,7 +381,7 @@
    "contact": "info@iiieurope.org"
   },
   {
-   "id": "e14",
+   "id": "e17",
    "title": "Nuremberg Academy Dialogue: The United Nations and the Nuremberg Principles",
    "host": "International Nuremberg Principles Academy",
    "date": "2026-11-20",
@@ -333,7 +405,7 @@
    "contact": "registration@nurembergacademy.org"
   },
   {
-   "id": "e15",
+   "id": "e18",
    "title": "Renewing the Memories #1 - Blue Island Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-20",
@@ -354,7 +426,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e16",
+   "id": "e19",
    "title": "Renewing the Memories #2 - The Taoyuan Airport Incident Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-21",
@@ -375,7 +447,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e17",
+   "id": "e20",
    "title": "Renewing the Memories #3 - Three Castrated Goats - Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-22",
