@@ -170,17 +170,17 @@ not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
 silently deletes on save. Excel automation is fragile (it hung once on
 5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 8 October 2026
+## Current state, as of 9 October 2026
 
-- Widget and script are at **1.1.0**. `events.json` holds **17 activities**,
+- Widget and script are at **1.1.0**. `events.json` holds **20 activities**,
   published from the SharePoint workbook. The Kunstmuseum exhibition runs 16 to
   20 November. Three activities fall outside 16 to 20 November, all intended:
   Verhalenhuis (Sat 14 Nov) and NowHere #2 and #3 (21 and 22 Nov).
 - On 5 October the original 11 activities were moved from a local workbook into
   the SharePoint file. The local `events calendar template.xlsx` is retired.
-- Chase list: eight activities lack a registration link (ECNL, HiiL, Legal
+- Chase list: eleven activities lack a registration link (ECNL, HiiL, Legal
   Action Worldwide, Kunstmuseum, Columbia, Weeramantry centenary, Jeune Fille,
-  Verhalenhuis). Columbia has no public contact. Columbia and Jeune Fille are
+  Verhalenhuis, and all three Mukwege Foundation panels). Columbia has no public contact. Columbia and Jeune Fille are
   hybrid with no venue.
 - Individual contact addresses, all published with the hosts' confirmation:
   `arthur@judicap.com` and `cwinfotsing@yahoo.fr` (7 October),
@@ -190,7 +190,9 @@ silently deletes on save. Excel automation is fragile (it hung once on
 - Pending SharePoint clean-up, each re-applied locally on every download until
   done: the old CAVV row ("Advisory Committee … University of Tilburg",
   superseded by the CAVV resubmission with the same title) must be deleted, and
-  three typos fixed (FIBGAR "moderatod by  Alessia", "Ministy", "excercise").
+  four typos fixed (FIBGAR "moderatod by  Alessia", "Ministy", "excercise",
+  and Mukwege panel 1 "examine t whether"). Giovanni knows about these and does
+  not need them reported each time: just re-apply them silently.
   Check for all of these on the next download.
 - Clearing a cell in the download with openpyxl does not remove its hyperlink,
   and the script then reads the hyperlink target (`mailto:…`) back as the value.
