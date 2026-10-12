@@ -170,17 +170,17 @@ not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
 silently deletes on save. Excel automation is fragile (it hung once on
 5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 9 October 2026
+## Current state, as of 12 October 2026
 
-- Widget and script are at **1.1.0**. `events.json` holds **20 activities**,
+- Widget and script are at **1.1.0**. `events.json` holds **21 activities**,
   published from the SharePoint workbook. The Kunstmuseum exhibition runs 16 to
   20 November. Three activities fall outside 16 to 20 November, all intended:
   Verhalenhuis (Sat 14 Nov) and NowHere #2 and #3 (21 and 22 Nov).
 - On 5 October the original 11 activities were moved from a local workbook into
   the SharePoint file. The local `events calendar template.xlsx` is retired.
-- Chase list: eleven activities lack a registration link (ECNL, HiiL, Legal
+- Chase list: twelve activities lack a registration link (ECNL, HiiL, Legal
   Action Worldwide, Kunstmuseum, Columbia, Weeramantry centenary, Jeune Fille,
-  Verhalenhuis, and all three Mukwege Foundation panels). Columbia has no public contact. Columbia and Jeune Fille are
+  Verhalenhuis, all three Mukwege Foundation panels, and OLJA's Gap Report launch). Columbia has no public contact. Columbia and Jeune Fille are
   hybrid with no venue.
 - Individual contact addresses, all published with the hosts' confirmation:
   `arthur@judicap.com` and `cwinfotsing@yahoo.fr` (7 October),
