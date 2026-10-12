@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09",
+ "updated": "2026-10-12",
  "events": [
   {
    "id": "e01",
@@ -194,6 +194,30 @@
   },
   {
    "id": "e09",
+   "title": "Mapping the Gaps in International Law: Introducing the OLJA International Law Gap Report",
+   "host": "Omnijuris Law & Justice Advocates (OLJA)",
+   "date": "2026-11-17",
+   "end_date": "",
+   "start": "10:00",
+   "end": "12:00",
+   "venue": "The Hague Humanity Hub",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Access to Justice",
+    "Democracy & Authoritarianism"
+   ],
+   "audience": [
+    "Policymakers/Diplomats",
+    "Legal Professionals",
+    "Academics/Researchers"
+   ],
+   "description": "International law promises protection and accountability, but too often its rules are weak, unclear or simply not enforced. This session introduces the International Law Gap Report, a research project by Omnijuris Law & Justice Advocates (OLJA) that maps where international humanitarian law, human rights law, international criminal law and refugee law fall short in practice, and where reform could close the gap.\n\nThe OLJA team will present the report's approach and first findings, followed by an open discussion with the audience. No specialist knowledge is needed, and technical terms will be explained.\n\nJoin us to learn how the report was built, share your own experience of where the law falls short, and find out how to contribute to the next stage of the project.",
+   "register": "",
+   "contact": "info@omnijuris.org"
+  },
+  {
+   "id": "e10",
    "title": "Scaling People-Centred Justice with AI",
    "host": "Hope Behind Bars Africa, HiiL",
    "date": "2026-11-18",
@@ -216,7 +240,7 @@
    "contact": "info@hiil.org"
   },
   {
-   "id": "e10",
+   "id": "e11",
    "title": "Legal Clinic for Civil Societal Organizations",
    "host": "Pro Bono Connect",
    "date": "2026-11-18",
@@ -238,7 +262,7 @@
    "contact": "l.derijck@probonoconnect.nl"
   },
   {
-   "id": "e11",
+   "id": "e12",
    "title": "One World, One Home, One Law for All: Commemoration Centenary ICJ Judge and Vice-President Christopher Weeramantry (17.11.1926)",
    "host": "Judicap in co-operation with Sri Lanka Embassy",
    "date": "2026-11-18",
@@ -262,7 +286,7 @@
    "contact": "arthur@judicap.com"
   },
   {
-   "id": "e12",
+   "id": "e13",
    "title": "Judging International Justice - featuring Judge Hilary Charlesworth of the International Court of Justice, in conversation with Professor Anna Spain Bradley of UCLA Law",
    "host": "UCLA Law's The Promise Institute for Human Rights (Europe)",
    "date": "2026-11-18",
@@ -286,7 +310,7 @@
    "contact": "uclapromiseeurope@law.ucla.edu"
   },
   {
-   "id": "e13",
+   "id": "e14",
    "title": "Jeune Fille, Droit et Souveraineté Économique en Afrique",
    "host": "Cameroon Ministry of Justice, Reknow Femmes D'Expertise",
    "date": "2026-11-19",
@@ -310,7 +334,7 @@
    "contact": "cwinfotsing@yahoo.fr"
   },
   {
-   "id": "e14",
+   "id": "e15",
    "title": "Film Screening: Surviving Genocide – The Rohingya Quest for Justice",
    "host": "Legal Action Worldwide (LAW)",
    "date": "2026-11-19",
@@ -334,7 +358,7 @@
    "contact": "info@legalactionworldwide.org"
   },
   {
-   "id": "e15",
+   "id": "e16",
    "title": "Roundtable on ICJ Jurisprudence",
    "host": "Columbia Society of International Law & Columbia Journal of Transnational Law",
    "date": "2026-11-19",
@@ -358,7 +382,7 @@
    "contact": ""
   },
   {
-   "id": "e16",
+   "id": "e17",
    "title": "The Proposal for an International Anti-Corruption Court: Renewing the Promise of Justice, 80 Years On",
    "host": "Integrity Initiatives International Europe - III Europe",
    "date": "2026-11-19",
@@ -381,7 +405,7 @@
    "contact": "info@iiieurope.org"
   },
   {
-   "id": "e17",
+   "id": "e18",
    "title": "Nuremberg Academy Dialogue: The United Nations and the Nuremberg Principles",
    "host": "International Nuremberg Principles Academy",
    "date": "2026-11-20",
@@ -405,7 +429,7 @@
    "contact": "registration@nurembergacademy.org"
   },
   {
-   "id": "e18",
+   "id": "e19",
    "title": "Renewing the Memories #1 - Blue Island Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-20",
@@ -426,7 +450,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e19",
+   "id": "e20",
    "title": "Renewing the Memories #2 - The Taoyuan Airport Incident Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-21",
@@ -447,7 +471,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e20",
+   "id": "e21",
    "title": "Renewing the Memories #3 - Three Castrated Goats - Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-22",
