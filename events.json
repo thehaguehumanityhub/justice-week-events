@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12",
+ "updated": "2026-10-13",
  "events": [
   {
    "id": "e01",
@@ -122,6 +122,28 @@
   },
   {
    "id": "e06",
+   "title": "Bridging the Gap, Renewing the Promise:  International law and Global Solidarity in the Palestinian Quest for Justice",
+   "host": "Council of Arab Ambassadors & Legal Mobilisation Center at the International Institute of Social Studies",
+   "date": "2026-11-16",
+   "end_date": "",
+   "start": "17:00",
+   "end": "19:00",
+   "venue": "International Institute of Social Studies (ISS), Kortenaerkade 12, 2518 AX Den Haag",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability"
+   ],
+   "audience": [
+    "Policymakers/Diplomats",
+    "Academics/Researchers",
+    "Civil Society Practitioners"
+   ],
+   "description": "International law has long held out the promise of peace and justice for the Palestinian people. Yet the gap between that promise and its implementation remains uneven across nations, what some commentators have referred to as “Justice for Some”. This event examines that gap not as a story of failure alone but as a call to renew the commitment that international law represents, namely, that no people shall be denied self-determination, protection, and recourse to justice.\n\nPalestine’s recourse to justice under international law reveals both the possibilities and the challenges inherent in the promise of peace and justice that international law represents and which global solidarity efforts seek to amplify and mobilize. Despite several legal determinations on the Question of Palestine achieved in recent years, such as three landmark Advisory Opinions of the International Court of Justice (ICJ) in 2004, 2024 and 2025, inter alia, that reaffirmed the Palestinian people’s right to self-determination, protection from prolonged occupation, and the illegality of Israel’s occupation, and solidarity actions, the failure to implement is jarring. \n\nIn spite of what international law has already committed regarding Palestine, trust in international law and the law-based international order has been undermined. To restore faith generally in the effectiveness of international law and enforcement institutions, as vividly illustrated regarding the Question of Palestine, the gap between the legal framework and its enforcement must be bridged.\n\nJoin us this evening to listen to legal experts and figures of authority in international law who will address this gap and share with us their insights on how we can restore the faith in international law. A Q&A will follow the panel.",
+   "register": "",
+   "contact": ""
+  },
+  {
+   "id": "e07",
    "title": "Making Human Rights Law Work: Building new alliances between business, finance & civil society",
    "host": "European Center for Non-Profit Law (ECNL), ABN AMRO",
    "date": "2026-11-16",
@@ -145,7 +167,7 @@
    "contact": ""
   },
   {
-   "id": "e07",
+   "id": "e08",
    "title": "Justice and Redress for Survivors of Conflict-Related Sexual Violence at the International Court of Justice.\n\nPanel 3 — Beyond the Courtroom: Survivor-Led Advocacy and the Future of Justice for Conflict-Related Sexual Violence (Closing Panel)",
    "host": "Mukwege Foundation",
    "date": "2026-11-17",
@@ -169,7 +191,7 @@
    "contact": "info@mukwegefoundation.org"
   },
   {
-   "id": "e08",
+   "id": "e09",
    "title": "Justice has no Passport: A Global Conversation on Universal Jurisdiction",
    "host": "FIBGAR",
    "date": "2026-11-17",
@@ -193,7 +215,7 @@
    "contact": "contacto@fibgar.org"
   },
   {
-   "id": "e09",
+   "id": "e10",
    "title": "Mapping the Gaps in International Law: Introducing the OLJA International Law Gap Report",
    "host": "Omnijuris Law & Justice Advocates (OLJA)",
    "date": "2026-11-17",
@@ -217,7 +239,30 @@
    "contact": "info@omnijuris.org"
   },
   {
-   "id": "e10",
+   "id": "e11",
+   "title": "The Consensus Trap:  Why Governance Organisations Cannot Decide and What to Do About It",
+   "host": "Legitmov",
+   "date": "2026-11-18",
+   "end_date": "",
+   "start": "10:30",
+   "end": "12:30",
+   "venue": "The Hague Humanity Hub",
+   "format": "In-person",
+   "tags": [
+    "Business & Human Rights",
+    "Access to Justice"
+   ],
+   "audience": [
+    "Students/Youth",
+    "Policymakers/Diplomats",
+    "Civil Society Practitioners"
+   ],
+   "description": "Most governance organisations are genuinely committed to hearing from the people they serve. They consult widely, run surveys, hold roundtables, and invest in participation. And then, somehow, still cannot decide.\n\nThis session is about that gap, the space between consultation and action that quietly undermines trust, wastes resources, and leaves the people who were consulted feeling unheard despite having been asked.\n\n“The Consultation Trap” brings together practitioners from governance, international justice, and social design to examine why organisations that do everything right on paper still get stuck. We look at the structural and relational dynamics that turn consultation into delay, and what it actually takes to build decision processes that move without sacrificing the legitimacy that participation is supposed to create.\n\nParticipants can expect a candid, practitioner-led conversation grounded in real cases and lived experience. This is not a lecture. It is a working session for people who sit inside these systems and want honest tools, not more frameworks. The panel includes voices from international justice innovation, governance strategy, and organisational change, and the format is designed to create space for the room to contribute, not just listen.\n\nYou should attend if you work in or alongside governance organisations, public institutions, NGOs, international bodies, civil society, and have ever left a meeting wondering how a room full of capable people managed to agree on nothing. This session is for you.",
+   "register": "",
+   "contact": ""
+  },
+  {
+   "id": "e12",
    "title": "Scaling People-Centred Justice with AI",
    "host": "Hope Behind Bars Africa, HiiL",
    "date": "2026-11-18",
@@ -240,7 +285,7 @@
    "contact": "info@hiil.org"
   },
   {
-   "id": "e11",
+   "id": "e13",
    "title": "Legal Clinic for Civil Societal Organizations",
    "host": "Pro Bono Connect",
    "date": "2026-11-18",
@@ -262,7 +307,7 @@
    "contact": "l.derijck@probonoconnect.nl"
   },
   {
-   "id": "e12",
+   "id": "e14",
    "title": "One World, One Home, One Law for All: Commemoration Centenary ICJ Judge and Vice-President Christopher Weeramantry (17.11.1926)",
    "host": "Judicap in co-operation with Sri Lanka Embassy",
    "date": "2026-11-18",
@@ -286,7 +331,30 @@
    "contact": "arthur@judicap.com"
   },
   {
-   "id": "e13",
+   "id": "e15",
+   "title": "Prevention at 80: The ICJ, the Duty to Prevent, and the Structural Limits of Anticipatory Justice",
+   "host": "American Bar Association Center for Human Rights",
+   "date": "2026-11-18",
+   "end_date": "",
+   "start": "15:00",
+   "end": "17:00",
+   "venue": "Online",
+   "format": "Online",
+   "tags": [
+    "International Law & Accountability",
+    "Access to Justice"
+   ],
+   "audience": [
+    "Policymakers/Diplomats",
+    "Legal Professionals",
+    "Civil Society Practitioners"
+   ],
+   "description": "Can international law stop a genocide before it happens, rather than judge it afterward? In 2007, in Bosnia v. Serbia, the International Court of Justice (ICJ) ruled that a state’s duty to prevent genocide begins the moment it learns, or should have known, of a serious risk of atrocity. Today that standard is being tested as never before, in Gambia v. Myanmar, South Africa v. Israel and Ukraine v. Russia, yet the gap between what the doctrine promises and what it achieves has never been wider.\n\nMarking the Court’s 80th anniversary, this session asks whether the ICJ has built a genuine system of anticipatory justice or a vocabulary that arrives, structurally, too late. A moderated panel of experts will develop, rather than resolve, six tensions: how early a warning must be before the “should have known” duty kicks in; who can be expected to act, from third states to armed groups that control no territory; the limits of the Court’s reach when atrocity risk sits inside a single state at civil war; how well states actually observe the Court’s emergency orders (its Article 41 provisional measures); what happens when the Court allocates duties it cannot enforce while the UN Security Council stays deadlocked; and whether the recent surge of cases brought in the common interest strengthens deterrence or exposes how hard the law is to enforce. In this moderated webinar, expert panelists will examine what the law can and cannot do when prevention matters most.",
+   "register": "https://americanbar.zoom.us/webinar/register/WN_JU7817BFRmOU6Sk3KpAn4Q#/registration",
+   "contact": "roli-outreach@americanbar.org"
+  },
+  {
+   "id": "e16",
    "title": "Judging International Justice - featuring Judge Hilary Charlesworth of the International Court of Justice, in conversation with Professor Anna Spain Bradley of UCLA Law",
    "host": "UCLA Law's The Promise Institute for Human Rights (Europe)",
    "date": "2026-11-18",
@@ -310,7 +378,7 @@
    "contact": "uclapromiseeurope@law.ucla.edu"
   },
   {
-   "id": "e14",
+   "id": "e17",
    "title": "Jeune Fille, Droit et Souveraineté Économique en Afrique",
    "host": "Cameroon Ministry of Justice, Reknow Femmes D'Expertise",
    "date": "2026-11-19",
@@ -334,7 +402,7 @@
    "contact": "cwinfotsing@yahoo.fr"
   },
   {
-   "id": "e15",
+   "id": "e18",
    "title": "Film Screening: Surviving Genocide – The Rohingya Quest for Justice",
    "host": "Legal Action Worldwide (LAW)",
    "date": "2026-11-19",
@@ -358,7 +426,7 @@
    "contact": "info@legalactionworldwide.org"
   },
   {
-   "id": "e16",
+   "id": "e19",
    "title": "Roundtable on ICJ Jurisprudence",
    "host": "Columbia Society of International Law & Columbia Journal of Transnational Law",
    "date": "2026-11-19",
@@ -382,7 +450,7 @@
    "contact": ""
   },
   {
-   "id": "e17",
+   "id": "e20",
    "title": "The Proposal for an International Anti-Corruption Court: Renewing the Promise of Justice, 80 Years On",
    "host": "Integrity Initiatives International Europe - III Europe",
    "date": "2026-11-19",
@@ -405,7 +473,7 @@
    "contact": "info@iiieurope.org"
   },
   {
-   "id": "e18",
+   "id": "e21",
    "title": "Nuremberg Academy Dialogue: The United Nations and the Nuremberg Principles",
    "host": "International Nuremberg Principles Academy",
    "date": "2026-11-20",
@@ -429,7 +497,7 @@
    "contact": "registration@nurembergacademy.org"
   },
   {
-   "id": "e19",
+   "id": "e22",
    "title": "Renewing the Memories #1 - Blue Island Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-20",
@@ -450,7 +518,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e20",
+   "id": "e23",
    "title": "Renewing the Memories #2 - The Taoyuan Airport Incident Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-21",
@@ -471,7 +539,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e21",
+   "id": "e24",
    "title": "Renewing the Memories #3 - Three Castrated Goats - Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-22",
