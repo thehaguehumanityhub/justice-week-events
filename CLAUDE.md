@@ -187,14 +187,11 @@ silently deletes on save. Excel automation is fragile (it hung once on
 - Individual contact addresses, all published with the hosts' confirmation:
   `arthur@judicap.com` and `cwinfotsing@yahoo.fr` (7 October),
   `emmylou.aben@pitztop.eu` (Verhalenhuis) and `l.derijck@probonoconnect.nl`
-  (Pro Bono Connect legal clinic) (8 October). They are in SharePoint as
-  entered, so they need no local handling.
-- Held back pending the host's confirmation: `fambreen521@gmail.com`
-  (Legitmov, "The Consensus Trap") and `mathias.zeller@minbuza.nl` (Colombia,
-  Comuneros del Sur, from 14 October). Clear each (value and hyperlink) in
-  every download until Giovanni confirms it, then stop.
-  `democracydrinksthehague@gmail.com` is the #DemocracyDrinks series inbox,
-  so it is published without confirmation.
+  (Pro Bono Connect legal clinic) (8 October), `fambreen521@gmail.com`
+  (Legitmov) and `mathias.zeller@minbuza.nl` (Colombia, Comuneros del Sur)
+  (14 October). They are in SharePoint as entered, so they need no local
+  handling. `democracydrinksthehague@gmail.com` is the #DemocracyDrinks series
+  inbox, so it is published without confirmation. Nothing is held back.
 - Pending SharePoint clean-up, each re-applied locally on every download until
   done: the old CAVV row ("Advisory Committee … University of Tilburg",
   superseded by the CAVV resubmission with the same title) must be deleted, and
