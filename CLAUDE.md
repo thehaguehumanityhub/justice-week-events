@@ -170,18 +170,18 @@ not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
 silently deletes on save. Excel automation is fragile (it hung once on
 5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 13 October 2026
+## Current state, as of 14 October 2026
 
-- Widget and script are at **1.1.0**. `events.json` holds **24 activities**,
+- Widget and script are at **1.1.0**. `events.json` holds **26 activities**,
   published from the SharePoint workbook. The Kunstmuseum exhibition runs 16 to
   20 November. Three activities fall outside 16 to 20 November, all intended:
   Verhalenhuis (Sat 14 Nov) and NowHere #2 and #3 (21 and 22 Nov).
 - On 5 October the original 11 activities were moved from a local workbook into
   the SharePoint file. The local `events calendar template.xlsx` is retired.
-- Chase list: fourteen activities lack a registration link (ECNL, HiiL, Legal
+- Chase list: eleven activities lack a registration link (ECNL, HiiL, Legal
   Action Worldwide, Kunstmuseum, Columbia, Weeramantry centenary, Jeune Fille,
-  Verhalenhuis, all three Mukwege Foundation panels, OLJA's Gap Report launch,
-  the Palestine panel at ISS, and Legitmov). Columbia and the Palestine panel
+  Verhalenhuis, OLJA's Gap Report launch, the Palestine panel at ISS, and
+  Legitmov). Columbia and the Palestine panel
   have no public contact. Columbia and Jeune Fille are
   hybrid with no venue.
 - Individual contact addresses, all published with the hosts' confirmation:
@@ -190,8 +190,11 @@ silently deletes on save. Excel automation is fragile (it hung once on
   (Pro Bono Connect legal clinic) (8 October). They are in SharePoint as
   entered, so they need no local handling.
 - Held back pending the host's confirmation: `fambreen521@gmail.com`
-  (Legitmov, "The Consensus Trap"). Clear it (value and hyperlink) in each
-  download until Giovanni confirms, then stop.
+  (Legitmov, "The Consensus Trap") and `mathias.zeller@minbuza.nl` (Colombia,
+  Comuneros del Sur, from 14 October). Clear each (value and hyperlink) in
+  every download until Giovanni confirms it, then stop.
+  `democracydrinksthehague@gmail.com` is the #DemocracyDrinks series inbox,
+  so it is published without confirmation.
 - Pending SharePoint clean-up, each re-applied locally on every download until
   done: the old CAVV row ("Advisory Committee … University of Tilburg",
   superseded by the CAVV resubmission with the same title) must be deleted, and
