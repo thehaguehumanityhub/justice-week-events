@@ -1,32 +1,8 @@
 {
- "updated": "2026-10-14",
+ "updated": "2026-10-16",
  "events": [
   {
    "id": "e01",
-   "title": "Verhalenhuis",
-   "host": "Pitztop",
-   "date": "2026-11-14",
-   "end_date": "",
-   "start": "15:00",
-   "end": "18:00",
-   "venue": "The Hague Humanity Hub",
-   "format": "In-person",
-   "tags": [
-    "Access to Justice",
-    "Democracy & Authoritarianism",
-    "Visual Arts, Culture & Politics"
-   ],
-   "audience": [
-    "General Public",
-    "Students/Youth",
-    "Civil Society Practitioners"
-   ],
-   "description": "Het Verhalenhuis offers storytelling workshops to people who have often had no prior contact with the performing arts and whose stories are underrepresented in society's mainstream narrative. Each Verhalenhuis edition consists of a series of 6-8 weekly workshops in which participants work on structuring stories and using body language and voice when sharing them.\n\nDuring the Hague Justice week we are having a kick off for a new group in the Hague Humanity Hub together with Pitztop. The session is meant for 8-10 newcomers who want to get acquainted with theatermaking and storytelling. \n\nThe skills to tell and present your own story are applicable in almost any field and can contribute to self-confidence and the sense that your story matters. By reclaiming stories under the motto \"your story on your terms,\" participants discover the power of narrative in their own hands. Alongside the workshops, Het Verhalenhuis also offers these stories and storytellers a stage as a follow-up trajectory. Participants in the Verhalenhuis editions are invited to create a theatre production together with theatre-maker Arvand Dashtaray and the Virgule FPAC team. ROSE Stories also curates a digital version of Het Verhalenhuis, where participants can share their stories in digital format.",
-   "register": "",
-   "contact": "emmylou.aben@pitztop.eu"
-  },
-  {
-   "id": "e02",
    "title": "Blue on the beauty of De Stijl and the strength of NATO - Exhibit",
    "host": "Kunstmuseum Den Haag",
    "date": "2026-11-16",
@@ -50,7 +26,7 @@
    "contact": "info@kunstmuseum.nl"
   },
   {
-   "id": "e03",
+   "id": "e02",
    "title": "Justice and Redress for Survivors of Conflict-Related Sexual Violence at the International Court of Justice.\n\nPanel 1 — Redress for Survivors at the ICJ: Implementation of the DRC v. Uganda Reparations Order",
    "host": "Mukwege Foundation",
    "date": "2026-11-16",
@@ -72,6 +48,30 @@
    "description": "During The Hague Justice Week the Dr. Denis Mukwege Foundation will convene three expert panel discussions confronting a question survivors of conflict-related sexual violence (CRSV) force us to ask honestly: does international law, and the international justice system built to enforce it, actually change survivors’ lives in practice?  \n\nIn panel 1 experts will examine whether Congolese victims and communities have received the compensation the Court intended, and the role of victims, civil society, and the international community in ensuring tangible redress.",
    "register": "https://forms.cloud.microsoft/e/KStKwm44Nk",
    "contact": "info@mukwegefoundation.org"
+  },
+  {
+   "id": "e03",
+   "title": "Justice as Critical Infrastructure for Peace and Resilience",
+   "host": "International IDEA",
+   "date": "2026-11-16",
+   "end_date": "",
+   "start": "11:00",
+   "end": "12:30",
+   "venue": "Benoordenhoutseweg 46, 2596 BC Den Haag",
+   "format": "Hybrid",
+   "tags": [
+    "Business & Human Rights",
+    "International Law & Accountability",
+    "Access to Justice"
+   ],
+   "audience": [
+    "Policymakers/Diplomats",
+    "Legal Professionals",
+    "Civil Society Practitioners"
+   ],
+   "description": "The event will explore how justice systems and institutions become part of the infrastructure through which societies rebuild trust, resilience and stability. The session will move beyond the narrow scope of formal courts and legal institutions and consider the wider justice ecosystem and how legal and governance frameworks can better connect with people's everyday realities.",
+   "register": "https://docs.google.com/forms/d/e/1FAIpQLSfbleakkVeNT4A7ko9oPrw_VXDXIXNoM6MgEJzBhQi3p8MgAg/viewform",
+   "contact": ""
   },
   {
    "id": "e04",
@@ -150,7 +150,7 @@
    "end_date": "",
    "start": "17:00",
    "end": "19:00",
-   "venue": "",
+   "venue": "The Hague Humanity Hub",
    "format": "Hybrid",
    "tags": [
     "Business & Human Rights",
@@ -163,11 +163,58 @@
     "Civil Society Practitioners"
    ],
    "description": "Human rights and environmental due diligence laws increasingly require companies and financial institutions to identify, prevent and address adverse human rights impacts. Effective implementation depends on access to reliable, independent information from civil society organisations, journalists, trade unions, researchers and affected communities. However, as civic space faces growing restrictions worldwide, this vital information ecosystem is becoming more vulnerable. This session examines why shrinking civic space is not only a civil society issue, but also a business, banking and justice concern. Bringing together representatives from business, finance, civil society and policy, it will highlight practical examples of cross-sector collaboration, including the Dutch KYC (Know Your Customer) standard to reduce NGO de-risking and research on conducting human rights due diligence in restrictive contexts. Participants will explore how new partnerships can strengthen accountability and help translate human rights laws into effective practice.",
-   "register": "",
+   "register": "https://www.eventbrite.com/e/making-human-rights-law-work-new-alliances-of-business-civil-society-tickets-2003352568461?aff=oddtdtcreator",
    "contact": ""
   },
   {
    "id": "e08",
+   "title": "Heritage on Trial: Can International Law Still Protect What War Destroys?",
+   "host": "Embassy of Ukraine in the Kingdom of the Netherlands, Embassy of the United Kingdom",
+   "date": "2026-11-17",
+   "end_date": "",
+   "start": "10:00",
+   "end": "12:00",
+   "venue": "",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Visual Arts, Culture & Politics"
+   ],
+   "audience": [
+    "General Public",
+    "Legal Professionals",
+    "Civil Society Practitioners"
+   ],
+   "description": "Heritage on Trial: Can International Law Still Protect What War Destroys?\n\nWhen a museum is shelled, a church burned, or a collection looted in wartime, is it simply a tragedy — or a crime that someone can be held to account for? Russia’s war against Ukraine has damaged, destroyed or emptied hundreds of museums, churches, libraries and archives, and cultural objects have been carried out of occupied territory. This has turned a long-standing legal promise — that cultural heritage must be protected even in war — into one of its hardest real-world tests.\nThis expert discussion brings together people who work on that promise from every side: Ukrainian officials and cultural first responders documenting the damage, international prosecutors and judges, and legal scholars. Together they will ask what the law can and cannot yet do — from the 1954 Hague Convention (the main treaty protecting cultural property in war) to the first international conviction for destroying heritage, and the mechanisms for recovering stolen objects.\n\nParticipants can expect a frank, accessible conversation — no legal background needed — about where protection works, where it fails, and what needs to change.\nWhy attend? Because the questions raised in Ukraine will shape how the world protects culture in every future conflict. The Hague, as the city of international law and justice, is where that conversation belongs",
+   "register": "",
+   "contact": "emb_nl@mfa.gov.ua"
+  },
+  {
+   "id": "e09",
+   "title": "Historic The Hague: The Origins of the City of Peace and Justice",
+   "host": "The Hague Municipality",
+   "date": "2026-11-17",
+   "end_date": "",
+   "start": "10:00",
+   "end": "12:00",
+   "venue": "City Hall (Spui 70), in front of The Hague International Centre (THIC)",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Peace & Security",
+    "Access to Justice"
+   ],
+   "audience": [
+    "General Public",
+    "Students/Youth",
+    "Civil Society Practitioners"
+   ],
+   "description": "This 2-hour walking tour takes you back in time, revealing how The Hague grew into the international City of Peace and Justice, while maintaining its long-standing role as the political heart of the Netherlands. As you stroll through historic streets and past iconic landmarks, you will uncover the stories that connect the city's national and international significance.",
+   "register": "https://www.eventbrite.nl/e/historic-the-hague-the-origins-of-the-city-of-peace-and-justice-tickets-2003352217411?aff=oddtdtcreator&keep_tld=true",
+   "contact": "engage@humanityhub.org"
+  },
+  {
+   "id": "e10",
    "title": "Justice and Redress for Survivors of Conflict-Related Sexual Violence at the International Court of Justice.\n\nPanel 3 — Beyond the Courtroom: Survivor-Led Advocacy and the Future of Justice for Conflict-Related Sexual Violence (Closing Panel)",
    "host": "Mukwege Foundation",
    "date": "2026-11-17",
@@ -191,7 +238,7 @@
    "contact": "info@mukwegefoundation.org"
   },
   {
-   "id": "e09",
+   "id": "e11",
    "title": "Justice has no Passport: A Global Conversation on Universal Jurisdiction",
    "host": "FIBGAR",
    "date": "2026-11-17",
@@ -215,7 +262,7 @@
    "contact": "contacto@fibgar.org"
   },
   {
-   "id": "e10",
+   "id": "e12",
    "title": "Mapping the Gaps in International Law: Introducing the OLJA International Law Gap Report",
    "host": "Omnijuris Law & Justice Advocates (OLJA)",
    "date": "2026-11-17",
@@ -239,7 +286,122 @@
    "contact": "info@omnijuris.org"
   },
   {
-   "id": "e11",
+   "id": "e13",
+   "title": "From Ukraine to Global Accountability: Presenting the Manual on Prosecuting International Environmental Crimes",
+   "host": "Embassy of Ukraine in the Kingdom of the Netherlands",
+   "date": "2026-11-17",
+   "end_date": "",
+   "start": "14:00",
+   "end": "16:00",
+   "venue": "Hoogsteder & Hoogsteder",
+   "format": "Hybrid",
+   "tags": [
+    "International Law & Accountability",
+    "Environmental & Climate Law",
+    "Access to Justice"
+   ],
+   "audience": [
+    "Policymakers/Diplomats",
+    "Legal Professionals",
+    "Civil Society Practitioners"
+   ],
+   "description": "Wars have environmental consequences, and they have long been among the least prosecuted. Nature reserves and national parks destroyed, forests burned, soil and water contaminated, biodiversity lost: damage that outlasts the fighting by decades and almost never reaches a courtroom. Ukraine has begun to change that.\n\nUnder war conditions, Ukrainian investigators and prosecutors have been documenting that damage — from the destruction of the Kakhovka Dam onwards — and building cases with no shared methodology to follow. That experience is now a tool others can use: the Manual on Prosecuting International Environmental Crimes, developed by Climate Counsel and UCLA’s The Promise Institute for Human Rights (Europe).\n\nThe Manual shows investigators, prosecutors and civil society how to build cases for serious environmental harm as international crimes — as war crimes where there is an armed conflict, and as crimes against humanity, which can be committed in peacetime.\n\nAt this event, co-organised by the Embassy of Ukraine in the Kingdom of the Netherlands and the Manual’s authors, the experts behind it will explain how it works, which crimes apply and how evidence is gathered, followed by an open discussion. The law already exists; this session is about using it. Whether you investigate, prosecute, research or campaign, or are simply curious how environmental destruction becomes a criminal case, you are welcome to join. No specialist background required.",
+   "register": "",
+   "contact": "uclapromiseeurope@law.ucla.edu"
+  },
+  {
+   "id": "e14",
+   "title": "No Peace Without Justice: Survivor Voices and Accountability for Crimes in Ukraine",
+   "host": "Netherlands Helsinki Committee",
+   "date": "2026-11-17",
+   "end_date": "",
+   "start": "17:30",
+   "end": "19:30",
+   "venue": "Het Nutshuis",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability"
+   ],
+   "audience": [
+    "General Public",
+    "Policymakers/Diplomats",
+    "Civil Society Practitioners"
+   ],
+   "description": "Peace is not the absence of war, but the presence of justice. Justice has a different meaning for each survivor. It is therefore crucial that the stories of survivors are heard and understood as part of the broader accountability process. \n\nOn November 17, 2026, as part of the Hague Justice Week, the Netherlands Helsinki Committee (NHC) and the Eastern Ukrainian Centre for Civil Initiatives (EUCCI) organise a discussion on accountability for crimes committed in Ukraine, as part of the project \"Justice and Accountability for Ukraine: Strengthening the Role of Survivor- and Civil-Society-Led Initiatives\", funded by the Ministry of Foreign Affairs of the Netherlands. This event is also co-funded by the Embassy of Switzerland in the Netherlands  Held under the theme '80 Years and Beyond: Renewing the Promise of Peace and Justice Through Law', this panel discussion will combine lived experience and legal expertise and aims to host a productive discussion focused on the victims' needs and realistic possibilities for achieving justice. \n\nSpeakers \n\nThree survivors from Ukraine who lived under the occupation will share their stories: Maryna Suprun, Valentyna Pestushko and Volodymyr Scherbachenko. They will be joined by Dr Iva Vukušić, an international expert on accountability for mass atrocities. She has more than 10 years of experience at war crimes tribunals and in advising governments on accountability for crimes committed in Ukraine. Additionally, an expert from the Register of Damage for Ukraine (RD4U) will join the discussion to share their institutional perspective on the justice opportunities for victims. \n\nStories from life under occupation \n\nEUCCI will present Uninvited, a book that compiles 25 personal stories from Ukrainians who lived under Russian occupation between 2014 and 2022. Contributions of residents from Zaporizhzhia, Kyiv, Luhansk, Kharkiv, Kherson and Chernihiv regions describe human rights violations they suffered, such as ''violations of basic freedoms, physical threats, lack of access to water, food, medical care and information, and homes that became places of confinement\". \n\nEvent details: \n\nDate: 17 November 2026 \n\nTime: 17:00-19:30 \n\n Venue: Bankhall, Het Nutshuis. Riviervismarkt 5, 2513 AM The Hague, Netherlands \n\nLanguage: English, Ukrainian with simultaneous interpretation",
+   "register": "",
+   "contact": "office@nhc.nl"
+  },
+  {
+   "id": "e15",
+   "title": "The Hague Justice Week Networking Breakfast",
+   "host": "The Hague Humanity Hub",
+   "date": "2026-11-18",
+   "end_date": "",
+   "start": "08:00",
+   "end": "09:30",
+   "venue": "The Hague Humanity Hub",
+   "format": "In-person",
+   "tags": [
+    "Peace & Security"
+   ],
+   "audience": [
+    "General Public",
+    "Students/Youth",
+    "Civil Society Practitioners"
+   ],
+   "description": "This networking breakfast, hosted at The Hague Humanity Hub, is one of the official networking moments of The Hague Justice Week. Over coffee and breakfast, participants, speakers, practitioners, researchers and advocates are warmly invited to come together before the day’s programme begins. It’s a relaxed opportunity to share highlights from the week so far and connect with others working on peace, justice, human rights and international cooperation.",
+   "register": "https://www.eventbrite.nl/e/the-hague-justice-week-networking-breakfast-tickets-2003356592497?aff=oddtdtcreator&keep_tld=true",
+   "contact": "engage@humanityhub.org"
+  },
+  {
+   "id": "e16",
+   "title": "Safeguarding women and girls’ rights in digital spaces: Unpacking rule of law approaches to address online violence against women and girls",
+   "host": "International Development Law Organisation (IDLO), Embassy of Australia, the Philippines and the United Kingdom, The Hague Municipality and International Gender Champions",
+   "date": "2026-11-18",
+   "end_date": "",
+   "start": "09:00",
+   "end": "10:00",
+   "venue": "IDLO, Hofweg 9E, 2511 AA Den Haag",
+   "format": "Hybrid",
+   "tags": [
+    "Women & Gender",
+    "Artificial Intelligence",
+    "Access to Justice"
+   ],
+   "audience": [
+    "Policymakers/Diplomats",
+    "Legal Professionals",
+    "Civil Society Practitioners"
+   ],
+   "description": "The digital transformation of our daily realities is giving rise to new forms of online violence against women and girls (VAWG). Although the pattern and forms of online violence are unique, they are part of a continuum of violence and discrimination experienced offline, reinforcing systemic inequalities against women and girls. Globally, law and policymakers continue to struggle to comprehensively address online VAWG, leaving significant gaps in legal frameworks for survivors to seek protection or access justice. Even when laws are in place, law enforcement personnel or judiciaries often lack the skills and knowledge, or technical expertise to effectively prevent, respond or adjudicate. This event will bring together policymakers, experts, private sector and civil society to explore the key legal and justice challenges in preventing and responding to online violence.\nFurthermore, panelists will discuss current and future initiatives aimed at eliminating online VAWG, in line with the UN 16 Days of Activism against Gender Based Violence Campaign, starting on 25 November 2026.",
+   "register": "",
+   "contact": ""
+  },
+  {
+   "id": "e17",
+   "title": "When Discomfort Becomes Dialogue: Practising Relational Justice",
+   "host": "The Hague University of Applied Sciences (THUAS)",
+   "date": "2026-11-18",
+   "end_date": "",
+   "start": "09:30",
+   "end": "11:30",
+   "venue": "The Hague University of Applied Sciences",
+   "format": "In-person",
+   "tags": [
+    "Children & Youth Rights",
+    "Access to Justice"
+   ],
+   "audience": [
+    "General Public",
+    "Students/Youth",
+    "Academics/Researchers"
+   ],
+   "description": "In this highly interactive, innovative, and critical dialogue session, participants are invited to co-create and enact a case that brings together different bodies of law, the emotional dimensions of formal rules and regulations, and questions of social justice. The goal is to foster a moment of “emotional reflexivity” among people from diverse positionalities, where discomfort is embraced as an opportunity for relational learning.\n\nWe will draw on frameworks developed through the Relational Peer Mediation project currently underway at The Hague University of Applied Sciences. These include the pedagogy of discomfort, Theatre of the Oppressed, and the Comenius-inspired concept of relational peer mediation. The session is designed for students, educators, and researchers seeking to develop alternative ways of relating within educational contexts.",
+   "register": "",
+   "contact": "peermediationthuas@hhs.nl"
+  },
+  {
+   "id": "e18",
    "title": "The Consensus Trap:  Why Governance Organisations Cannot Decide and What to Do About It",
    "host": "Legitmov",
    "date": "2026-11-18",
@@ -262,7 +424,7 @@
    "contact": "fambreen521@gmail.com"
   },
   {
-   "id": "e12",
+   "id": "e19",
    "title": "Scaling People-Centred Justice with AI",
    "host": "Hope Behind Bars Africa, HiiL",
    "date": "2026-11-18",
@@ -285,7 +447,7 @@
    "contact": "info@hiil.org"
   },
   {
-   "id": "e13",
+   "id": "e20",
    "title": "Legal Clinic for Civil Societal Organizations",
    "host": "Pro Bono Connect",
    "date": "2026-11-18",
@@ -307,7 +469,7 @@
    "contact": "l.derijck@probonoconnect.nl"
   },
   {
-   "id": "e14",
+   "id": "e21",
    "title": "One World, One Home, One Law for All: Commemoration Centenary ICJ Judge and Vice-President Christopher Weeramantry (17.11.1926)",
    "host": "Judicap in co-operation with Sri Lanka Embassy",
    "date": "2026-11-18",
@@ -331,14 +493,36 @@
    "contact": "arthur@judicap.com"
   },
   {
-   "id": "e15",
-   "title": "Prevention at 80: The ICJ, the Duty to Prevent, and the Structural Limits of Anticipatory Justice",
-   "host": "American Bar Association Center for Human Rights",
+   "id": "e22",
+   "title": "Civic Actors Between Authoritarianism and International Power",
+   "host": "Democracy and Rule of Law Collective, World Liberty Congress, East West Management Institute",
    "date": "2026-11-18",
    "end_date": "",
    "start": "15:00",
    "end": "17:00",
-   "venue": "Online",
+   "venue": "The Hague Humanity Hub",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Access to Justice",
+    "Democracy & Authoritarianism"
+   ],
+   "audience": [
+    "General Public"
+   ],
+   "description": "What happens when the people working hardest to defend democracy at home are caught between the authoritarian or illiberal governments they oppose and the international actors who claim to support them? This session, organized in partnership between the World Liberty Congress and the Democracy & Rule of Law Collective, brings together civic leaders, journalists, practitioners and researchers from different regions to explore exactly that question.  Rather than a traditional panel, this is a fishbowl discussion: a small group of speakers sits in a center circle and talks openly, while the audience sits around them and can rotate in to ask questions, respond, or join the conversation directly. Expect an informal, comparative exchange rather than a set of prepared remarks, drawing on speakers’ lived experience in Georgia, Kazakhstan, Nicaragua, Rwanda and China, with voices speaking both from exile and from within their home country. Everyone in the room is invited to explore similarities across these different contexts.\n\nTogether, we’ll examine who gets to shape democratic change, how international support can strengthen or sometimes complicate local efforts, and how civic actors can secure a meaningful role in decisions affecting their countries’ political futures.\n\nWhether you work in civil society, policy, journalism, or research, you’ll leave with a sharper, more grounded understanding of these dynamics than any single country’s story can offer on its own, along with practical lessons for building more inclusive approaches to democracy, justice, accountability and the rule of law. We warmly invite you to join the conversation, not just to listen.",
+   "register": "https://www.eventbrite.nl/e/civic-actors-between-authoritarianism-and-international-power-tickets-2003447134310?aff=oddtdtcreator&keep_tld=true",
+   "contact": ""
+  },
+  {
+   "id": "e23",
+   "title": "Prevention at 80: The ICJ, the Duty to Prevent, and the Structural Limits of Anticipatory Justice",
+   "host": "American Bar Association Center for Human Rights, Stichting ABA ROLI Netherlands",
+   "date": "2026-11-18",
+   "end_date": "",
+   "start": "15:00",
+   "end": "16:15",
+   "venue": "",
    "format": "Online",
    "tags": [
     "International Law & Accountability",
@@ -350,11 +534,11 @@
     "Civil Society Practitioners"
    ],
    "description": "Can international law stop a genocide before it happens, rather than judge it afterward? In 2007, in Bosnia v. Serbia, the International Court of Justice (ICJ) ruled that a state’s duty to prevent genocide begins the moment it learns, or should have known, of a serious risk of atrocity. Today that standard is being tested as never before, in Gambia v. Myanmar, South Africa v. Israel and Ukraine v. Russia, yet the gap between what the doctrine promises and what it achieves has never been wider.\n\nMarking the Court’s 80th anniversary, this session asks whether the ICJ has built a genuine system of anticipatory justice or a vocabulary that arrives, structurally, too late. A moderated panel of experts will develop, rather than resolve, six tensions: how early a warning must be before the “should have known” duty kicks in; who can be expected to act, from third states to armed groups that control no territory; the limits of the Court’s reach when atrocity risk sits inside a single state at civil war; how well states actually observe the Court’s emergency orders (its Article 41 provisional measures); what happens when the Court allocates duties it cannot enforce while the UN Security Council stays deadlocked; and whether the recent surge of cases brought in the common interest strengthens deterrence or exposes how hard the law is to enforce. In this moderated webinar, expert panelists will examine what the law can and cannot do when prevention matters most.",
-   "register": "https://americanbar.zoom.us/webinar/register/WN_JU7817BFRmOU6Sk3KpAn4Q#/registration",
+   "register": "",
    "contact": "roli-outreach@americanbar.org"
   },
   {
-   "id": "e16",
+   "id": "e24",
    "title": "Judging International Justice - featuring Judge Hilary Charlesworth of the International Court of Justice, in conversation with Professor Anna Spain Bradley of UCLA Law",
    "host": "UCLA Law's The Promise Institute for Human Rights (Europe)",
    "date": "2026-11-18",
@@ -378,7 +562,31 @@
    "contact": "uclapromiseeurope@law.ucla.edu"
   },
   {
-   "id": "e17",
+   "id": "e25",
+   "title": "Verhalenhuis Workshop Series",
+   "host": "Pitztop, Olivscent",
+   "date": "2026-11-18",
+   "end_date": "",
+   "start": "18:00",
+   "end": "21:00",
+   "venue": "The Hague Humanity Hub",
+   "format": "In-person",
+   "tags": [
+    "Access to Justice",
+    "Democracy & Authoritarianism",
+    "Visual Arts, Culture & Politics"
+   ],
+   "audience": [
+    "General Public",
+    "Students/Youth",
+    "Civil Society Practitioners"
+   ],
+   "description": "Het Verhalenhuis offers storytelling workshops to people who have often had no prior contact with the performing arts and whose stories are underrepresented in society's mainstream narrative. Each Verhalenhuis edition consists of a series of 6-8 weekly workshops in which participants work on structuring stories and using body language and voice when sharing them.\n\nDuring the Hague Justice week we are having a kick off for a new group in the Hague Humanity Hub together with Pitztop. The session is meant for 8-10 newcomers who want to get acquainted with theatermaking and storytelling. \n\nThe skills to tell and present your own story are applicable in almost any field and can contribute to self-confidence and the sense that your story matters. By reclaiming stories under the motto \"your story on your terms,\" participants discover the power of narrative in their own hands. Alongside the workshops, Het Verhalenhuis also offers these stories and storytellers a stage as a follow-up trajectory. Participants in the Verhalenhuis editions are invited to create a theatre production together with theatre-maker Arvand Dashtaray and the Virgule FPAC team. ROSE Stories also curates a digital version of Het Verhalenhuis, where participants can share their stories in digital format.",
+   "register": "",
+   "contact": "emmylou.aben@pitztop.eu"
+  },
+  {
+   "id": "e26",
    "title": "Jeune Fille, Droit et Souveraineté Économique en Afrique",
    "host": "Cameroon Ministry of Justice, Reknow Femmes D'Expertise",
    "date": "2026-11-19",
@@ -402,7 +610,55 @@
    "contact": "cwinfotsing@yahoo.fr"
   },
   {
-   "id": "e18",
+   "id": "e27",
+   "title": "Justice in an Age of Authoritarianism",
+   "host": "World Liberty Congress",
+   "date": "2026-11-19",
+   "end_date": "",
+   "start": "10:00",
+   "end": "11:30",
+   "venue": "The Hague Humanity Hub",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Access to Justice",
+    "Democracy & Authoritarianism"
+   ],
+   "audience": [
+    "General Public",
+    "Policymakers/Diplomats",
+    "Legal Professionals"
+   ],
+   "description": "Justice in an Age of Authoritarianism will explore how authoritarian governments use tools such as political imprisonment, politically motivated prosecutions, surveillance, forced exile, and transnational repression — when governments target critics and dissidents even beyond their own borders — to silence opposition and weaken democratic movements.\n\nBringing together activists, human rights defenders, and legal experts with direct experience of these tactics, the session will move from documenting patterns of repression to examining what meaningful accountability can look like in practice. Participants can expect a candid discussion about where existing justice mechanisms are working, where gaps remain, and how international institutions and civil society can respond more effectively.\n\nThis session is for anyone interested in the intersection of authoritarianism, human rights, and international justice, and in how accountability can better protect those working for freedom and democracy.\n\nModerated by:\nKate Gibson Barrister - Doughty Street Chambers\n\nParticipants:\nCarine Kanimba – Rwanda \nMuhamadjon Kabirov – Tajikistan\nWu’er Kaixi – China\nNatalia Pelevina – Russia\nKiele Cabrera – Cuba",
+   "register": "",
+   "contact": "info@worldlibertycongress.org"
+  },
+  {
+   "id": "e28",
+   "title": "The Hague’s International Zone: A Journey from War to Peace",
+   "host": "The Hague Municipality",
+   "date": "2026-11-19",
+   "end_date": "",
+   "start": "10:00",
+   "end": "12:00",
+   "venue": "Museon (Stadhouderslaan 37), next to the pond",
+   "format": "In-person",
+   "tags": [
+    "Peace & Security",
+    "International Law & Accountability",
+    "Transitional Justice"
+   ],
+   "audience": [
+    "General Public",
+    "Students/Youth",
+    "Civil Society Practitioners"
+   ],
+   "description": "This 2-hour walking tour takes you through The Hague’s International Zone, home to many of the world’s leading international organizations. Along the way, you will discover how this area transformed from a wartime landscape into a symbol of peace, justice, and international cooperation. Through its landmarks, institutions, and stories, the walk reveals how The Hague became known around the world as the International City of Peace and Justice.",
+   "register": "https://www.eventbrite.nl/e/the-hagues-international-zone-a-journey-from-war-to-peace-tickets-2003355235438?aff=oddtdtcreator&keep_tld=true",
+   "contact": "engage@humanityhub.org"
+  },
+  {
+   "id": "e29",
    "title": "Film Screening: Surviving Genocide – The Rohingya Quest for Justice",
    "host": "Legal Action Worldwide (LAW)",
    "date": "2026-11-19",
@@ -426,7 +682,7 @@
    "contact": "info@legalactionworldwide.org"
   },
   {
-   "id": "e19",
+   "id": "e30",
    "title": "Roundtable on ICJ Jurisprudence",
    "host": "Columbia Society of International Law & Columbia Journal of Transnational Law",
    "date": "2026-11-19",
@@ -450,7 +706,7 @@
    "contact": ""
   },
   {
-   "id": "e20",
+   "id": "e31",
    "title": "The Proposal for an International Anti-Corruption Court: Renewing the Promise of Justice, 80 Years On",
    "host": "Integrity Initiatives International Europe - III Europe",
    "date": "2026-11-19",
@@ -473,7 +729,30 @@
    "contact": "info@iiieurope.org"
   },
   {
-   "id": "e21",
+   "id": "e32",
+   "title": "The Future of the Rule of Law in times of Crisis and Conflict",
+   "host": "United Nations Development Programme (UNDP)",
+   "date": "2026-11-19",
+   "end_date": "",
+   "start": "16:00",
+   "end": "18:00",
+   "venue": "IDLO, Hofweg 9E, 2511 AA Den Haag",
+   "format": "Hybrid",
+   "tags": [
+    "International Law & Accountability",
+    "Access to Justice"
+   ],
+   "audience": [
+    "General Public",
+    "Policymakers/Diplomats",
+    "Civil Society Practitioners"
+   ],
+   "description": "Let’s look back in order to look forward. A promise made 80 years ago – to put law before force – must hold. \n\nWith conflicts multiplying and justice out of reach for millions, how do we prevent crises, renew legitimacy and build justice and security systems that are people-centred, accountable and grounded in human rights?  \n\nJoin a conversation with judges, policymakers and civil society leaders to identify new solutions for new realities. The discussion will bridge international law and national justice systems with the lived realities of people and communities. You will hear voices from conflict zones, courtrooms and the institutions where the international justice agenda is shaped.\n  \nChallenge assumptions, hear different perspectives and help shape what stronger, more people-centred justice and rule of law can look like.",
+   "register": "https://us06web.zoom.us/webinar/register/WN__voxNiafTRO3g2cnV-v26w#/registration",
+   "contact": ""
+  },
+  {
+   "id": "e33",
    "title": "#DemocracyDrinks x The Hague Justice Week: Effects of a Shifting International Order",
    "host": "The Hague Humanity Hub",
    "date": "2026-11-19",
@@ -497,7 +776,27 @@
    "contact": "democracydrinksthehague@gmail.com"
   },
   {
-   "id": "e22",
+   "id": "e34",
+   "title": "Mending the weave: Customary and informal pathways to lasting peace",
+   "host": "",
+   "date": "2026-11-20",
+   "end_date": "",
+   "start": "09:00",
+   "end": "11:00",
+   "venue": "IDLO, Hofweg 9E, 2511 AA Den Haag",
+   "format": "Hybrid",
+   "tags": [],
+   "audience": [
+    "Policymakers/Diplomats",
+    "Legal Professionals",
+    "Civil Society Practitioners"
+   ],
+   "description": "In the 80 years since the International Court of Justice was established, customary and informal justice (CIJ) systems have become increasingly recognized for their role in the architecture of international peace and justice. When aligned with human rights standards and meaningfully connected to formal justice institutions, CIJ systems can contribute to preventing and resolving disputes, restoring trust and strengthening the rule of law, as well as promoting accountability and offering redress for violations of human rights and humanitarian law. As international justice institutions face crises of credibility and legitimacy around the world, there is a distinct role for community-owned, culturally- resonant pathways to justice. The challenge of engaging with CIJ systems is understanding how to do so in a manner that fosters coherence with formal institutions while safeguarding rights, particularly for women, youth, and marginalized and excluded groups.\nThis event will bring together practitioners, scholars, judicial actors, traditional and Indigenous leaders, and policymakers who can speak to how CIJ systems can strengthen access to justice, advance transitional justice, and sustain peace, in ways that are rights-based, gender-responsive, and restorative. It will also explore how to enhance the legitimacy of CIJ mechanisms in the eyes of the communities it serves.",
+   "register": "",
+   "contact": ""
+  },
+  {
+   "id": "e35",
    "title": "Colombia in Search of Justice - Relational Restorative Justice and the Comuneros del Sur Process in Nariño",
    "host": "Embassy of the Kingdom of the Netherlands in Colombia",
    "date": "2026-11-20",
@@ -521,7 +820,30 @@
    "contact": "mathias.zeller@minbuza.nl"
   },
   {
-   "id": "e23",
+   "id": "e36",
+   "title": "Peace Through People-Centered Justice: Renewing the Promise of Peace and Justice Beyond the Courtroom",
+   "host": "Pathfinders, Cordaid",
+   "date": "2026-11-20",
+   "end_date": "",
+   "start": "15:00",
+   "end": "17:00",
+   "venue": "The Hague Humanity Hub",
+   "format": "Hybrid",
+   "tags": [
+    "Access to Justice",
+    "Peace & Security"
+   ],
+   "audience": [
+    "Policymakers/Diplomats",
+    "Academics/Researchers",
+    "Civil Society Practitioners"
+   ],
+   "description": "International efforts to advance peace and justice have often been focused on strengthening institutions, negotiating new legal frameworks and preventing and resolving conflict. Yet for most people, peace and justice are experienced much closer to home: in whether they feel safe in their neighborhood, whether disputes can be resolved fairly, and whether they can access services when they need it. Cities, local governments, community organizations and justice actors are often on the front line of addressing the grievances, exclusion and unmet justice needs that can undermine trust and contribute to violence. Connecting these local realities with national policies and global commitments is essential to building more peaceful, just and inclusive societies.  People-centered justice and violence prevention offer complementary ways of responding to these challenges. Both begin with people's experiences and recognize that lasting peace depends not only on responding to violence or resolving disputes once they escalate, but also on addressing the underlying problems that affect people's safety, dignity and ability to resolve problems peacefully. Bridging the gap between global commitments and local realities is central to the work of Pathfinders for Peaceful, Just and Inclusive Societies. Through initiatives such as Peace in \nOur Cities (PiOC) and the Justice Action Coalition (JAC), Pathfinders brings together governments, cities, and partners to advance complementary approaches to violence prevention and people-centered justice. \n\nThe session will explore the connections between people’s everyday experiences of justice and safety, and how unresolved justice needs, exclusion, and lack of trust can contribute to grievances and violence. Drawing on practical experiences from cities and communities, it will highlight the role of local governments and locally led approaches in advancing people-centered justice, violence prevention, inclusion, trust, and social cohesion.\nThe discussion will also consider how these experiences can inform national and international policy and identify practical lessons for strengthening the relationship between peace, justice, and the rule of law from the local level upward. After these initial panel interventions, the discussion will be opened to participants for questions, reflections, and exchange to create an interactive conversation.",
+   "register": "https://luma.com/luhr3esw",
+   "contact": ""
+  },
+  {
+   "id": "e37",
    "title": "Nuremberg Academy Dialogue: The United Nations and the Nuremberg Principles",
    "host": "International Nuremberg Principles Academy",
    "date": "2026-11-20",
@@ -545,7 +867,7 @@
    "contact": "registration@nurembergacademy.org"
   },
   {
-   "id": "e24",
+   "id": "e38",
    "title": "Renewing the Memories #1 - Blue Island Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-20",
@@ -566,7 +888,31 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e25",
+   "id": "e39",
+   "title": "‘30 Years of the Death of Yugoslavia: A Generational Perspective’",
+   "host": "The Hague University of Applied Sciences (THUAS)",
+   "date": "2026-11-20",
+   "end_date": "",
+   "start": "20:00",
+   "end": "22:00",
+   "venue": "The Hague University of Applied Sciences",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Artificial Intelligence",
+    "Democracy & Authoritarianism"
+   ],
+   "audience": [
+    "General Public",
+    "Students/Youth",
+    "Legal Professionals"
+   ],
+   "description": "Join us as we look back at the BBC’s The Death of Yugoslavia documentary, 30 years later, and explore how the media, misinformation, and propaganda shaped the conflicts. We’ll also discuss how AI and social media have changed the way we receive and understand information today. Expect an interactive session with real-world examples, thought-provoking conversations, and open discussions where everyone is encouraged to share their thoughts. Whether you’re interested in history, politics, or modern technology, this is a great opportunity to explore how the past connects to the world we live in today!",
+   "register": "https://docs.google.com/forms/d/e/1FAIpQLSdkyYrDbshMRdMOLbTg7C1OdI5nxIAr7XjTcs6TI6Ri8kNd0g/viewform",
+   "contact": ""
+  },
+  {
+   "id": "e40",
    "title": "Renewing the Memories #2 - The Taoyuan Airport Incident Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-21",
@@ -587,7 +933,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e26",
+   "id": "e41",
    "title": "Renewing the Memories #3 - Three Castrated Goats - Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-22",
