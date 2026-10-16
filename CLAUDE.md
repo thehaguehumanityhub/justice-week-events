@@ -170,34 +170,31 @@ not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
 silently deletes on save. Excel automation is fragile (it hung once on
 5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 16 October 2026
+## Current state, as of 16 October 2026 (afternoon)
 
-- Widget and script are at **1.1.0**. `events.json` holds **41 activities**,
-  published from the SharePoint workbook. The Kunstmuseum exhibition runs 16 to
-  20 November. NowHere #2 and #3 fall on 21 and 22 November, intended. The
-  14 November Verhalenhuis kick-off was replaced on 16 October by a
-  "Verhalenhuis Workshop Series" on 18 November (asked Giovanni to confirm).
-- Chase list (the script prints it): eighteen activities lack a registration
-  link. "Mending the weave" (20 Nov, IDLO) has no host and no topics.
-  "Heritage on Trial" (17 Nov) is in person with no venue.
-- Individual contact addresses published with the hosts' confirmation:
-  `arthur@judicap.com`, `cwinfotsing@yahoo.fr`, `emmylou.aben@pitztop.eu`,
-  `l.derijck@probonoconnect.nl`, `fambreen521@gmail.com`,
-  `mathias.zeller@minbuza.nl`. They need no local handling.
-  `democracydrinksthehague@gmail.com` and `engage@humanityhub.org` are Hub
-  inboxes, published without confirmation.
-- **Held back pending confirmation** (clear value and hyperlink in every
-  download until Giovanni confirms each, then stop): `s.hickey@idea.int`
-  (International IDEA), `andrea@worldlibertycongress.org` (Civic Actors),
-  `laura.ospina@nyu.edu` (Pathfinders/Cordaid), `lorraine.reuter@undp.org`
-  (UNDP), `vwitula@idlo.int` (both IDLO events),
-  `karloskonstantinos9@gmail.com` (THUAS Yugoslavia).
+- Widget and script are at **1.1.0**. `events.json` holds **50 activities**,
+  24 with a registration link, published from the SharePoint workbook. The
+  Kunstmuseum exhibition runs 16 to 20 November, 10:00 to 17:00.
+- Outside 16 to 20 November: NowHere #2 and #3 (21 and 22 Nov, intended);
+  EcoJustice's EU Environmental Crime Directive session (12 Nov) and the fourth
+  Global ProBono Bar "Conscientious Lawyering" panel (23 Nov), both asked about
+  on 16 October. The 14 November Verhalenhuis kick-off became a "Verhalenhuis
+  Workshop Series" on 18 November (also asked).
+- **Contacts:** on 16 October Giovanni confirmed that every host in the
+  workbook agreed to their contact address being public, including
+  individuals' addresses. Nothing is held back. For contacts added after that
+  date, an individual's address still needs his confirmation before it is
+  published; a shared or organisational inbox does not.
 - **Silent local fixes on every download**, until they are made in SharePoint
-  (Giovanni knows; do not report them each time): delete the old CAVV row
-  ("Advisory Committee … University of Tilburg"); typos "moderatod by  Alessia",
+  (Giovanni knows; do not report them each time): typos "moderatod by  Alessia",
   "Ministy", "excercise", "examine t whether", "International Developmen Law",
   "Embassy of australia", "The Philippine and" (to "the Philippines and"),
-  "The Hague Humanity hub" (venue).
+  "The Hague Humanity hub". The old CAVV row was removed in SharePoint on
+  16 October; if it ever reappears, clear it again.
+- Open with Giovanni: ABA "Prevention at 80" lost its Zoom registration link
+  and its "Online" venue on 16 October, which looks accidental. ECNL's
+  registration cell holds two links (Eventbrite, then Zoom); only the first
+  becomes the button.
 - **Outlook Safe Links**: partners paste links copied from Outlook, wrapped as
   `https://<x>.safelinks.protection.outlook.com/?url=<encoded>&data=…`. The
   wrapper carries the sender's email address and tracking data, and must never
