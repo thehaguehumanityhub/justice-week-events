@@ -170,35 +170,39 @@ not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
 silently deletes on save. Excel automation is fragile (it hung once on
 5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 14 October 2026
+## Current state, as of 16 October 2026
 
-- Widget and script are at **1.1.0**. `events.json` holds **26 activities**,
+- Widget and script are at **1.1.0**. `events.json` holds **41 activities**,
   published from the SharePoint workbook. The Kunstmuseum exhibition runs 16 to
-  20 November. Three activities fall outside 16 to 20 November, all intended:
-  Verhalenhuis (Sat 14 Nov) and NowHere #2 and #3 (21 and 22 Nov).
-- On 5 October the original 11 activities were moved from a local workbook into
-  the SharePoint file. The local `events calendar template.xlsx` is retired.
-- Chase list: eleven activities lack a registration link (ECNL, HiiL, Legal
-  Action Worldwide, Kunstmuseum, Columbia, Weeramantry centenary, Jeune Fille,
-  Verhalenhuis, OLJA's Gap Report launch, the Palestine panel at ISS, and
-  Legitmov). Columbia and the Palestine panel
-  have no public contact. Columbia and Jeune Fille are
-  hybrid with no venue.
-- Individual contact addresses, all published with the hosts' confirmation:
-  `arthur@judicap.com` and `cwinfotsing@yahoo.fr` (7 October),
-  `emmylou.aben@pitztop.eu` (Verhalenhuis) and `l.derijck@probonoconnect.nl`
-  (Pro Bono Connect legal clinic) (8 October), `fambreen521@gmail.com`
-  (Legitmov) and `mathias.zeller@minbuza.nl` (Colombia, Comuneros del Sur)
-  (14 October). They are in SharePoint as entered, so they need no local
-  handling. `democracydrinksthehague@gmail.com` is the #DemocracyDrinks series
-  inbox, so it is published without confirmation. Nothing is held back.
-- Pending SharePoint clean-up, each re-applied locally on every download until
-  done: the old CAVV row ("Advisory Committee … University of Tilburg",
-  superseded by the CAVV resubmission with the same title) must be deleted, and
-  four typos fixed (FIBGAR "moderatod by  Alessia", "Ministy", "excercise",
-  and Mukwege panel 1 "examine t whether"). Giovanni knows about these and does
-  not need them reported each time: just re-apply them silently.
-  Check for all of these on the next download.
+  20 November. NowHere #2 and #3 fall on 21 and 22 November, intended. The
+  14 November Verhalenhuis kick-off was replaced on 16 October by a
+  "Verhalenhuis Workshop Series" on 18 November (asked Giovanni to confirm).
+- Chase list (the script prints it): eighteen activities lack a registration
+  link. "Mending the weave" (20 Nov, IDLO) has no host and no topics.
+  "Heritage on Trial" (17 Nov) is in person with no venue.
+- Individual contact addresses published with the hosts' confirmation:
+  `arthur@judicap.com`, `cwinfotsing@yahoo.fr`, `emmylou.aben@pitztop.eu`,
+  `l.derijck@probonoconnect.nl`, `fambreen521@gmail.com`,
+  `mathias.zeller@minbuza.nl`. They need no local handling.
+  `democracydrinksthehague@gmail.com` and `engage@humanityhub.org` are Hub
+  inboxes, published without confirmation.
+- **Held back pending confirmation** (clear value and hyperlink in every
+  download until Giovanni confirms each, then stop): `s.hickey@idea.int`
+  (International IDEA), `andrea@worldlibertycongress.org` (Civic Actors),
+  `laura.ospina@nyu.edu` (Pathfinders/Cordaid), `lorraine.reuter@undp.org`
+  (UNDP), `vwitula@idlo.int` (both IDLO events),
+  `karloskonstantinos9@gmail.com` (THUAS Yugoslavia).
+- **Silent local fixes on every download**, until they are made in SharePoint
+  (Giovanni knows; do not report them each time): delete the old CAVV row
+  ("Advisory Committee … University of Tilburg"); typos "moderatod by  Alessia",
+  "Ministy", "excercise", "examine t whether", "International Developmen Law",
+  "Embassy of australia", "The Philippine and" (to "the Philippines and"),
+  "The Hague Humanity hub" (venue).
+- **Outlook Safe Links**: partners paste links copied from Outlook, wrapped as
+  `https://<x>.safelinks.protection.outlook.com/?url=<encoded>&data=…`. The
+  wrapper carries the sender's email address and tracking data, and must never
+  be published. Unwrap to the decoded `url` parameter (UNDP's Zoom link and a
+  second ECNL link on 16 October). Check every download for `safelinks`.
 - Clearing a cell in the download with openpyxl does not remove its hyperlink,
   and the script then reads the hyperlink target (`mailto:…`) back as the value.
   Clear `cell.hyperlink` too.
