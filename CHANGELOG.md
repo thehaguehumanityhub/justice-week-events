@@ -9,6 +9,19 @@ Each version is tagged in git (`v1.1.0`), so an older widget can be served
 from jsDelivr by tag if a release ever needs rolling back:
 `https://cdn.jsdelivr.net/gh/thehaguehumanityhub/justice-week-events@v1.0.0/events-embed.html`
 
+## 1.1.1 — 2026-10-19
+
+Script
+- Reads a registration link hidden behind display text ("Registration form:
+  …", a shortened address), falling back to the cell's hyperlink when the
+  visible text holds no web address. Ten activities had been published
+  without their link.
+- Unwraps Outlook Safe Links in registration links, which carry the sender's
+  email address and tracking data, so they cannot be published by mistake.
+
+Widget
+- No change beyond the version number.
+
 ## 1.1.0 — 2026-09-25
 
 Widget

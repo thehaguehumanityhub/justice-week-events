@@ -170,10 +170,10 @@ not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
 silently deletes on save. Excel automation is fragile (it hung once on
 5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 19 October 2026
+## Current state, as of 19 October 2026 (evening)
 
-- Widget and script are at **1.1.0**. `events.json` holds **51 activities**,
-  25 with a registration link, published from the SharePoint workbook. The
+- Widget and script are at **1.1.1**. `events.json` holds **51 activities**,
+  35 with a registration link, published from the SharePoint workbook. The
   Kunstmuseum exhibition runs 16 to 20 November, 10:00 to 17:00.
 - Outside 16 to 20 November: NowHere #2 and #3 (21 and 22 Nov, intended);
   EcoJustice's EU Environmental Crime Directive session (12 Nov) and the fourth
@@ -203,8 +203,16 @@ silently deletes on save. Excel automation is fragile (it hung once on
 - **Outlook Safe Links**: partners paste links copied from Outlook, wrapped as
   `https://<x>.safelinks.protection.outlook.com/?url=<encoded>&data=…`. The
   wrapper carries the sender's email address and tracking data, and must never
-  be published. Unwrap to the decoded `url` parameter (UNDP's Zoom link and a
-  second ECNL link on 16 October). Check every download for `safelinks`.
+  be published. Since 1.1.1 the script unwraps them in registration links
+  itself; still check the published file for `safelinks` anywhere else.
+- **Hidden links**: partners often paste a link behind display text
+  ("Registration form: …"). Since 1.1.1 the script falls back to the cell's
+  hyperlink when the visible text holds no web address. Before that, ten links
+  were silently dropped, and on 19 October colleagues rewrote some cells as
+  plain URLs trying to work around it. They no longer need to.
+- Three hosts put an email address in the registration field (Hope Behind
+  Bars Africa, OLJA, Save the Children). By design these show "Registration
+  opens soon", not a button.
 - Clearing a cell in the download with openpyxl does not remove its hyperlink,
   and the script then reads the hyperlink target (`mailto:…`) back as the value.
   Clear `cell.hyperlink` too.

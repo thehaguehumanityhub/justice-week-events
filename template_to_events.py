@@ -12,9 +12,10 @@ If the result would hold fewer activities than the current events.json, nothing 
 and the missing titles are listed. Add --allow-fewer when removing activities on purpose.
 """
 import sys, json, re, datetime
+from urllib.parse import unquote
 from openpyxl import load_workbook
 
-VERSION = "1.1.0"  # keep in step with CHANGELOG.md and the widget
+VERSION = "1.1.1"  # keep in step with CHANGELOG.md and the widget
 
 EXAMPLE_TITLE = "Justice has no Passport: A Global Conversation on Universal Jurisdiction"
 EXAMPLE_ORG   = "Baltasar Garzón International Foundation"
@@ -28,6 +29,12 @@ HEAD = {  # template header -> field
  "public contact":"contact",
 }
 URL = re.compile(r"https?://\S+")
+SAFELINK = re.compile(r"https://[a-z0-9]+\.safelinks\.protection\.outlook\.com/\?url=([^&\s]+)\S*")
+
+def unwrap(url):
+    """Outlook Safe Links carry the sender's address and tracking data: keep only the real link."""
+    m = SAFELINK.match(url)
+    return unquote(m.group(1)) if m else url
 
 def txt(v):
     if v is None: return ""
@@ -55,13 +62,18 @@ def read(path):
     for i, name in enumerate(cols):
         if name in HEAD: idx[HEAD[name]] = i
     out = []
-    for row in ws.iter_rows(min_row=hrow+1, values_only=True):
+    for cells in ws.iter_rows(min_row=hrow+1):
+        row = [c.value for c in cells]
         g = lambda k: txt(row[idx[k]]) if k in idx and idx[k] < len(row) else ""
         title = g("title")
         if not title: continue
         if title == EXAMPLE_TITLE and g("host").startswith(EXAMPLE_ORG[:20]):
             continue                                   # untouched example row
         reg = g("register"); m = URL.search(reg)
+        if not m and "register" in idx and idx["register"] < len(cells):
+            # link hidden behind display text, e.g. "Registration form: ..."
+            link = cells[idx["register"]].hyperlink
+            m = URL.match(link.target or "") if link else None
         out.append({
           "title": title,
           "host": g("host"),
@@ -74,7 +86,7 @@ def read(path):
           "tags": [x for x in (g("t1"), g("t2"), g("t3")) if x],
           "audience": [x for x in (g("a1"), g("a2"), g("a3")) if x],
           "description": g("description"),
-          "register": m.group(0).rstrip(".,);") if m else "",
+          "register": unwrap(m.group(0)).rstrip(".,);") if m else "",
           "contact": g("contact"),
         })
     return out
