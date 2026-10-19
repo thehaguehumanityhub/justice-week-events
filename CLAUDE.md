@@ -170,10 +170,10 @@ not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
 silently deletes on save. Excel automation is fragile (it hung once on
 5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 16 October 2026 (afternoon)
+## Current state, as of 19 October 2026
 
-- Widget and script are at **1.1.0**. `events.json` holds **50 activities**,
-  24 with a registration link, published from the SharePoint workbook. The
+- Widget and script are at **1.1.0**. `events.json` holds **51 activities**,
+  25 with a registration link, published from the SharePoint workbook. The
   Kunstmuseum exhibition runs 16 to 20 November, 10:00 to 17:00.
 - Outside 16 to 20 November: NowHere #2 and #3 (21 and 22 Nov, intended);
   EcoJustice's EU Environmental Crime Directive session (12 Nov) and the fourth
@@ -185,6 +185,11 @@ silently deletes on save. Excel automation is fragile (it hung once on
   individuals' addresses. Nothing is held back. For contacts added after that
   date, an individual's address still needs his confirmation before it is
   published; a shared or organisational inbox does not.
+- **Held back pending confirmation** (clear value and hyperlink in every
+  download until Giovanni confirms, then stop): `amuzergues@idlo.int` (Justice
+  in wartime, Ukraine) and `mwarren@idlo.int` (Mending the weave), both new on
+  19 October, replacing confirmed IDLO addresses. Until confirmed, both
+  activities show no contact.
 - **Silent local fixes on every download**, until they are made in SharePoint
   (Giovanni knows; do not report them each time): typos "moderatod by  Alessia",
   "Ministy", "excercise", "examine t whether", "International Developmen Law",
