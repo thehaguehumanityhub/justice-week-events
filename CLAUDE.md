@@ -185,11 +185,9 @@ silently deletes on save. Excel automation is fragile (it hung once on
   individuals' addresses. Nothing is held back. For contacts added after that
   date, an individual's address still needs his confirmation before it is
   published; a shared or organisational inbox does not.
-- **Held back pending confirmation** (clear value and hyperlink in every
-  download until Giovanni confirms, then stop): `amuzergues@idlo.int` (Justice
-  in wartime, Ukraine) and `mwarren@idlo.int` (Mending the weave), both new on
-  19 October, replacing confirmed IDLO addresses. Until confirmed, both
-  activities show no contact.
+- `amuzergues@idlo.int` (Justice in wartime) and `mwarren@idlo.int` (Mending
+  the weave), new on 19 October, were confirmed the same day and are
+  published. Nothing is held back.
 - **Silent local fixes on every download**, until they are made in SharePoint
   (Giovanni knows; do not report them each time): typos "moderatod by  Alessia",
   "Ministy", "excercise", "examine t whether", "International Developmen Law",
