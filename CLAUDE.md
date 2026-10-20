@@ -170,13 +170,13 @@ not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
 silently deletes on save. Excel automation is fragile (it hung once on
 5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 19 October 2026 (evening)
+## Current state, as of 20 October 2026
 
-- Widget and script are at **1.1.1**. `events.json` holds **51 activities**,
-  35 with a registration link, published from the SharePoint workbook. The
+- Widget and script are at **1.1.1**. `events.json` holds **54 activities**,
+  37 with a registration link, published from the SharePoint workbook. The
   Kunstmuseum exhibition runs 16 to 20 November, 10:00 to 17:00.
 - Outside 16 to 20 November: NowHere #2 and #3 (21 and 22 Nov, intended);
-  EcoJustice's EU Environmental Crime Directive session (12 Nov) and the fourth
+  EcoJustice's EU Environmental Crime Directive session (13 Nov, at the Hub) and the fourth
   Global ProBono Bar "Conscientious Lawyering" panel (23 Nov), both asked about
   on 16 October. The 14 November Verhalenhuis kick-off became a "Verhalenhuis
   Workshop Series" on 18 November (also asked).
@@ -187,17 +187,20 @@ silently deletes on save. Excel automation is fragile (it hung once on
   published; a shared or organisational inbox does not.
 - `amuzergues@idlo.int` (Justice in wartime) and `mwarren@idlo.int` (Mending
   the weave), new on 19 October, were confirmed the same day and are
-  published. Nothing is held back.
+  published.
+- **Held back pending confirmation** (clear value and hyperlink in every
+  download until Giovanni confirms, then stop): `alyn.ware@wfm-igp.org` (World
+  Federalist Movement, LAW not War) and `jessica.corsi@city.ac.uk` (City Law
+  School, Gender and the ICJ), both new on 20 October.
 - **Silent local fixes on every download**, until they are made in SharePoint
   (Giovanni knows; do not report them each time): typos "moderatod by  Alessia",
   "Ministy", "excercise", "examine t whether", "International Developmen Law",
   "Embassy of australia", "The Philippine and" (to "the Philippines and"),
-  "The Hague Humanity hub". The old CAVV row was removed in SharePoint on
+  "The Hague Humanity hub", "Ukranian" (NHC host line). The old CAVV row was removed in SharePoint on
   16 October; if it ever reappears, clear it again.
-- Open with Giovanni: ABA "Prevention at 80" lost its Zoom registration link
-  and its "Online" venue on 16 October, which looks accidental. ECNL's
-  registration cell holds two links (Eventbrite, then Zoom); only the first
-  becomes the button.
+- ECNL's registration cell holds two links (Eventbrite, then Zoom); only the
+  first becomes the button. Links clicked in Excel Online gain harmless
+  `&OR=EXCEL-WEB…&CT=…` tracking parameters; they work unchanged.
 - **Outlook Safe Links**: partners paste links copied from Outlook, wrapped as
   `https://<x>.safelinks.protection.outlook.com/?url=<encoded>&data=…`. The
   wrapper carries the sender's email address and tracking data, and must never
