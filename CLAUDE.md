@@ -20,7 +20,8 @@ SharePoint and which is downloaded as an input and deliberately never committed.
 | `CHANGELOG.md` | What changed in each version of the widget, script and template. |
 
 Sibling repo `thehaguehumanityhub/thjw` holds the co-hosting organisations logo
-grid, a separate widget on the same page. Same delivery method, different data.
+grid, a separate widget on the same page. Same delivery method, different data. Its own
+`CLAUDE.md` covers the roster, logos and overrides.
 
 ## How it reaches the website
 
