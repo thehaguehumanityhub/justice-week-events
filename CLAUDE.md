@@ -115,8 +115,9 @@ Only `id` and `title` are required. Everything else degrades deliberately:
 **Never publish personal contact details.** The intake collects each host's
 personal email and phone number. Neither script copies them and neither belongs
 in this repo, which is public twice over, on GitHub and on the CDN. The only
-contact that reaches the page is the field hosts filled in as public-facing, and
-even there a shared inbox is preferred over an individual's address.
+contact that reaches the page is the field hosts filled in as public-facing.
+An individual's address there is fine: colleagues get the host's permission
+before entering it (see Current state).
 
 **Never commit the raw submissions.** The `.xlsx` files stay outside the repo,
 in `~/Downloads/thjw/`.
@@ -170,7 +171,7 @@ not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
 silently deletes on save. Excel automation is fragile (it hung once on
 5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 22 October 2026
+## Current state, as of 22 October 2026 (afternoon)
 
 - Widget and script are at **1.1.1**. `events.json` holds **58 activities**,
   40 with a registration link, published from the SharePoint workbook. The
@@ -180,19 +181,12 @@ silently deletes on save. Excel automation is fragile (it hung once on
   Global ProBono Bar "Conscientious Lawyering" panel (23 Nov), both asked about
   on 16 October. The 14 November Verhalenhuis kick-off became a "Verhalenhuis
   Workshop Series" on 18 November (also asked).
-- **Contacts:** on 16 October Giovanni confirmed that every host in the
-  workbook agreed to their contact address being public, including
-  individuals' addresses. Nothing is held back. For contacts added after that
-  date, an individual's address still needs his confirmation before it is
-  published; a shared or organisational inbox does not.
-- `amuzergues@idlo.int` (Justice in wartime) and `mwarren@idlo.int` (Mending
-  the weave), new on 19 October, were confirmed the same day and are
-  published.
-- **Held back pending confirmation** (clear value and hyperlink in every
-  download until Giovanni confirms, then stop): `alyn.ware@wfm-igp.org` (World
-  Federalist Movement, LAW not War) and `jessica.corsi@city.ac.uk` (City Law
-  School, Gender and the ICJ), both new on 20 October; `sfalasca@ictj.org`
-  (ICTJ, Justice in New Languages), new on 22 October.
+- **Contacts:** since 22 October, every address in the workbook's "Public
+  contact" column counts as approved, including individuals' addresses:
+  Giovanni's colleagues get each host's permission before entering it. Publish
+  them as they are, without holding any back or asking. This applies only to
+  that column; the personal-details rule above still forbids copying anything
+  else from the intake.
 - **Silent local fixes on every download**, until they are made in SharePoint
   (Giovanni knows; do not report them each time): typos "moderatod by  Alessia",
   "Ministy", "excercise", "examine t whether", "International Developmen Law",
