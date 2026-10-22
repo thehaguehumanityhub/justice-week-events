@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20",
+ "updated": "2026-10-22",
  "events": [
   {
    "id": "e01",
@@ -171,7 +171,7 @@
   {
    "id": "e08",
    "title": "International Justice and the Digital Realm: Addressing the Legislative and Adjudicative Gaps",
-   "host": "ProtectNGO",
+   "host": "ProtectNGO, Embassy of The Kingdom of The Netherlands, and City of The Hague",
    "date": "2026-11-16",
    "end_date": "",
    "start": "15:00",
@@ -377,11 +377,35 @@
     "Academics/Researchers"
    ],
    "description": "International law promises protection and accountability, but too often its rules are weak, unclear or simply not enforced. This session introduces the International Law Gap Report, a research project by Omnijuris Law & Justice Advocates (OLJA) that maps where international humanitarian law, human rights law, international criminal law and refugee law fall short in practice, and where reform could close the gap.\n\nThe OLJA team will present the report's approach and first findings, followed by an open discussion with the audience. No specialist knowledge is needed, and technical terms will be explained.\n\nJoin us to learn how the report was built, share your own experience of where the law falls short, and find out how to contribute to the next stage of the project.",
-   "register": "",
+   "register": "https://tally.so/r/Z9j8av",
    "contact": "info@omnijuris.org"
   },
   {
    "id": "e17",
+   "title": "Beyond the Rescue: Confronting Barriers to Justice for Child Survivors",
+   "host": "Free a Girl",
+   "date": "2026-11-17",
+   "end_date": "",
+   "start": "13:00",
+   "end": "15:00",
+   "venue": "",
+   "format": "Online",
+   "tags": [
+    "Women & Gender",
+    "Children & Youth Rights",
+    "Access to Justice"
+   ],
+   "audience": [
+    "General Public",
+    "Students/Youth",
+    "Academics/Researchers"
+   ],
+   "description": "This session will unpack the often-hidden realities of the legal maze that child survivors of sexual abuse and trafficking face long after their initial rescue. Because dramatic rescue operations frequently capture public attention while the subsequent judicial hurdles remain largely invisible, this session, drawing from research conducted by Free A Girl in four countries, will focus on the systemic, procedural, and social barriers that obstruct true access to justice. The talk will highlight how the very institutions designed to protect vulnerable children often become secondary sources of trauma due to severe gaps in procedural rights, a lack of trauma-sensitive procedures, and inadequate witness protection.\nThis presentation will translate complex judicial failings and data into a deeply human narrative. Specifically, the session will aim to:\n●        Highlight the intense financial, emotional, and social hurdles that will follow during the legal process.\n●        Outline the specific barriers survivors encounter, including direct intimidation from perpetrators, social stigma, and the systemic failures.\n●        Equip the audience with an understanding of the reforms required that will be necessary to transform a retraumatizing legal system into a genuine pathway for healing and restitution.",
+   "register": "",
+   "contact": "atj@freeagirl.nl"
+  },
+  {
+   "id": "e18",
    "title": "The ICJ at 100: Realistic Expectations on the World Court’s Next 20 Years",
    "host": "European Society of International Law",
    "date": "2026-11-17",
@@ -405,7 +429,7 @@
    "contact": "james.devaney@glasgow.ac.uk"
   },
   {
-   "id": "e18",
+   "id": "e19",
    "title": "From Ukraine to Global Accountability: Presenting the Manual on Prosecuting International Environmental Crimes",
    "host": "Embassy of Ukraine in the Kingdom of the Netherlands, Climate Counsel and UCLA Promise Institute for Human Rights",
    "date": "2026-11-17",
@@ -429,9 +453,9 @@
    "contact": "uclapromiseeurope@law.ucla.edu"
   },
   {
-   "id": "e19",
+   "id": "e20",
    "title": "Who Owns the Truth?",
-   "host": "Asymmetrical Haircuts",
+   "host": "Asymmetrical Haircuts, Leiden University",
    "date": "2026-11-17",
    "end_date": "",
    "start": "16:00",
@@ -453,7 +477,7 @@
    "contact": "editors@asymmetricalhaircuts.com"
   },
   {
-   "id": "e20",
+   "id": "e21",
    "title": "What Does Gender Have to Do with It? Gender, the ICJ Judge, and the International Rule of Law",
    "host": "The City Law School, City St George's University, University of London, The Working Group on Gender Parity for the ICJ",
    "date": "2026-11-17",
@@ -477,7 +501,7 @@
    "contact": ""
   },
   {
-   "id": "e21",
+   "id": "e22",
    "title": "No Peace Without Justice: Survivor Voices and Accountability for Crimes in Ukraine",
    "host": "Netherlands Helsinki Committee, Eastern Ukrainian Centre for Civil Initiatives (EUCCI), Dutch Ministry of Foreign Affairs, Embassy of Switzerland to The Netherlands",
    "date": "2026-11-17",
@@ -499,7 +523,7 @@
    "contact": "office@nhc.nl"
   },
   {
-   "id": "e22",
+   "id": "e23",
    "title": "The Hague Justice Week Networking Breakfast",
    "host": "The Hague Humanity Hub",
    "date": "2026-11-18",
@@ -521,7 +545,7 @@
    "contact": "engage@humanityhub.org"
   },
   {
-   "id": "e23",
+   "id": "e24",
    "title": "Safeguarding women and girls’ rights in digital spaces: Unpacking rule of law approaches to address online violence against women and girls",
    "host": "International Development Law Organisation (IDLO), Embassy of Australia, The Philippines and the United Kingdom, The Hague Municipality and International Gender Champions",
    "date": "2026-11-18",
@@ -545,7 +569,7 @@
    "contact": "vwitula@idlo.int"
   },
   {
-   "id": "e24",
+   "id": "e25",
    "title": "When Discomfort Becomes Dialogue: Practising Relational Justice",
    "host": "The Hague University of Applied Sciences (THUAS)",
    "date": "2026-11-18",
@@ -568,7 +592,7 @@
    "contact": "peermediationthuas@hhs.nl"
   },
   {
-   "id": "e25",
+   "id": "e26",
    "title": "The Consensus Trap:  Why Governance Organisations Cannot Decide and What to Do About It",
    "host": "Legitmov",
    "date": "2026-11-18",
@@ -591,7 +615,7 @@
    "contact": "fambreen521@gmail.com"
   },
   {
-   "id": "e26",
+   "id": "e27",
    "title": "Conscientious Lawyering: Realizing the Promise of International Law: Artificial Intelligence Law",
    "host": "Global ProBono Bar Association",
    "date": "2026-11-18",
@@ -614,7 +638,7 @@
    "contact": "contact@probonobar.org"
   },
   {
-   "id": "e27",
+   "id": "e28",
    "title": "Scaling People-Centred Justice with AI",
    "host": "Hope Behind Bars Africa, HiiL",
    "date": "2026-11-18",
@@ -637,7 +661,7 @@
    "contact": "hello@hopebehindbarsafrica.org"
   },
   {
-   "id": "e28",
+   "id": "e29",
    "title": "One World, One Home, One Law for All: Commemoration Centenary ICJ Judge and Vice-President Christopher Weeramantry (17.11.1926)",
    "host": "Judicap in co-operation with Sri Lanka Embassy",
    "date": "2026-11-18",
@@ -661,7 +685,29 @@
    "contact": "arthur@judicap.com"
   },
   {
-   "id": "e29",
+   "id": "e30",
+   "title": "Arrest Warrants and Peace Negotiations: Charting New Pathways Towards Peace and Justice",
+   "host": "Leiden University",
+   "date": "2026-11-18",
+   "end_date": "",
+   "start": "15:00",
+   "end": "19:00",
+   "venue": "Leiden University, Campus Spui, Spui 5, 2511 BL Den Haag",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability"
+   ],
+   "audience": [
+    "General Public",
+    "Policymakers/Diplomats",
+    "Legal Professionals"
+   ],
+   "description": "International criminal justice is increasingly relevant in situations of ongoing conflict or conflict transformation. At the same time, the dynamics and formats of peace negotiations are rapidly evolving in times of changing geopolitics. \nThese developments pose challenges in relation to the interplay of peace and justice. How can states simultaneously uphold their legal obligations to investigate and prosecute international crimes and cooperate with international legal institutions, such as the International Criminal Court (ICC), while facilitating negotiations aimed at ending armed conflict and reaching long term sustainable peace? \nWhat legal and practical avenues exist to reconcile peace and justice, without prioritizing one over the other? What space does the law of cooperation provide for consultation or diplomatic initiatives? \nIf you are interested in these discussions, join us for our expert seminar and debate on Arrest Warrants and Peace Negotiations: Charting New Pathways Towards Peace and Justice",
+   "register": "https://www.formdesk.com/universiteitleiden/PeaceJusticeEvent18Nov",
+   "contact": "grotiuscentre@law.leidenuniv.nl"
+  },
+  {
+   "id": "e31",
    "title": "Civic Actors Between Authoritarianism and International Power",
    "host": "Democracy and Rule of Law Collective, World Liberty Congress, Lex Populi",
    "date": "2026-11-18",
@@ -683,7 +729,7 @@
    "contact": "andrea@worldlibertycongress.org"
   },
   {
-   "id": "e30",
+   "id": "e32",
    "title": "Prevention at 80: The ICJ, the Duty to Prevent, and the Structural Limits of Anticipatory Justice",
    "host": "American Bar Association Center for Human Rights, Stichting ABA ROLI Netherlands",
    "date": "2026-11-18",
@@ -706,7 +752,7 @@
    "contact": "roli-outreach@americanbar.org"
   },
   {
-   "id": "e31",
+   "id": "e33",
    "title": "Legal Clinic for Civil Societal Organizations",
    "host": "Pro Bono Connect, Partos",
    "date": "2026-11-18",
@@ -728,7 +774,7 @@
    "contact": "l.derijck@probonoconnect.nl"
   },
   {
-   "id": "e32",
+   "id": "e34",
    "title": "Judging International Justice - featuring Judge Hilary Charlesworth of the International Court of Justice, in conversation with Professor Anna Spain Bradley of UCLA Law",
    "host": "UCLA Law's The Promise Institute for Human Rights (Europe)",
    "date": "2026-11-18",
@@ -752,7 +798,7 @@
    "contact": "uclapromiseeurope@law.ucla.edu"
   },
   {
-   "id": "e33",
+   "id": "e35",
    "title": "Verhalenhuis Workshop Series",
    "host": "Pitztop, Olivscent",
    "date": "2026-11-18",
@@ -776,7 +822,7 @@
    "contact": "emmylou.aben@pitztop.eu"
   },
   {
-   "id": "e34",
+   "id": "e36",
    "title": "The Latest Front in the Fight for Free Speech: Screening of the \"The Librarians\"",
    "host": "International Federation of Library Association and Institutions (IFLA)",
    "date": "2026-11-18",
@@ -800,7 +846,7 @@
    "contact": "ifla@ifla.org"
   },
   {
-   "id": "e35",
+   "id": "e37",
    "title": "Jeune Fille, Droit et Souveraineté Économique en Afrique",
    "host": "Cameroon Ministry of Justice, Reknow Femmes D'Expertise",
    "date": "2026-11-19",
@@ -824,7 +870,7 @@
    "contact": "cwinfotsing@yahoo.fr"
   },
   {
-   "id": "e36",
+   "id": "e38",
    "title": "Justice in an Age of Authoritarianism",
    "host": "World Liberty Congress",
    "date": "2026-11-19",
@@ -848,7 +894,7 @@
    "contact": "info@worldlibertycongress.org"
   },
   {
-   "id": "e37",
+   "id": "e39",
    "title": "Not Just Upheld, Reimagined: Seeing Children as Children in International Law",
    "host": "Save The Children, Global Rights Compliance",
    "date": "2026-11-19",
@@ -871,7 +917,7 @@
    "contact": "hagueaccountabilityhub@savethechildren.nl"
   },
   {
-   "id": "e38",
+   "id": "e40",
    "title": "The Hague’s International Zone: A Journey from War to Peace",
    "host": "The Hague Municipality",
    "date": "2026-11-19",
@@ -895,7 +941,7 @@
    "contact": "engage@humanityhub.org"
   },
   {
-   "id": "e39",
+   "id": "e41",
    "title": "Film Screening: Surviving Genocide – The Rohingya Quest for Justice",
    "host": "Legal Action Worldwide (LAW)",
    "date": "2026-11-19",
@@ -919,7 +965,7 @@
    "contact": "info@legalactionworldwide.org"
   },
   {
-   "id": "e40",
+   "id": "e42",
    "title": "Roundtable on International Court of Justice (ICJ) Jurisprudence",
    "host": "Columbia Society of International Law & Columbia Journal of Transnational Law",
    "date": "2026-11-19",
@@ -943,7 +989,7 @@
    "contact": "mob2119@columbia.edu"
   },
   {
-   "id": "e41",
+   "id": "e43",
    "title": "The Proposal for an International Anti-Corruption Court: Renewing the Promise of Justice, 80 Years On",
    "host": "Integrity Initiatives International Europe - III Europe",
    "date": "2026-11-19",
@@ -966,9 +1012,33 @@
    "contact": "info@iiieurope.org"
   },
   {
-   "id": "e42",
+   "id": "e44",
+   "title": "Justice in New Languages: Youth, Art, and the Future of the Fight Against Impunity",
+   "host": "International Center for Transitional Justice (ICTJ)",
+   "date": "2026-11-19",
+   "end_date": "",
+   "start": "16:00",
+   "end": "18:00",
+   "venue": "Pulchri Studio, Lange Voorhout 15, The Hague, Netherlands",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Children & Youth Rights",
+    "Access to Justice"
+   ],
+   "audience": [
+    "Students/Youth",
+    "Policymakers/Diplomats",
+    "Civil Society Practitioners"
+   ],
+   "description": "Eighty years after the founding of the International Court of Justice, a new generation is reimagining how communities pursue truth, accountability, and justice.\n\nAcross Lebanon, Syria, The Gambia, Colombia, and Ukraine, young activists and community leaders are challenging impunity and confronting legacies of conflict and repression. Rather than relying solely on traditional legal and institutional approaches, they are using art, film, music, digital storytelling, and grassroots initiatives to make justice more accessible, meaningful, and relevant to their communities.\n\nOrganized by the International Center for Transitional Justice (ICTJ), this event will bring together young leaders and activists from different regions to share their experiences and explore how creative expression and community engagement can transform the pursuit of justice.\n\nThrough personal testimonies, multimedia presentations, and a moderated discussion, participants will discover how young people are finding new ways to address past injustices, preserve memory, and mobilize their communities. The programme will feature examples of creative initiatives, including Tomorrow We Continue, an award-winning animated short film developed with Syrian civil society organizations to raise awareness about enforced disappearances.\n\nThe conversation will explore what international justice institutions can learn from these emerging approaches and how younger generations are helping shape the future of peace, justice, and accountability. \n\nFollowing the discussion, guests are invited to a networking reception featuring an exhibition of artworks, photography, textiles, and other creative works developed through ICTJ's collaborations with communities affected by conflict and injustice.\n\nJoin us for an evening of dialogue, creativity, and connection, celebrating the voices and ideas that are shaping the future of justice.",
+   "register": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=NAQpIx2sC0GssqHZfJZVEUZg1MOaE-dGpl7n4dNdZnhUMU9VV1BZSUJTV1pTQ0dYQTZDRUJaU0ZSNS4u&route=shorturl",
+   "contact": ""
+  },
+  {
+   "id": "e45",
    "title": "The Future of the Rule of Law in times of Crisis and Conflict",
-   "host": "United Nations Development Programme (UNDP)",
+   "host": "United Nations Development Programme (UNDP), International Development Law Organization (IDLO), Hague Institute for Innovation of law (HiiL)",
    "date": "2026-11-19",
    "end_date": "",
    "start": "16:00",
@@ -977,7 +1047,8 @@
    "format": "Hybrid",
    "tags": [
     "International Law & Accountability",
-    "Access to Justice"
+    "Access to Justice",
+    "Peace & Security"
    ],
    "audience": [
     "General Public",
@@ -989,7 +1060,7 @@
    "contact": "lorraine.reuter@undp.org"
   },
   {
-   "id": "e43",
+   "id": "e46",
    "title": "#DemocracyDrinks x The Hague Justice Week: Effects of a Shifting International Order",
    "host": "The Hague Humanity Hub",
    "date": "2026-11-19",
@@ -1013,7 +1084,7 @@
    "contact": "democracydrinksthehague@gmail.com"
   },
   {
-   "id": "e44",
+   "id": "e47",
    "title": "Conscientious Lawyering: Realizing the Promise of International Law: International Humanitarian Law",
    "host": "Global ProBono Bar Association",
    "date": "2026-11-19",
@@ -1036,9 +1107,9 @@
    "contact": "contact@probonobar.org"
   },
   {
-   "id": "e45",
+   "id": "e48",
    "title": "Mending the weave: Customary and informal pathways to lasting peace",
-   "host": "European Forum for Restorative Justice (EFRJ),  International Development Law Organisation (IDLO), United Nations Development Programme (UNDP), European Commission Representation in the Netherlands and Embassy of The Philippines",
+   "host": "European Forum for Restorative Justice (EFRJ),  International Development Law Organisation (IDLO), United Nations Development Programme (UNDP), EU Liaison Office to The Hague and Embassy of The Philippines",
    "date": "2026-11-20",
    "end_date": "",
    "start": "09:00",
@@ -1060,7 +1131,7 @@
    "contact": "mwarren@idlo.int"
   },
   {
-   "id": "e46",
+   "id": "e49",
    "title": "Legal Alternatives to War (LAW not War): \nToward the universality and effectiveness of the ICJ at 80 years and beyond",
    "host": "World Federalist Movement, Institute for Global Policy",
    "date": "2026-11-20",
@@ -1084,7 +1155,30 @@
    "contact": ""
   },
   {
-   "id": "e47",
+   "id": "e50",
+   "title": "The Kosovo Specialist Chambers - History, Mandate and Proceedings",
+   "host": "Kosovo Specialist Chambers (KSC)",
+   "date": "2026-11-20",
+   "end_date": "",
+   "start": "10:00",
+   "end": "11:30",
+   "venue": "Raamweg 47, 2596 HN Den Haag",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Access to Justice"
+   ],
+   "audience": [
+    "General Public",
+    "Students/Youth",
+    "Civil Society Practitioners"
+   ],
+   "description": "This interactive in-person session provides information on the mandate and activities of the Kosovo Specialist Chambers which is a temporary court based in The Hague dealing with war crimes and crimes against humanity in Kosovo 1998-2000. It further elaborates how a relocated court bridges the distance in time and place to deliver justice.  \n\nParticipants will also be provided a tour of the public areas of the court.",
+   "register": "",
+   "contact": "Public@scp-ks.org"
+  },
+  {
+   "id": "e51",
    "title": "Colombia in Search of Justice - Relational Restorative Justice and the Comuneros del Sur Process in Nariño",
    "host": "Embassy of the Kingdom of the Netherlands in Colombia",
    "date": "2026-11-20",
@@ -1108,7 +1202,7 @@
    "contact": "mathias.zeller@minbuza.nl"
   },
   {
-   "id": "e48",
+   "id": "e52",
    "title": "Peace Through People-Centered Justice: Renewing the Promise of Peace and Justice Beyond the Courtroom",
    "host": "Pathfinders, Government of the Netherlands, Embassy of the Republic of Guatemala to the Netherlands, Municipality of the Hague, Cordaid, and UNDP",
    "date": "2026-11-20",
@@ -1126,12 +1220,12 @@
     "Academics/Researchers",
     "Civil Society Practitioners"
    ],
-   "description": "International efforts to advance peace and justice have often been focused on strengthening institutions, negotiating new legal frameworks and preventing and resolving conflict. Yet for most people, peace and justice are experienced much closer to home: in whether they feel safe in their neighborhood, whether disputes can be resolved fairly, and whether they can access services when they need it. Cities, local governments, community organizations and justice actors are often on the front line of addressing the grievances, exclusion and unmet justice needs that can undermine trust and contribute to violence. Connecting these local realities with national policies and global commitments is essential to building more peaceful, just and inclusive societies.  People-centered justice and violence prevention offer complementary ways of responding to these challenges. Both begin with people's experiences and recognize that lasting peace depends not only on responding to violence or resolving disputes once they escalate, but also on addressing the underlying problems that affect people's safety, dignity and ability to resolve problems peacefully. Bridging the gap between global commitments and local realities is central to the work of Pathfinders for Peaceful, Just and Inclusive Societies. Through initiatives such as Peace in Our Cities (PiOC) and the Justice Action Coalition (JAC), Pathfinders brings together governments, cities, and partners to advance complementary approaches to violence prevention and people-centered justice. \n\nThe session will explore the connections between people’s everyday experiences of justice and safety, and how unresolved justice needs, exclusion, and lack of trust can contribute to grievances and violence. Drawing on practical experiences from cities and communities, it will highlight the role of local governments and locally led approaches in advancing people-centered justice, violence prevention, inclusion, trust, and social cohesion.\nThe discussion will also consider how these experiences can inform national and international policy and identify practical lessons for strengthening the relationship between peace, justice, and the rule of law from the local level upward. After these initial panel interventions, the discussion will be opened to participants for questions, reflections, and exchange to create an interactive conversation.",
+   "description": "International efforts to advance peace and justice have traditionally focused on strengthening institutions, developing legal frameworks, and preventing or resolving conflict. Yet for most people, peace and justice are experienced much closer to home: in whether they feel safe in their communities, can resolve disputes fairly, and have access to justice when they need it. People-centered justice and violence prevention offer complementary approaches to addressing the grievances, exclusion, and unmet justice needs that can undermine trust and contribute to violence. Through initiatives such as Peace in Our Cities (PiOC) and the Justice Action Coalition (JAC), Pathfinders for Peaceful, Just and Inclusive Societies works to connect these approaches across local, national, and global levels.\n\nThis session will explore how cities, local governments, and community actors are advancing locally led approaches that strengthen access to justice, safety, trust, and social cohesion. Drawing on practical experiences, the discussion will examine how addressing people's everyday justice needs and preventing violence can reinforce one another, while highlighting lessons that can inform national and international policies and commitments to peace and the rule of law.\n\nFollowing the panelists' initial reflections, the conversation will open to participants for questions and exchange, creating an opportunity to explore how we can build and sustain peace and justice from the local level upward.",
    "register": "https://luma.com/luhr3esw",
    "contact": "laura.ospina@nyu.edu"
   },
   {
-   "id": "e49",
+   "id": "e53",
    "title": "Nuremberg Academy Dialogue: The United Nations and the Nuremberg Principles",
    "host": "International Nuremberg Principles Academy",
    "date": "2026-11-20",
@@ -1155,7 +1249,7 @@
    "contact": "registration@nurembergacademy.org"
   },
   {
-   "id": "e50",
+   "id": "e54",
    "title": "Renewing the Memories #1 - Blue Island Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-20",
@@ -1176,7 +1270,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e51",
+   "id": "e55",
    "title": "‘30 Years of the Death of Yugoslavia: A Generational Perspective’",
    "host": "The Hague University of Applied Sciences (THUAS)",
    "date": "2026-11-20",
@@ -1200,7 +1294,7 @@
    "contact": "karloskonstantinos9@gmail.com"
   },
   {
-   "id": "e52",
+   "id": "e56",
    "title": "Renewing the Memories #2 - The Taoyuan Airport Incident Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-21",
@@ -1221,7 +1315,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e53",
+   "id": "e57",
    "title": "Renewing the Memories #3 - Three Castrated Goats - Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-22",
@@ -1242,7 +1336,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e54",
+   "id": "e58",
    "title": "Conscientious Lawyering: Realizing the Promise of International Law: International Human Rights Law",
    "host": "Global ProBono Bar Association",
    "date": "2026-11-23",
