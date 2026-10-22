@@ -170,10 +170,10 @@ not openpyxl: the dropdowns are stored as an Excel extension that openpyxl
 silently deletes on save. Excel automation is fragile (it hung once on
 5 October), so prefer asking Giovanni to make the change in SharePoint.
 
-## Current state, as of 20 October 2026
+## Current state, as of 22 October 2026
 
-- Widget and script are at **1.1.1**. `events.json` holds **54 activities**,
-  37 with a registration link, published from the SharePoint workbook. The
+- Widget and script are at **1.1.1**. `events.json` holds **58 activities**,
+  40 with a registration link, published from the SharePoint workbook. The
   Kunstmuseum exhibition runs 16 to 20 November, 10:00 to 17:00.
 - Outside 16 to 20 November: NowHere #2 and #3 (21 and 22 Nov, intended);
   EcoJustice's EU Environmental Crime Directive session (13 Nov, at the Hub) and the fourth
@@ -191,7 +191,8 @@ silently deletes on save. Excel automation is fragile (it hung once on
 - **Held back pending confirmation** (clear value and hyperlink in every
   download until Giovanni confirms, then stop): `alyn.ware@wfm-igp.org` (World
   Federalist Movement, LAW not War) and `jessica.corsi@city.ac.uk` (City Law
-  School, Gender and the ICJ), both new on 20 October.
+  School, Gender and the ICJ), both new on 20 October; `sfalasca@ictj.org`
+  (ICTJ, Justice in New Languages), new on 22 October.
 - **Silent local fixes on every download**, until they are made in SharePoint
   (Giovanni knows; do not report them each time): typos "moderatod by  Alessia",
   "Ministy", "excercise", "examine t whether", "International Developmen Law",
@@ -211,8 +212,8 @@ silently deletes on save. Excel automation is fragile (it hung once on
   hyperlink when the visible text holds no web address. Before that, ten links
   were silently dropped, and on 19 October colleagues rewrote some cells as
   plain URLs trying to work around it. They no longer need to.
-- Three hosts put an email address in the registration field (Hope Behind
-  Bars Africa, OLJA, Save the Children). By design these show "Registration
+- Two hosts put an email address in the registration field (Hope Behind
+  Bars Africa, Save the Children; OLJA added a real link on 22 October). By design these show "Registration
   opens soon", not a button.
 - Clearing a cell in the download with openpyxl does not remove its hyperlink,
   and the script then reads the hyperlink target (`mailto:…`) back as the value.
