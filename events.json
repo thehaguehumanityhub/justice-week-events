@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23",
+ "updated": "2026-10-26",
  "events": [
   {
    "id": "e01",
@@ -437,7 +437,7 @@
    "start": "14:00",
    "end": "16:00",
    "venue": "Hoogsteder & Hoogsteder",
-   "format": "Hybrid",
+   "format": "In-person",
    "tags": [
     "International Law & Accountability",
     "Environmental & Climate Law",
@@ -449,7 +449,7 @@
     "Civil Society Practitioners"
    ],
    "description": "Wars have environmental consequences, and they have long been among the least prosecuted. Nature reserves and national parks destroyed, forests burned, soil and water contaminated, biodiversity lost: damage that outlasts the fighting by decades and almost never reaches a courtroom. Ukraine has begun to change that.\n\nUnder war conditions, Ukrainian investigators and prosecutors have been documenting that damage — from the destruction of the Kakhovka Dam onwards — and building cases with no shared methodology to follow. That experience is now a tool others can use: the Manual on Prosecuting International Environmental Crimes, developed by Climate Counsel and UCLA’s The Promise Institute for Human Rights (Europe).\n\nThe Manual shows investigators, prosecutors and civil society how to build cases for serious environmental harm as international crimes — as war crimes where there is an armed conflict, and as crimes against humanity, which can be committed in peacetime.\n\nAt this event, co-organised by the Embassy of Ukraine in the Kingdom of the Netherlands and the Manual’s authors, the experts behind it will explain how it works, which crimes apply and how evidence is gathered, followed by an open discussion. The law already exists; this session is about using it. Whether you investigate, prosecute, research or campaign, or are simply curious how environmental destruction becomes a criminal case, you are welcome to join. No specialist background required.",
-   "register": "",
+   "register": "https://docs.google.com/forms/d/e/1FAIpQLSdYJzmpbHptvLW_uRoQV3_37Ics8vGfMyYAU0vP8a9uKqiOsw/viewform",
    "contact": "uclapromiseeurope@law.ucla.edu"
   },
   {
