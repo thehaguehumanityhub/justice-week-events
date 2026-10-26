@@ -382,30 +382,6 @@
   },
   {
    "id": "e17",
-   "title": "Beyond the Rescue: Confronting Barriers to Justice for Child Survivors",
-   "host": "Free a Girl",
-   "date": "2026-11-17",
-   "end_date": "",
-   "start": "13:00",
-   "end": "15:00",
-   "venue": "",
-   "format": "Online",
-   "tags": [
-    "Women & Gender",
-    "Children & Youth Rights",
-    "Access to Justice"
-   ],
-   "audience": [
-    "General Public",
-    "Students/Youth",
-    "Academics/Researchers"
-   ],
-   "description": "This session will unpack the often-hidden realities of the legal maze that child survivors of sexual abuse and trafficking face long after their initial rescue. Because dramatic rescue operations frequently capture public attention while the subsequent judicial hurdles remain largely invisible, this session, drawing from research conducted by Free A Girl in four countries, will focus on the systemic, procedural, and social barriers that obstruct true access to justice. The talk will highlight how the very institutions designed to protect vulnerable children often become secondary sources of trauma due to severe gaps in procedural rights, a lack of trauma-sensitive procedures, and inadequate witness protection.\nThis presentation will translate complex judicial failings and data into a deeply human narrative. Specifically, the session will aim to:\n●        Highlight the intense financial, emotional, and social hurdles that will follow during the legal process.\n●        Outline the specific barriers survivors encounter, including direct intimidation from perpetrators, social stigma, and the systemic failures.\n●        Equip the audience with an understanding of the reforms required that will be necessary to transform a retraumatizing legal system into a genuine pathway for healing and restitution.",
-   "register": "",
-   "contact": "atj@freeagirl.nl"
-  },
-  {
-   "id": "e18",
    "title": "The ICJ at 100: Realistic Expectations on the World Court’s Next 20 Years",
    "host": "European Society of International Law",
    "date": "2026-11-17",
@@ -429,7 +405,7 @@
    "contact": "james.devaney@glasgow.ac.uk"
   },
   {
-   "id": "e19",
+   "id": "e18",
    "title": "From Ukraine to Global Accountability: Presenting the Manual on Prosecuting International Environmental Crimes",
    "host": "Embassy of Ukraine in the Kingdom of the Netherlands, Climate Counsel and UCLA Promise Institute for Human Rights",
    "date": "2026-11-17",
@@ -453,7 +429,7 @@
    "contact": "uclapromiseeurope@law.ucla.edu"
   },
   {
-   "id": "e20",
+   "id": "e19",
    "title": "Who Owns the Truth?",
    "host": "Asymmetrical Haircuts, Leiden University",
    "date": "2026-11-17",
@@ -472,12 +448,12 @@
     "Academics/Researchers",
     "Civil Society Practitioners"
    ],
-   "description": "What happens when an international justice process is 'over'?\n\n'Who Owns the Truth?' will feature survivors and evidence-collectors. It will be a conversation on the importance of archives of international accountability mechanisms to victims. We include representatives from The Gambia, for whom the process is only just beginning, representatives from Ukraine who are dealing with multiple efforts at justice, and those who have worked at the institution with the largest war crimes archive in the world, here in The Hague.  \n\nJoin us and be part of the audience for a live recording of 'Asymmetrical Haircuts' podcast in collaboration with the Centre for Peace and Justice, Leiden University College.",
+   "description": "Asymmetrical Haircuts, in partnership with Leiden University Centre for Peace and Justice, will host a live podcast exploring the intersections between history, memory and justice for serious human rights violations.\nInternational justice mechanisms have been justified as contributing to truth, peace and reconciliation.  The “right to truth” for victims has been recognised and interpreted by different international courts and bodies. But the \"truth\" about conflicts, occupation and oppression is not just proof of the crimes in court. These are stories of families, communities and societies. So whose truth is it? Who owns it? And how do we preserve it?\nJoin us in the audience to hear expert practitioners from Bosnia and Herzegovina, The Gambia and Ukraine in the discussion.",
    "register": "https://www.eventbrite.co.uk/e/who-owns-the-truth-tickets-2003716245228?aff=oddtdtcreator",
    "contact": "editors@asymmetricalhaircuts.com"
   },
   {
-   "id": "e21",
+   "id": "e20",
    "title": "What Does Gender Have to Do with It? Gender, the ICJ Judge, and the International Rule of Law",
    "host": "The City Law School, City St George's University, University of London, The Working Group on Gender Parity for the ICJ",
    "date": "2026-11-17",
@@ -501,7 +477,7 @@
    "contact": "jessica.corsi@city.ac.uk"
   },
   {
-   "id": "e22",
+   "id": "e21",
    "title": "No Peace Without Justice: Survivor Voices and Accountability for Crimes in Ukraine",
    "host": "Netherlands Helsinki Committee, Eastern Ukrainian Centre for Civil Initiatives (EUCCI), Dutch Ministry of Foreign Affairs, Embassy of Switzerland to The Netherlands",
    "date": "2026-11-17",
@@ -523,7 +499,7 @@
    "contact": "office@nhc.nl"
   },
   {
-   "id": "e23",
+   "id": "e22",
    "title": "The Hague Justice Week Networking Breakfast",
    "host": "The Hague Humanity Hub",
    "date": "2026-11-18",
@@ -545,7 +521,7 @@
    "contact": "engage@humanityhub.org"
   },
   {
-   "id": "e24",
+   "id": "e23",
    "title": "Safeguarding women and girls’ rights in digital spaces: Unpacking rule of law approaches to address online violence against women and girls",
    "host": "International Development Law Organisation (IDLO), Embassy of Australia, The Philippines and the United Kingdom, The Hague Municipality and International Gender Champions",
    "date": "2026-11-18",
@@ -569,7 +545,7 @@
    "contact": "vwitula@idlo.int"
   },
   {
-   "id": "e25",
+   "id": "e24",
    "title": "When Discomfort Becomes Dialogue: Practising Relational Justice",
    "host": "The Hague University of Applied Sciences (THUAS)",
    "date": "2026-11-18",
@@ -592,7 +568,7 @@
    "contact": "peermediationthuas@hhs.nl"
   },
   {
-   "id": "e26",
+   "id": "e25",
    "title": "The Consensus Trap:  Why Governance Organisations Cannot Decide and What to Do About It",
    "host": "Legitmov",
    "date": "2026-11-18",
@@ -615,7 +591,7 @@
    "contact": "fambreen521@gmail.com"
   },
   {
-   "id": "e27",
+   "id": "e26",
    "title": "Conscientious Lawyering: Realizing the Promise of International Law: Artificial Intelligence Law",
    "host": "Global ProBono Bar Association",
    "date": "2026-11-18",
@@ -638,7 +614,7 @@
    "contact": "contact@probonobar.org"
   },
   {
-   "id": "e28",
+   "id": "e27",
    "title": "Scaling People-Centred Justice with AI",
    "host": "Hope Behind Bars Africa, HiiL",
    "date": "2026-11-18",
@@ -661,7 +637,7 @@
    "contact": "hello@hopebehindbarsafrica.org"
   },
   {
-   "id": "e29",
+   "id": "e28",
    "title": "One World, One Home, One Law for All: Commemoration Centenary ICJ Judge and Vice-President Christopher Weeramantry (17.11.1926)",
    "host": "Judicap in co-operation with Sri Lanka Embassy",
    "date": "2026-11-18",
@@ -685,7 +661,7 @@
    "contact": "arthur@judicap.com"
   },
   {
-   "id": "e30",
+   "id": "e29",
    "title": "Arrest Warrants and Peace Negotiations: Charting New Pathways Towards Peace and Justice",
    "host": "Leiden University",
    "date": "2026-11-18",
@@ -707,7 +683,7 @@
    "contact": "grotiuscentre@law.leidenuniv.nl"
   },
   {
-   "id": "e31",
+   "id": "e30",
    "title": "Civic Actors Between Authoritarianism and International Power",
    "host": "Democracy and Rule of Law Collective, World Liberty Congress, Lex Populi",
    "date": "2026-11-18",
@@ -729,7 +705,7 @@
    "contact": "andrea@worldlibertycongress.org"
   },
   {
-   "id": "e32",
+   "id": "e31",
    "title": "Prevention at 80: The ICJ, the Duty to Prevent, and the Structural Limits of Anticipatory Justice",
    "host": "American Bar Association Center for Human Rights, Stichting ABA ROLI Netherlands",
    "date": "2026-11-18",
@@ -752,7 +728,7 @@
    "contact": "roli-outreach@americanbar.org"
   },
   {
-   "id": "e33",
+   "id": "e32",
    "title": "Legal Clinic for Civil Societal Organizations",
    "host": "Pro Bono Connect, Partos",
    "date": "2026-11-18",
@@ -774,7 +750,7 @@
    "contact": "l.derijck@probonoconnect.nl"
   },
   {
-   "id": "e34",
+   "id": "e33",
    "title": "Judging International Justice - featuring Judge Hilary Charlesworth of the International Court of Justice, in conversation with Professor Anna Spain Bradley of UCLA Law",
    "host": "UCLA Law's The Promise Institute for Human Rights (Europe)",
    "date": "2026-11-18",
@@ -798,7 +774,7 @@
    "contact": "uclapromiseeurope@law.ucla.edu"
   },
   {
-   "id": "e35",
+   "id": "e34",
    "title": "Verhalenhuis Workshop Series",
    "host": "Pitztop, Olivscent",
    "date": "2026-11-18",
@@ -822,7 +798,7 @@
    "contact": "emmylou.aben@pitztop.eu"
   },
   {
-   "id": "e36",
+   "id": "e35",
    "title": "The Latest Front in the Fight for Free Speech: Screening of the \"The Librarians\"",
    "host": "International Federation of Library Association and Institutions (IFLA)",
    "date": "2026-11-18",
@@ -846,7 +822,7 @@
    "contact": "ifla@ifla.org"
   },
   {
-   "id": "e37",
+   "id": "e36",
    "title": "Jeune Fille, Droit et Souveraineté Économique en Afrique",
    "host": "Cameroon Ministry of Justice, Reknow Femmes D'Expertise",
    "date": "2026-11-19",
@@ -870,7 +846,7 @@
    "contact": "cwinfotsing@yahoo.fr"
   },
   {
-   "id": "e38",
+   "id": "e37",
    "title": "Justice in an Age of Authoritarianism",
    "host": "World Liberty Congress",
    "date": "2026-11-19",
@@ -894,7 +870,7 @@
    "contact": "info@worldlibertycongress.org"
   },
   {
-   "id": "e39",
+   "id": "e38",
    "title": "Not Just Upheld, Reimagined: Seeing Children as Children in International Law",
    "host": "Save The Children, Global Rights Compliance",
    "date": "2026-11-19",
@@ -917,7 +893,7 @@
    "contact": "hagueaccountabilityhub@savethechildren.nl"
   },
   {
-   "id": "e40",
+   "id": "e39",
    "title": "The Hague’s International Zone: A Journey from War to Peace",
    "host": "The Hague Municipality",
    "date": "2026-11-19",
@@ -941,7 +917,7 @@
    "contact": "engage@humanityhub.org"
   },
   {
-   "id": "e41",
+   "id": "e40",
    "title": "Film Screening: Surviving Genocide – The Rohingya Quest for Justice",
    "host": "Legal Action Worldwide (LAW)",
    "date": "2026-11-19",
@@ -965,7 +941,7 @@
    "contact": "info@legalactionworldwide.org"
   },
   {
-   "id": "e42",
+   "id": "e41",
    "title": "Roundtable on International Court of Justice (ICJ) Jurisprudence",
    "host": "Columbia Society of International Law & Columbia Journal of Transnational Law",
    "date": "2026-11-19",
@@ -989,7 +965,7 @@
    "contact": "mob2119@columbia.edu"
   },
   {
-   "id": "e43",
+   "id": "e42",
    "title": "The Proposal for an International Anti-Corruption Court: Renewing the Promise of Justice, 80 Years On",
    "host": "Integrity Initiatives International Europe - III Europe",
    "date": "2026-11-19",
@@ -1012,7 +988,7 @@
    "contact": "info@iiieurope.org"
   },
   {
-   "id": "e44",
+   "id": "e43",
    "title": "Justice in New Languages: Youth, Art, and the Future of the Fight Against Impunity",
    "host": "International Center for Transitional Justice (ICTJ)",
    "date": "2026-11-19",
@@ -1036,7 +1012,7 @@
    "contact": "sfalasca@ictj.org"
   },
   {
-   "id": "e45",
+   "id": "e44",
    "title": "The Future of the Rule of Law in times of Crisis and Conflict",
    "host": "United Nations Development Programme (UNDP), International Development Law Organization (IDLO), Hague Institute for Innovation of law (HiiL)",
    "date": "2026-11-19",
@@ -1060,7 +1036,7 @@
    "contact": "lorraine.reuter@undp.org"
   },
   {
-   "id": "e46",
+   "id": "e45",
    "title": "#DemocracyDrinks x The Hague Justice Week: Effects of a Shifting International Order",
    "host": "The Hague Humanity Hub",
    "date": "2026-11-19",
@@ -1084,7 +1060,7 @@
    "contact": "democracydrinksthehague@gmail.com"
   },
   {
-   "id": "e47",
+   "id": "e46",
    "title": "Conscientious Lawyering: Realizing the Promise of International Law: International Humanitarian Law",
    "host": "Global ProBono Bar Association",
    "date": "2026-11-19",
@@ -1107,7 +1083,7 @@
    "contact": "contact@probonobar.org"
   },
   {
-   "id": "e48",
+   "id": "e47",
    "title": "Mending the weave: Customary and informal pathways to lasting peace",
    "host": "European Forum for Restorative Justice (EFRJ),  International Development Law Organisation (IDLO), United Nations Development Programme (UNDP), EU Liaison Office to The Hague and Embassy of The Philippines",
    "date": "2026-11-20",
@@ -1131,7 +1107,7 @@
    "contact": "mwarren@idlo.int"
   },
   {
-   "id": "e49",
+   "id": "e48",
    "title": "Legal Alternatives to War (LAW not War): \nToward the universality and effectiveness of the ICJ at 80 years and beyond",
    "host": "World Federalist Movement, Institute for Global Policy",
    "date": "2026-11-20",
@@ -1155,7 +1131,7 @@
    "contact": "alyn.ware@wfm-igp.org"
   },
   {
-   "id": "e50",
+   "id": "e49",
    "title": "The Kosovo Specialist Chambers - History, Mandate and Proceedings",
    "host": "Kosovo Specialist Chambers (KSC)",
    "date": "2026-11-20",
@@ -1176,6 +1152,30 @@
    "description": "This interactive in-person session provides information on the mandate and activities of the Kosovo Specialist Chambers which is a temporary court based in The Hague dealing with war crimes and crimes against humanity in Kosovo 1998-2000. It further elaborates how a relocated court bridges the distance in time and place to deliver justice.  \n\nParticipants will also be provided a tour of the public areas of the court.",
    "register": "",
    "contact": "Public@scp-ks.org"
+  },
+  {
+   "id": "e50",
+   "title": "Beyond the Rescue: Confronting Barriers to Justice for Child Survivors",
+   "host": "Free a Girl",
+   "date": "2026-11-20",
+   "end_date": "",
+   "start": "12:00",
+   "end": "14:00",
+   "venue": "",
+   "format": "Online",
+   "tags": [
+    "Women & Gender",
+    "Children & Youth Rights",
+    "Access to Justice"
+   ],
+   "audience": [
+    "General Public",
+    "Students/Youth",
+    "Academics/Researchers"
+   ],
+   "description": "This session will unpack the often-hidden realities of the legal maze that child survivors of sexual abuse and trafficking face long after their initial rescue. Because dramatic rescue operations frequently capture public attention while the subsequent judicial hurdles remain largely invisible, this session, drawing from research conducted by Free A Girl in four countries, will focus on the systemic, procedural, and social barriers that obstruct true access to justice. The talk will highlight how the very institutions designed to protect vulnerable children often become secondary sources of trauma due to severe gaps in procedural rights, a lack of trauma-sensitive procedures, and inadequate witness protection.\nThis presentation will translate complex judicial failings and data into a deeply human narrative. Specifically, the session will aim to:\n●        Highlight the intense financial, emotional, and social hurdles that will follow during the legal process.\n●        Outline the specific barriers survivors encounter, including direct intimidation from perpetrators, social stigma, and the systemic failures.\n●        Equip the audience with an understanding of the reforms required that will be necessary to transform a retraumatizing legal system into a genuine pathway for healing and restitution.",
+   "register": "",
+   "contact": "atj@freeagirl.nl"
   },
   {
    "id": "e51",
