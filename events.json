@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27",
+ "updated": "2026-10-28",
  "events": [
   {
    "id": "e01",
@@ -22,7 +22,7 @@
     "Civil Society Practitioners"
    ],
    "description": "Criminal law is an important tool to protect the environment and advance environmental justice. EU member states including the Netherlands are working on legislation to implement the new EU Environmental Crime Directive (ECD). Civil society has a key but sometimes overlooked role to play in ensuring environmental criminal law is effectively enforced to protect both the communities affected by environmental crime and the ecosystems at the heart of climate and environmental action. ThisThe EU Environmental Crime Directive: a new step in the fight for environmental justicroundtable invites participants to reflect on how environmental crime is addressed in the Netherlands, what the ECD aims to strengthen or change, and opportunities it offers for civil society actors working on environmental protection.",
-   "register": "",
+   "register": "https://forms.cloud.microsoft/e/ANBWYERXdD",
    "contact": "helena@ecojustice.earth"
   },
   {
@@ -117,7 +117,7 @@
     "Civil Society Practitioners"
    ],
    "description": "The event will explore how justice systems and institutions become part of the infrastructure through which societies rebuild trust, resilience and stability. The session will move beyond the narrow scope of formal courts and legal institutions and consider the wider justice ecosystem and how legal and governance frameworks can better connect with people's everyday realities.",
-   "register": "https://docs.google.com/forms/d/e/1FAIpQLSfbleakkVeNT4A7ko9oPrw_VXDXIXNoM6MgEJzBhQi3p8MgAg/viewform",
+   "register": "https://hiil.org/our-events/justice-as-critical-infrastructure-for-peace-and-resilience/",
    "contact": "s.hickey@idea.int"
   },
   {
@@ -195,7 +195,7 @@
   {
    "id": "e09",
    "title": "Bridging the Gap, Renewing the Promise:  International law and Global Solidarity in the Palestinian Quest for Justice",
-   "host": "Council of Arab Ambassadors & Legal Mobilisation Platform at the International Institute of Social Studies",
+   "host": "Council of Arab Ambassadors & Legal Mobilisation Platform",
    "date": "2026-11-16",
    "end_date": "",
    "start": "17:00",
@@ -212,7 +212,7 @@
    ],
    "description": "International law has long held out the promise of peace and justice for the Palestinian people. Yet the gap between that promise and its implementation remains uneven across nations, what some commentators have referred to as “Justice for Some”. This event examines that gap not as a story of failure alone but as a call to renew the commitment that international law represents, namely, that no people shall be denied self-determination, protection, and recourse to justice.\n\nPalestine’s recourse to justice under international law reveals both the possibilities and the challenges inherent in the promise of peace and justice that international law represents and which global solidarity efforts seek to amplify and mobilize. Despite several legal determinations on the Question of Palestine achieved in recent years, such as three landmark Advisory Opinions of the International Court of Justice (ICJ) in 2004, 2024 and 2025, inter alia, that reaffirmed the Palestinian people’s right to self-determination, protection from prolonged occupation, and the illegality of Israel’s occupation, and solidarity actions, the failure to implement is jarring. \n\nIn spite of what international law has already committed regarding Palestine, trust in international law and the law-based international order has been undermined. To restore faith generally in the effectiveness of international law and enforcement institutions, as vividly illustrated regarding the Question of Palestine, the gap between the legal framework and its enforcement must be bridged.\n\nJoin us this evening to listen to legal experts and figures of authority in international law who will address this gap and share with us their insights on how we can restore the faith in international law. A Q&A will follow the panel.",
    "register": "https://www.iss.nl/en/registration-bridging-gap-renewing-promise",
-   "contact": ""
+   "contact": "lmp@iss.nl"
   },
   {
    "id": "e10",
@@ -455,7 +455,7 @@
   {
    "id": "e20",
    "title": "What Does Gender Have to Do with It? Gender, the ICJ Judge, and the International Rule of Law",
-   "host": "The City Law School, City St George's University, University of London, The Working Group on Gender Parity for the ICJ",
+   "host": "The City Law School, City St George's University, University of London, The Working Group on Gender Parity for the ICJ, Gender Justice in International Law Committee of the American Branch of the International Law Association (ABILA)",
    "date": "2026-11-17",
    "end_date": "",
    "start": "17:15",
@@ -639,7 +639,7 @@
   {
    "id": "e28",
    "title": "One World, One Home, One Law for All: Commemoration Centenary ICJ Judge and Vice-President Christopher Weeramantry (17.11.1926)",
-   "host": "Judicap in co-operation with Sri Lanka Embassy",
+   "host": "Judicap, Sri Lanka Embassy to The Netherlands",
    "date": "2026-11-18",
    "end_date": "",
    "start": "14:00",
@@ -657,7 +657,7 @@
     "Civil Society Practitioners"
    ],
    "description": "Even a century after the establishment of the World Court in 1920, one of the greatest challenges facing international law remains that of bringing the world’s diverse cultures and legal traditions into harmony. Several judges have made exceptional contributions to this endeavour. A prominent figure in recent decades was Christopher Weeramantry of Sri Lanka (ICJ judge, 1991–2000). Throughout his life, he sought common ground among the world’s major religions and emphasized the moral convictions that unite humanity. His principled position in the 1996 advisory proceedings on the legality of the threat or use of nuclear weapons remains as relevant as ever. At the gathering at the Embassy of Sri Lanka, the judge’s former colleagues and students will discuss the significance and feasibility of Weeramantry’s ideas in an era of growing polarisation and the erosion of international law.",
-   "register": "",
+   "register": "https://docs.google.com/forms/d/e/1FAIpQLSfE29F6eOwYgQ5Z0AJBsSSiZVR1ZDD6D63CV6UlBA6oHpyWuw/viewform",
    "contact": "arthur@judicap.com"
   },
   {
@@ -1038,7 +1038,7 @@
   {
    "id": "e45",
    "title": "#DemocracyDrinks x The Hague Justice Week: Effects of a Shifting International Order",
-   "host": "The Hague Humanity Hub",
+   "host": "The Hague Humanity Hub, Netherlands Institute for Multiparty Democracy (NIMD)",
    "date": "2026-11-19",
    "end_date": "",
    "start": "17:00",
