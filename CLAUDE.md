@@ -192,7 +192,10 @@ silently deletes on save. Excel automation is fragile (it hung once on
   (Giovanni knows; do not report them each time): typos "moderatod by  Alessia",
   "Ministy", "excercise", "examine t whether", "International Developmen Law",
   "Embassy of australia", "The Philippine and" (to "the Philippines and"),
-  "The Hague Humanity hub", "Ukranian" (NHC host line). The old CAVV row was removed in SharePoint on
+  "The Hague Humanity hub", "Ukranian" (NHC host line), the stray apostrophe in
+  "Asymmetrical Haircuts', in partnership" (Who Owns the Truth?), and
+  EcoJustice's registration cell (Brevo link, see below) replaced by
+  `https://forms.cloud.microsoft/e/ANBWYERXdD`. The old CAVV row was removed in SharePoint on
   16 October; if it ever reappears, clear it again.
 - ECNL's registration cell holds two links (Eventbrite, then Zoom); only the
   first becomes the button. Links clicked in Excel Online gain harmless
@@ -202,6 +205,16 @@ silently deletes on save. Excel automation is fragile (it hung once on
   wrapper carries the sender's email address and tracking data, and must never
   be published. Since 1.1.1 the script unwraps them in registration links
   itself; still check the published file for `safelinks` anywhere else.
+- **Newsletter tracking links (Brevo/Sendinblue)**: partners also paste links
+  copied from a mailing, such as `https://<x>.sendibt3.com/mk/…`. Unlike Safe
+  Links they carry no readable target, and the script does not catch them.
+  `/mk/mr/` opens the web version of the email as sent to one subscriber,
+  including that subscriber's personal unsubscribe link; `/mk/cl/` logs each
+  click against them. Never publish either. To clean one, find the real target
+  (a `/mk/cl/` page names it in a meta refresh) and ask Giovanni before
+  opening it, since it registers a view or click. On 28 October EcoJustice's
+  link resolved to their Microsoft Forms sign-up. Check the published file for
+  `sendibt` as well as `safelinks`.
 - **Hidden links**: partners often paste a link behind display text
   ("Registration form: …"). Since 1.1.1 the script falls back to the cell's
   hyperlink when the visible text holds no web address. Before that, ten links
