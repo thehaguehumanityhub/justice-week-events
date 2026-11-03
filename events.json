@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30",
+ "updated": "2026-11-03",
  "events": [
   {
    "id": "e01",
@@ -69,7 +69,7 @@
     "Policymakers/Diplomats"
    ],
    "description": "Visit an intriguing exhibition at Kunstmuseum Den Haag about aesthetics and politics, focusing  on the visual identity of NATO and modern art by Piet Mondrian, Gerrit Rietveld and artists.",
-   "register": "https://www.kunstmuseum.nl/nl/bezoek/tickets-kopen",
+   "register": "https://www.kunstmuseum.nl/nl/bezoek/activiteiten/introductie-tentoonstelling-antonis-pittas-bleu-blauw-mple-blau-blue-0",
    "contact": "info@kunstmuseum.nl"
   },
   {
@@ -147,15 +147,17 @@
   {
    "id": "e07",
    "title": "Cities, Conflict and Recovery: Cultural Rights and Transitional Justice",
-   "host": "Global Cities Hub",
+   "host": "Global Cities Hub, United Nations Development Programme (UNDP)",
    "date": "2026-11-16",
    "end_date": "",
    "start": "14:00",
-   "end": "15:30",
+   "end": "15:00",
    "venue": "",
    "format": "Online",
    "tags": [
-    "Business & Human Rights"
+    "International Law & Accountability",
+    "Peace & Security",
+    "Transitional Justice"
    ],
    "audience": [
     "Policymakers/Diplomats",
@@ -630,7 +632,7 @@
     "Academics/Researchers"
    ],
    "description": "In this highly interactive, innovative, and critical dialogue session, participants are invited to co-create and enact a case that brings together different bodies of law, the emotional dimensions of formal rules and regulations, and questions of social justice. The goal is to foster a moment of “emotional reflexivity” among people from diverse positionalities, where discomfort is embraced as an opportunity for relational learning.\n\nWe will draw on frameworks developed through the Relational Peer Mediation project currently underway at The Hague University of Applied Sciences. These include the pedagogy of discomfort, Theatre of the Oppressed, and the Comenius-inspired concept of relational peer mediation. The session is designed for students, educators, and researchers seeking to develop alternative ways of relating within educational contexts.",
-   "register": "",
+   "register": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=m2tYomf4PEuTY1tDXF28Rdm1xrzqNXJPj01Mr7Oub3hUMkpYN0xDWTRaQ1VCSzg0RFJNS0UzQUo4OS4u&route=shorturl",
    "contact": "peermediationthuas@hhs.nl"
   },
   {
@@ -698,8 +700,8 @@
     "Academics/Researchers",
     "Students/Youth"
    ],
-   "description": "Millions of people across Africa first encounter the justice system not in a courtroom, but at a police station, a checkpoint, or through a phone screen. In Nigeria alone, an estimated 25 million people face legal problems every year, and more than 14 million cannot get the help they need. AI-powered tools are opening new possibilities for delivering legal information, guidance and support at scale and closer to the point of need but scaling them responsibly raises real questions about reliability, privacy, bias, accountability and human oversight.\n\nThis interactive session brings together experiences from Nigeria (Justice Padi AI), Tunisia and Niger with justice practitioners, policymakers and technology partners to explore what these emerging models teach us about expanding access to justice across different legal, institutional and infrastructure contexts. Participants will hear a moderated panel discussion and country snapshots, then step into the \"From Prototype to Scale-Up\" simulation, a board game in which teams take on the role of decision-makers deploying an AI-powered justice solution, navigating real dilemmas around data governance, ethics, institutional resistance, financing and political constraints.\n\nCome for a candid look at what it really takes to move AI-for-justice tools from prototype to sustainable scale, and leave with practical considerations for responsible design, human oversight and institutional collaboration.",
-   "register": "",
+   "description": "Millions of people across Africa first encounter the justice system not in a courtroom, but at a police station, a checkpoint, or through a phone screen. In Nigeria alone, an estimated 25 million people face legal problems every year, and more than 14 million cannot get the help they need. AI-powered tools are opening new possibilities for delivering legal information, guidance and support at scale and closer to the point of need but scaling them responsibly raises real questions about reliability, privacy, bias, accountability and human oversight.\n\nThis interactive session brings together experiences from Nigeria (Justice Padi AI), Tunisia and Niger with justice practitioners, policymakers and technology partners to explore what these emerging models teach us about expanding access to justice across different legal, institutional and infrastructure contexts. Participants will hear a moderated panel discussion and country snapshots, then step into the \"From Prototype to Scale-Up\" simulation, a board game in which teams take on the role of decision-makers deploying an AI-powered justice solution, navigating real dilemmas around data governance, ethics, institutional resistance, financing and political constraints.\n\nCome for a candid look at what it really takes to move AI-for-justice tools from prototype to sustainable scale, and leave with practical considerations for responsible design, human oversight and institutional collaboration. \n\nFor online participation: https://us06web.zoom.us/webinar/register/WN_DVIGbvZASl-zBM10bpX8ig#/registration",
+   "register": "https://hiil.org/our-events/27588/",
    "contact": "hello@hopebehindbarsafrica.org"
   },
   {
