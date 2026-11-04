@@ -1,0 +1,1657 @@
+<!-- The Hague Justice Week 2026 - programme explorer. Version 0.2.1 (prototype, not yet published).
+     A secondary, full-width view of the same programme as events-embed.html, which it does not replace.
+     Data: events.json and host-aliases.json in this repo; the co-hosts roster (the ORGS array in
+     orgs-embed.html), overrides.json and logos/ in thehaguehumanityhub/thjw.
+     No change here is needed to update the programme.
+     Optional settings, set by the page before this loads: window.THJW_EXPLORER =
+       { backUrl, heroImage, eventsRoot, orgsRoot, now } - the last three are for testing on a computer. -->
+<div id="thjw-explorer" class="thjw-x" data-version="0.2.1" data-view="day">
+  <header class="x-hero" id="x-hero">
+    <div class="x-hero-in">
+      <p class="x-eyebrow">The Hague Justice Week 2026 <span aria-hidden="true">·</span> <span id="x-span">16–20 November</span></p>
+      <h2 class="x-h">Explore the programme</h2>
+      <ul class="x-stats" id="x-stats" aria-label="Programme at a glance"></ul>
+      <div class="x-herobar">
+        <label class="x-search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9 2a7 7 0 105.3 11.6l3.5 3.6 1.4-1.4-3.5-3.6A7 7 0 009 2zm0 2a5 5 0 110 10A5 5 0 019 4z"/></svg>
+          <input type="search" id="x-q" placeholder="Search activities, organisations, speakers" aria-label="Search the programme" autocomplete="off">
+        </label>
+        <button type="button" class="x-fs" id="x-fs" aria-pressed="false">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h5v2H5v3H3V3zm9 0h5v5h-2V5h-3V3zM3 12h2v3h3v2H3v-5zm12 0h2v5h-5v-2h3v-3z"/></svg>
+          <span>Full screen</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="x-tabs" aria-label="Ways to explore">
+    <div class="x-tabs-in">
+      <a class="x-nav x-back" id="x-back" href="https://humanityhub.org/the-hague-justice-week/" aria-label="Back to the Justice Week page">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4.5L7 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Back to website</span>
+      </a>
+      <button type="button" class="x-nav x-home" id="x-home" aria-label="Home: show the whole programme, with no filters" title="Show the whole programme again, with no filters">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 9.5L10 3.5l7 6V17h-4.5v-4.5h-5V17H3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span>Home</span>
+      </button>
+      <span class="x-sep" aria-hidden="true"></span>
+      <div class="x-tablist" role="tablist">
+        <button type="button" role="tab" class="x-tab" data-view="day" aria-selected="true">By day</button>
+        <button type="button" role="tab" class="x-tab" data-view="timeline" aria-selected="false">Timeline</button>
+        <button type="button" role="tab" class="x-tab" data-view="theme" aria-selected="false">By theme</button>
+        <button type="button" role="tab" class="x-tab" data-view="org" aria-selected="false">By organisation</button>
+        <button type="button" role="tab" class="x-tab x-tab-mine" data-view="mine" aria-selected="false">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L2.8 8.1l5-.7z"/></svg>
+          My programme <span class="x-mine-n" id="x-mine-n" hidden></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="x-layout">
+    <aside class="x-side" id="x-side" aria-label="Filters">
+      <button type="button" class="x-sidetoggle" id="x-sidetoggle" aria-expanded="false" aria-controls="x-facets">
+        Filters <span class="x-badge" id="x-nfilters" hidden></span>
+      </button>
+      <div class="x-facets" id="x-facets">
+        <section class="x-facet"><h3>Themes</h3><div class="x-chips" id="x-f-tags"></div></section>
+        <section class="x-facet" id="x-facet-days"><h3>Day</h3><div class="x-chips" id="x-f-days"></div></section>
+        <section class="x-facet"><h3>Registration</h3><div class="x-chips" id="x-f-reg"></div></section>
+        <section class="x-facet"><h3>Format</h3><div class="x-chips" id="x-f-formats"></div></section>
+        <section class="x-facet"><h3>Who it is for</h3><div class="x-chips" id="x-f-aud"></div></section>
+      </div>
+    </aside>
+
+    <main class="x-main">
+      <div class="x-toolbar">
+        <div class="x-summary" id="x-summary" aria-live="polite"></div>
+        <div class="x-tools">
+          <button type="button" class="x-tool" id="x-share">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8.5 11.5a3.5 3.5 0 005 0l2.5-2.5a3.5 3.5 0 00-5-5l-1 1M11.5 8.5a3.5 3.5 0 00-5 0L4 11a3.5 3.5 0 005 5l1-1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <span>Copy link to this view</span>
+          </button>
+          <div class="x-seg" id="x-layout-toggle" role="group" aria-label="Show as">
+            <button type="button" data-layout="cards" aria-pressed="true" title="Cards">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h6v6H3zM11 3h6v6h-6zM3 11h6v6H3zM11 11h6v6h-6z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Cards</span>
+            </button>
+            <button type="button" data-layout="list" aria-pressed="false" title="Compact list">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>List</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="x-view"><p class="x-status">Loading the programme…</p></div>
+    </main>
+  </div>
+
+  <div class="x-scrim" id="x-scrim" hidden></div>
+  <section class="x-drawer" id="x-drawer" role="dialog" aria-modal="true" aria-labelledby="x-d-title" hidden>
+    <button type="button" class="x-close" id="x-close" aria-label="Close">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="x-d-body" id="x-d-body"></div>
+  </section>
+  <p class="x-toast" id="x-toast" role="status" aria-live="polite" hidden></p>
+</div>
+
+<style>
+#thjw-explorer{
+  --x-navy:#17345e; --x-navy-2:#0f2748; --x-ink:#1c2a3f; --x-muted:#5c6b82;
+  --x-mint:#e5efe4; --x-line:#dfe4ea; --x-hair:#eef1f5; --x-bg:#f6f8fb; --x-tile:#f1f4f8;
+  --x-open:#1d6b45; --x-star:#d99a00; --x-now:#c62f3a;
+  font-family:inherit;color:var(--x-ink);background:var(--x-bg);-webkit-font-smoothing:antialiased;
+  /* break out of the theme's content column: this view is meant to use the whole window */
+  width:calc(100vw - var(--x-sbw,0px));margin:0 0 2rem calc(50% - 50vw + var(--x-sbw,0px) / 2);min-height:100vh;position:relative}
+#thjw-explorer[data-bleed="0"]{width:auto;margin-left:0}
+#thjw-explorer:fullscreen{overflow:auto;margin:0;width:100%}
+#thjw-explorer *,#thjw-explorer *::before,#thjw-explorer *::after{box-sizing:border-box}
+#thjw-explorer [hidden]{display:none!important}
+#thjw-explorer button{font:inherit;color:inherit}
+#thjw-explorer .x-ico{width:1em;height:1em;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* hero */
+#thjw-explorer .x-hero{background:var(--x-navy);color:#fff;padding:2.6rem 1.25rem 2.2rem;background-size:cover;background-position:center;
+  background-image:radial-gradient(circle at 85% -20%,rgba(255,255,255,.12),transparent 55%),
+                   radial-gradient(circle at 0% 120%,rgba(203,224,200,.18),transparent 50%)}
+#thjw-explorer .x-hero-in,#thjw-explorer .x-tabs-in{max-width:1440px;margin:0 auto}
+#thjw-explorer .x-eyebrow{margin:0 0 .5rem;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#cbe0c8}
+#thjw-explorer .x-h{margin:0 0 1.2rem;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.1;font-weight:800;color:#fff}
+#thjw-explorer .x-stats{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin:0 0 1.6rem;padding:0;list-style:none}
+#thjw-explorer .x-stats li{display:flex;align-items:baseline;gap:.45rem;font-size:.92rem;color:rgba(255,255,255,.8)}
+#thjw-explorer .x-stats b{font-size:1.6rem;font-weight:800;color:#fff;font-variant-numeric:tabular-nums}
+#thjw-explorer .x-herobar{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+#thjw-explorer .x-search{position:relative;display:flex;align-items:center;flex:1 1 320px;max-width:560px}
+#thjw-explorer .x-search svg{position:absolute;left:1rem;width:18px;height:18px;fill:var(--x-muted);pointer-events:none}
+#thjw-explorer .x-search input{width:100%;font:inherit;font-size:1rem;color:var(--x-ink);padding:.85rem 1rem .85rem 2.8rem;
+  border:0;border-radius:999px;background:#fff;outline:none;-webkit-appearance:none;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+#thjw-explorer .x-search input:focus{box-shadow:0 0 0 3px #cbe0c8}
+#thjw-explorer .x-fs{display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;font-size:.88rem;font-weight:600;
+  padding:.7rem 1rem;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff}
+#thjw-explorer .x-fs:hover{background:rgba(255,255,255,.1)}
+#thjw-explorer .x-fs svg{width:16px;height:16px;fill:currentColor}
+
+/* tabs */
+#thjw-explorer .x-tabs{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--x-line);padding:0 1.25rem}
+#thjw-explorer .x-tabs-in{display:flex;align-items:center;gap:.25rem;overflow-x:auto}
+#thjw-explorer .x-tablist{display:flex;gap:.25rem}
+#thjw-explorer .x-nav{display:inline-flex;align-items:center;gap:.4rem;cursor:pointer;background:none;border:0;padding:.55rem .8rem;
+  border-radius:999px;font-size:.9rem;font-weight:600;color:var(--x-muted);text-decoration:none;white-space:nowrap}
+#thjw-explorer .x-nav svg{width:17px;height:17px;flex:0 0 auto}
+#thjw-explorer .x-nav:hover{background:var(--x-hair);color:var(--x-navy)}
+#thjw-explorer .x-nav:focus-visible{outline:2px solid var(--x-navy);outline-offset:-2px}
+#thjw-explorer .x-sep{width:1px;height:1.6rem;background:var(--x-line);margin:0 .5rem;flex:0 0 auto}
+#thjw-explorer .x-tab{cursor:pointer;display:inline-flex;align-items:center;gap:.4rem;background:none;border:0;border-bottom:3px solid transparent;
+  padding:1rem 1rem .85rem;font-size:.95rem;font-weight:600;color:var(--x-muted);white-space:nowrap}
+#thjw-explorer .x-tab:hover{color:var(--x-navy)}
+#thjw-explorer .x-tab[aria-selected="true"]{color:var(--x-navy);border-bottom-color:var(--x-navy)}
+#thjw-explorer .x-tab:focus-visible{outline:2px solid var(--x-navy);outline-offset:-4px}
+#thjw-explorer .x-tab-mine svg{width:16px;height:16px;fill:var(--x-star)}
+#thjw-explorer .x-mine-n{font-size:.72rem;font-weight:700;background:var(--x-star);color:#fff;border-radius:999px;padding:.1rem .45rem}
+
+/* layout */
+#thjw-explorer .x-layout{max-width:1440px;margin:0 auto;padding:1.5rem 1.25rem 3rem;display:grid;
+  grid-template-columns:270px minmax(0,1fr);gap:2rem;align-items:start}
+#thjw-explorer[data-view="mine"] .x-layout{grid-template-columns:minmax(0,1fr)}
+#thjw-explorer[data-view="mine"] .x-side,#thjw-explorer[data-view="timeline"] #x-facet-days{display:none}
+#thjw-explorer .x-side{position:sticky;top:4.2rem;max-height:calc(100vh - 5rem);overflow:auto;padding-right:.25rem}
+#thjw-explorer .x-sidetoggle{display:none}
+#thjw-explorer .x-facet{margin:0 0 1.4rem}
+#thjw-explorer .x-facet h3{margin:0 0 .6rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--x-muted)}
+#thjw-explorer .x-chips{display:flex;flex-wrap:wrap;gap:.35rem}
+#thjw-explorer .x-chip{cursor:pointer;display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:600;line-height:1.15;
+  padding:.42rem .65rem;border-radius:999px;border:1px solid var(--x-line);background:#fff;color:var(--x-ink);text-align:left;
+  transition:background .15s,border-color .15s,color .15s}
+#thjw-explorer .x-chip .x-ico{font-size:.95rem;color:var(--c,var(--x-navy))}
+#thjw-explorer .x-chip:hover{border-color:var(--c,var(--x-navy))}
+#thjw-explorer .x-chip .x-n{font-weight:500;color:var(--x-muted);font-variant-numeric:tabular-nums}
+#thjw-explorer .x-chip[aria-pressed="true"]{background:var(--c,var(--x-navy));border-color:var(--c,var(--x-navy));color:#fff}
+#thjw-explorer .x-chip[aria-pressed="true"] .x-n,#thjw-explorer .x-chip[aria-pressed="true"] .x-ico{color:rgba(255,255,255,.9)}
+#thjw-explorer .x-chip[data-empty]{color:var(--x-muted);border-style:dashed;background:transparent}
+#thjw-explorer .x-chip[data-empty] .x-ico{color:var(--x-muted)}
+
+/* toolbar: summary on the left, share and layout on the right */
+#thjw-explorer .x-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem 1rem;margin:0 0 1.2rem}
+#thjw-explorer .x-summary{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;min-height:2rem;font-size:.92rem;color:var(--x-muted)}
+#thjw-explorer .x-summary strong{color:var(--x-ink)}
+#thjw-explorer .x-pill{display:inline-flex;align-items:center;gap:.35rem;cursor:pointer;font-size:.8rem;font-weight:600;
+  padding:.3rem .55rem .3rem .65rem;border-radius:999px;border:0;background:var(--c,var(--x-navy));color:#fff}
+#thjw-explorer .x-pill::after{content:"×";font-size:1rem;line-height:.8;opacity:.8}
+#thjw-explorer .x-link{cursor:pointer;background:none;border:0;padding:0;font-size:.85rem;color:var(--x-navy);text-decoration:underline;text-underline-offset:3px}
+#thjw-explorer .x-tools{display:flex;align-items:center;gap:.5rem}
+#thjw-explorer .x-tool{display:inline-flex;align-items:center;gap:.4rem;cursor:pointer;font-size:.82rem;font-weight:600;padding:.45rem .8rem;
+  border-radius:999px;border:1px solid var(--x-line);background:#fff;color:var(--x-navy)}
+#thjw-explorer .x-tool:hover{border-color:var(--x-navy)}
+#thjw-explorer .x-tool svg{width:16px;height:16px}
+#thjw-explorer .x-seg{display:inline-flex;border:1px solid var(--x-line);border-radius:999px;background:#fff;padding:2px}
+#thjw-explorer .x-seg button{display:inline-flex;align-items:center;gap:.35rem;cursor:pointer;border:0;background:none;border-radius:999px;
+  padding:.38rem .7rem;font-size:.8rem;font-weight:600;color:var(--x-muted)}
+#thjw-explorer .x-seg button svg{width:15px;height:15px}
+#thjw-explorer .x-seg button[aria-pressed="true"]{background:var(--x-navy);color:#fff}
+#thjw-explorer[data-view="theme"] .x-seg,#thjw-explorer[data-view="org"] .x-seg,#thjw-explorer[data-view="timeline"] .x-seg{display:none}
+
+/* today strip */
+#thjw-explorer .x-today{margin:0 0 2rem;padding:1.1rem 1.2rem;border-radius:16px;background:#fff;border:1px solid var(--x-line);
+  border-left:5px solid var(--x-now)}
+#thjw-explorer .x-today h3{margin:0 0 .8rem;font-size:1.05rem;font-weight:800;color:var(--x-navy);display:flex;align-items:center;gap:.5rem}
+#thjw-explorer .x-live{width:9px;height:9px;border-radius:50%;background:var(--x-now);box-shadow:0 0 0 0 rgba(198,47,58,.5);animation:xpulse 2s infinite}
+@keyframes xpulse{70%{box-shadow:0 0 0 8px rgba(198,47,58,0)}100%{box-shadow:0 0 0 0 rgba(198,47,58,0)}}
+#thjw-explorer .x-today-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem 1.5rem}
+#thjw-explorer .x-today h4{margin:0 0 .45rem;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--x-muted)}
+#thjw-explorer .x-today ul{margin:0;padding:0;list-style:none;display:grid;gap:.35rem}
+#thjw-explorer .x-tl-item{all:unset;cursor:pointer;display:grid;grid-template-columns:3.4rem minmax(0,1fr);gap:.6rem;align-items:baseline;
+  padding:.35rem .5rem;margin:0 -.5rem;border-radius:8px;font-size:.88rem;line-height:1.35}
+#thjw-explorer .x-tl-item:hover,#thjw-explorer .x-tl-item:focus-visible{background:var(--x-hair)}
+#thjw-explorer .x-tl-item:focus-visible{outline:2px solid var(--x-navy)}
+#thjw-explorer .x-tl-item b{font-variant-numeric:tabular-nums;color:var(--x-navy)}
+#thjw-explorer .x-tl-item.is-now b{color:var(--x-now)}
+#thjw-explorer .x-today p{margin:0;font-size:.88rem;color:var(--x-muted)}
+
+/* day sections and cards */
+#thjw-explorer .x-day{margin:0 0 2.2rem}
+#thjw-explorer .x-dayhead{display:flex;align-items:baseline;gap:.75rem;margin:0 0 .9rem;padding:0 0 .55rem;border-bottom:2px solid var(--x-line)}
+#thjw-explorer .x-dayhead h3{margin:0;font-size:1.25rem;font-weight:800;color:var(--x-navy)}
+#thjw-explorer .x-dayhead span{font-size:.88rem;color:var(--x-muted)}
+#thjw-explorer .x-dayhead .x-todaytag{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--x-now);
+  padding:.2rem .5rem;border-radius:999px;align-self:center}
+#thjw-explorer .x-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+#thjw-explorer .x-card{position:relative;display:flex;flex-direction:column;gap:.6rem;padding:1.05rem 1.05rem 1rem;background:#fff;
+  border:1px solid var(--x-line);border-radius:14px;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+#thjw-explorer .x-card::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--stripe,var(--x-navy))}
+#thjw-explorer .x-card:hover,#thjw-explorer .x-card:focus-within{transform:translateY(-2px);border-color:#b9c4d3;box-shadow:0 10px 24px rgba(23,52,94,.11)}
+/* the title button stretches over the whole card; the star sits above it */
+#thjw-explorer .x-open{all:unset;cursor:pointer}
+#thjw-explorer .x-open::after{content:"";position:absolute;inset:0;z-index:1}
+#thjw-explorer .x-open:focus-visible::after{outline:2px solid var(--x-navy);outline-offset:-3px;border-radius:14px}
+#thjw-explorer .x-when{display:flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:700;color:var(--x-navy);font-variant-numeric:tabular-nums}
+#thjw-explorer .x-when > span:first-child{margin-right:auto}
+#thjw-explorer .x-fmt{font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.22rem .45rem;border-radius:4px;
+  background:var(--x-hair);color:var(--x-navy);white-space:nowrap}
+#thjw-explorer .x-fmt[data-f="Online"]{background:#e3f1f1;color:#155e5e}
+#thjw-explorer .x-fmt[data-f="Hybrid"]{background:#f6ecdf;color:#7a4b13}
+#thjw-explorer .x-star{position:relative;z-index:2;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;
+  margin:-6px -6px -6px 0;border-radius:50%;border:0;background:none;color:#9aa6b8}
+#thjw-explorer .x-star svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}
+#thjw-explorer .x-star:hover{background:var(--x-hair);color:var(--x-star)}
+#thjw-explorer .x-star[aria-pressed="true"]{color:var(--x-star)}
+#thjw-explorer .x-star[aria-pressed="true"] svg{fill:currentColor}
+#thjw-explorer .x-star:focus-visible{outline:2px solid var(--x-navy)}
+#thjw-explorer .x-title{margin:0;font-size:1rem;font-weight:700;line-height:1.35;color:var(--x-ink);
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+#thjw-explorer .x-labels{display:flex;flex-wrap:wrap;gap:.3rem;margin:0;padding:0;list-style:none}
+#thjw-explorer .x-label{display:inline-flex;align-items:center;gap:.3rem;font-size:.7rem;font-weight:700;line-height:1;
+  padding:.28rem .5rem .28rem .42rem;border-radius:999px;background:var(--bg);color:var(--c)}
+#thjw-explorer .x-label .x-ico{font-size:.85rem;stroke-width:1.9}
+#thjw-explorer button.x-label{cursor:pointer;border:0}
+#thjw-explorer button.x-label:hover{background:var(--c);color:#fff}
+#thjw-explorer .x-reg{margin:0;display:inline-flex;align-items:center;gap:.35rem;font-size:.76rem;font-weight:700;color:var(--x-muted)}
+#thjw-explorer .x-reg::before{content:"";width:7px;height:7px;border-radius:50%;border:1.5px dashed currentColor}
+#thjw-explorer .x-reg.is-open{color:var(--x-open)}
+#thjw-explorer .x-reg.is-open::before{border:0;background:currentColor}
+#thjw-explorer .x-hosts{display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;margin-top:auto;padding-top:.7rem;border-top:1px solid var(--x-hair)}
+#thjw-explorer .x-logos{display:flex;flex-wrap:wrap;gap:.4rem}
+#thjw-explorer .x-lg{height:40px;min-width:48px;max-width:122px;border-radius:8px;background:var(--x-tile);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;padding:5px 8px}
+#thjw-explorer .x-lg.is-dark{background:var(--x-navy)}
+#thjw-explorer .x-lg img{max-height:30px;max-width:106px;width:auto;height:auto;object-fit:contain;display:block}
+#thjw-explorer .x-mono{font-size:.68rem;font-weight:800;letter-spacing:.02em;color:var(--x-navy);background:var(--x-mint);
+  min-width:34px;height:100%;padding:0 .4rem;border-radius:6px;display:flex;align-items:center;justify-content:center}
+#thjw-explorer .x-hosttext{font-size:.8rem;line-height:1.35;color:var(--x-muted);display:-webkit-box;-webkit-line-clamp:2;
+  -webkit-box-orient:vertical;overflow:hidden}
+
+/* compact list */
+#thjw-explorer .x-list{display:flex;flex-direction:column;background:#fff;border:1px solid var(--x-line);border-radius:14px;overflow:hidden}
+#thjw-explorer .x-row{position:relative;display:grid;grid-template-columns:6.2rem minmax(0,1fr) 7.5rem 8.5rem 2rem;gap:1rem;align-items:center;
+  padding:.75rem 1rem;border-top:1px solid var(--x-hair)}
+#thjw-explorer .x-row:first-child{border-top:0}
+#thjw-explorer .x-row:hover,#thjw-explorer .x-row:focus-within{background:#f9fafc}
+#thjw-explorer .x-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--stripe,var(--x-navy))}
+#thjw-explorer .x-row-time{font-size:.82rem;font-weight:700;color:var(--x-navy);font-variant-numeric:tabular-nums}
+#thjw-explorer .x-row-main{min-width:0}
+#thjw-explorer .x-row-title{margin:0;font-size:.92rem;font-weight:700;line-height:1.35;display:flex;align-items:baseline;gap:.45rem}
+#thjw-explorer .x-row-title .x-dots{display:inline-flex;gap:3px;flex:0 0 auto;transform:translateY(-1px)}
+#thjw-explorer .x-row-title .x-dots i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+#thjw-explorer .x-row-host{margin:.15rem 0 0;font-size:.78rem;color:var(--x-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#thjw-explorer .x-row .x-star{margin:0}
+#thjw-explorer .x-row .x-open::after{border-radius:0}
+
+/* theme view */
+#thjw-explorer .x-themes{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+#thjw-explorer .x-theme{position:relative;overflow:hidden;cursor:pointer;text-align:left;border:0;border-radius:16px;padding:1.3rem 1.3rem 1.1rem;color:#fff;
+  background:var(--c);display:flex;flex-direction:column;gap:.7rem;min-height:220px;transition:transform .18s ease,box-shadow .18s ease}
+#thjw-explorer .x-theme > .x-ico{position:absolute;right:-14px;bottom:-14px;font-size:7.5rem;stroke-width:1.2;opacity:.16}
+#thjw-explorer .x-theme-ico{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.18)}
+#thjw-explorer .x-theme-ico .x-ico{font-size:1.35rem}
+#thjw-explorer .x-theme:hover,#thjw-explorer .x-theme:focus-visible{transform:translateY(-3px);box-shadow:0 12px 26px rgba(0,0,0,.18);outline:none}
+#thjw-explorer .x-theme:focus-visible{outline:3px solid var(--x-navy);outline-offset:2px}
+#thjw-explorer .x-theme h3{margin:0;font-size:1.2rem;font-weight:800;line-height:1.2;color:#fff}
+#thjw-explorer .x-theme .x-big{font-size:.85rem;font-weight:600;opacity:.92}
+#thjw-explorer .x-theme ul{position:relative;margin:0;padding:0;list-style:none;display:grid;gap:.35rem;font-size:.84rem;line-height:1.35}
+#thjw-explorer .x-theme li{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;opacity:.95}
+#thjw-explorer .x-theme li::before{content:"→ ";opacity:.7}
+#thjw-explorer .x-theme .x-more{position:relative;margin-top:auto;font-size:.82rem;font-weight:700}
+
+/* organisation view */
+#thjw-explorer .x-orgs{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));grid-auto-rows:1fr}
+#thjw-explorer .x-org{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.5rem;
+  padding:1rem .85rem .9rem;background:#fff;border:1px solid var(--x-line);border-radius:14px;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+#thjw-explorer .x-org:hover,#thjw-explorer .x-org:focus-within{transform:translateY(-3px);border-color:var(--x-navy);box-shadow:0 8px 22px rgba(23,52,94,.12)}
+#thjw-explorer .x-org-main{all:unset;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:.6rem;width:100%}
+#thjw-explorer .x-org-main:focus-visible{outline:2px solid var(--x-navy);outline-offset:4px;border-radius:8px}
+#thjw-explorer .x-logo{display:flex;align-items:center;justify-content:center;width:100%;height:84px;border-radius:10px;background:var(--x-tile);padding:.7rem}
+#thjw-explorer .x-logo.is-dark{background:var(--x-navy)}
+#thjw-explorer .x-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+#thjw-explorer .x-logo .x-mono{width:60px;height:60px;font-size:1rem;border-radius:50%}
+#thjw-explorer .x-org-name{font-size:.84rem;font-weight:600;line-height:1.3;color:var(--x-ink);
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+#thjw-explorer .x-org-n{font-size:.76rem;font-weight:700;color:var(--x-navy);background:var(--x-mint);padding:.2rem .5rem;border-radius:999px}
+#thjw-explorer .x-ext{font-size:.76rem;color:var(--x-muted);text-decoration:underline;text-underline-offset:2px}
+#thjw-explorer .x-ext:hover{color:var(--x-navy)}
+#thjw-explorer .x-subhead{margin:2.2rem 0 .9rem;font-size:1rem;font-weight:800;color:var(--x-navy)}
+#thjw-explorer .x-note{margin:0 0 1rem;font-size:.88rem;color:var(--x-muted);max-width:70ch}
+
+/* timeline view */
+#thjw-explorer .x-daypick{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1rem}
+#thjw-explorer .x-daypick button{cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;gap:.1rem;padding:.5rem .85rem;
+  border-radius:12px;border:1px solid var(--x-line);background:#fff;font-size:.86rem;font-weight:700;color:var(--x-navy)}
+#thjw-explorer .x-daypick button span{font-size:.72rem;font-weight:500;color:var(--x-muted)}
+#thjw-explorer .x-daypick button[aria-pressed="true"]{background:var(--x-navy);border-color:var(--x-navy);color:#fff}
+#thjw-explorer .x-daypick button[aria-pressed="true"] span{color:rgba(255,255,255,.8)}
+#thjw-explorer .x-daypick button:disabled{opacity:.4;cursor:default}
+#thjw-explorer .x-tl-meta{margin:0 0 .8rem;font-size:.88rem;color:var(--x-muted)}
+#thjw-explorer .x-tl-band{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:0 0 .8rem;font-size:.82rem;color:var(--x-muted)}
+#thjw-explorer .x-tl-band button{all:unset;cursor:pointer;padding:.35rem .7rem;border-radius:999px;background:var(--bg);color:var(--c);font-weight:700;font-size:.8rem}
+#thjw-explorer .x-tl-band button:focus-visible{outline:2px solid var(--x-navy)}
+#thjw-explorer .x-tl-scroll{overflow-x:auto;background:#fff;border:1px solid var(--x-line);border-radius:14px;padding:0 0 .5rem}
+#thjw-explorer .x-tl{position:relative;min-width:calc(var(--hours) * 120px)}
+#thjw-explorer .x-tl-axis{position:sticky;top:0;height:2.2rem;border-bottom:1px solid var(--x-line);background:#fff;z-index:1}
+#thjw-explorer .x-tl-axis span{position:absolute;top:.65rem;font-size:.74rem;font-weight:700;color:var(--x-muted);transform:translateX(-50%);font-variant-numeric:tabular-nums}
+#thjw-explorer .x-tl-grid{position:absolute;top:2.2rem;bottom:0;width:1px;background:var(--x-hair)}
+#thjw-explorer .x-tl-lanes{position:relative;margin-top:.5rem}
+#thjw-explorer .x-tl-bar{all:unset;box-sizing:border-box;position:absolute;height:60px;cursor:pointer;overflow:hidden;
+  padding:.35rem .55rem;border-radius:8px;background:var(--bg);border-left:4px solid var(--c);font-size:.76rem;line-height:1.25;color:var(--x-ink)}
+#thjw-explorer .x-tl-bar b{display:block;font-size:.72rem;color:var(--c);font-variant-numeric:tabular-nums}
+#thjw-explorer .x-tl-bar span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:600}
+#thjw-explorer .x-tl-bar:hover,#thjw-explorer .x-tl-bar:focus-visible{box-shadow:0 6px 16px rgba(23,52,94,.16);z-index:2}
+#thjw-explorer .x-tl-bar:focus-visible{outline:2px solid var(--x-navy)}
+#thjw-explorer .x-tl-bar.is-mine{box-shadow:inset 0 0 0 2px var(--x-star)}
+#thjw-explorer .x-tl-now{position:absolute;top:0;bottom:0;width:2px;background:var(--x-now);z-index:3;pointer-events:none}
+#thjw-explorer .x-tl-now::before{content:"Now";position:absolute;top:.55rem;left:4px;font-size:.68rem;font-weight:800;color:var(--x-now)}
+
+/* my programme */
+#thjw-explorer .x-mine-head{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;margin:0 0 1.4rem}
+#thjw-explorer .x-mine-head h3{margin:0 auto 0 0;font-size:1.25rem;font-weight:800;color:var(--x-navy)}
+#thjw-explorer .x-empty{max-width:560px;margin:2rem auto;text-align:center;padding:2rem 1.5rem;background:#fff;border:1px dashed var(--x-line);border-radius:16px}
+#thjw-explorer .x-empty svg{width:40px;height:40px;fill:none;stroke:var(--x-star);stroke-width:1.5;stroke-linejoin:round}
+#thjw-explorer .x-empty h3{margin:.6rem 0 .4rem;color:var(--x-navy)}
+#thjw-explorer .x-empty p{margin:0;color:var(--x-muted);line-height:1.5}
+#thjw-explorer .x-clash{margin:.25rem 0 0;font-size:.76rem;font-weight:700;color:var(--x-now)}
+#thjw-explorer .x-shared{margin:0 0 1.4rem;padding:1rem 1.2rem;border-radius:14px;background:#fff8e6;border:1px solid #f2dc9b;
+  display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;font-size:.9rem}
+
+/* drawer */
+#thjw-explorer .x-scrim{position:fixed;inset:0;background:rgba(15,39,72,.45);z-index:40}
+#thjw-explorer .x-drawer{position:fixed;top:0;right:0;bottom:0;width:min(640px,100vw);background:#fff;z-index:41;overflow:auto;
+  box-shadow:-12px 0 40px rgba(0,0,0,.18);animation:xslide .22s ease}
+@keyframes xslide{from{transform:translateX(40px);opacity:0}to{transform:none;opacity:1}}
+#thjw-explorer .x-close{position:sticky;top:.75rem;float:right;margin:.75rem .75rem 0 0;width:40px;height:40px;border-radius:50%;
+  border:1px solid var(--x-line);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1}
+#thjw-explorer .x-close svg{width:18px;height:18px}
+#thjw-explorer .x-close:hover{border-color:var(--x-navy)}
+#thjw-explorer .x-d-body{padding:1.6rem 1.8rem 2.5rem}
+#thjw-explorer .x-d-stripe{height:6px;margin:-1.6rem -1.8rem 1.4rem;background:var(--stripe,var(--x-navy))}
+#thjw-explorer .x-d-when{margin:0 0 .4rem;font-size:.86rem;font-weight:700;color:var(--x-navy)}
+#thjw-explorer .x-d-title{margin:0 0 .9rem;font-size:1.5rem;line-height:1.25;font-weight:800;color:var(--x-ink);padding-right:2.5rem}
+#thjw-explorer .x-d-labels{margin:0 0 1.3rem}
+#thjw-explorer .x-d-cta{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:0 0 .9rem}
+#thjw-explorer .x-d-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.6rem}
+#thjw-explorer .x-btn{display:inline-block;font-size:.92rem;font-weight:700;padding:.7rem 1.25rem;border-radius:999px;text-decoration:none;
+  background:var(--x-navy);color:#fff;border:1px solid var(--x-navy)}
+#thjw-explorer a.x-btn:hover{background:var(--x-navy-2);color:#fff}
+#thjw-explorer .x-btn.is-pending{background:transparent;color:var(--x-muted);border-style:dashed;border-color:var(--x-line);font-weight:600}
+#thjw-explorer .x-ghost{display:inline-flex;align-items:center;gap:.4rem;cursor:pointer;font-size:.82rem;font-weight:600;padding:.5rem .85rem;
+  border-radius:999px;border:1px solid var(--x-line);background:#fff;color:var(--x-ink);text-decoration:none}
+#thjw-explorer .x-ghost:hover{border-color:var(--x-navy);color:var(--x-navy)}
+#thjw-explorer .x-ghost svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+#thjw-explorer .x-ghost[aria-pressed="true"]{border-color:var(--x-star);background:#fff8e6}
+#thjw-explorer .x-ghost[aria-pressed="true"] svg{fill:var(--x-star);stroke:var(--x-star)}
+#thjw-explorer .x-d-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin:0 0 1.6rem;
+  padding:1rem 1.1rem;background:var(--x-bg);border-radius:12px}
+#thjw-explorer .x-d-facts dt{font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--x-muted);margin:0 0 .2rem}
+#thjw-explorer .x-d-facts dd{margin:0;font-size:.88rem;line-height:1.45}
+#thjw-explorer .x-d-h{margin:0 0 .7rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--x-muted)}
+#thjw-explorer .x-d-hosts{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.6rem;margin:0 0 .6rem}
+#thjw-explorer .x-d-host{display:flex;flex-direction:column;align-items:center;gap:.45rem;text-align:center;padding:.6rem;
+  border:1px solid var(--x-line);border-radius:12px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s}
+#thjw-explorer a.x-d-host:hover,#thjw-explorer a.x-d-host:focus-visible{border-color:var(--x-navy);box-shadow:0 6px 16px rgba(23,52,94,.1);outline:none}
+#thjw-explorer .x-d-host .x-logo{height:62px;padding:.5rem}
+#thjw-explorer .x-d-host .x-logo .x-mono{width:46px;height:46px}
+#thjw-explorer .x-d-hname{font-size:.76rem;font-weight:600;line-height:1.3}
+#thjw-explorer a.x-d-host .x-d-hname::after{content:" ↗";color:var(--x-muted)}
+#thjw-explorer .x-d-hostline{margin:0 0 1.6rem;font-size:.86rem;color:var(--x-muted);line-height:1.5}
+#thjw-explorer .x-d-desc{margin:0 0 1.6rem;font-size:.95rem;line-height:1.65;white-space:pre-line}
+#thjw-explorer .x-d-contact{font-size:.86rem;color:var(--x-muted);overflow-wrap:anywhere}
+#thjw-explorer .x-d-contact a{color:var(--x-navy)}
+#thjw-explorer .x-d-more{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.6rem}
+#thjw-explorer .x-related{display:grid;gap:.6rem;margin:0 0 1.6rem}
+#thjw-explorer .x-rel{all:unset;box-sizing:border-box;cursor:pointer;display:block;padding:.7rem .9rem .7rem 1rem;border-radius:12px;
+  border:1px solid var(--x-line);border-left:4px solid var(--c);font-size:.88rem;line-height:1.35}
+#thjw-explorer .x-rel:hover,#thjw-explorer .x-rel:focus-visible{border-color:var(--x-navy);border-left-color:var(--c);background:#f9fafc}
+#thjw-explorer .x-rel:focus-visible{outline:2px solid var(--x-navy)}
+#thjw-explorer .x-rel small{display:block;font-size:.76rem;font-weight:700;color:var(--x-navy);margin-bottom:.15rem}
+#thjw-explorer .x-rel b{font-weight:700}
+#thjw-explorer .x-status{margin:2rem 0;color:var(--x-muted)}
+#thjw-explorer .x-toast{position:fixed;left:50%;bottom:1.5rem;transform:translateX(-50%);z-index:50;margin:0;padding:.7rem 1.1rem;border-radius:999px;
+  background:var(--x-ink);color:#fff;font-size:.88rem;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+
+@media (max-width:900px){
+  #thjw-explorer .x-layout{grid-template-columns:minmax(0,1fr);gap:1rem;padding-top:1rem}
+  #thjw-explorer .x-side{position:static;max-height:none;overflow:visible;padding:0}
+  #thjw-explorer .x-sidetoggle{display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;font-weight:700;font-size:.9rem;
+    padding:.6rem 1rem;border-radius:999px;border:1px solid var(--x-line);background:#fff}
+  #thjw-explorer .x-facets{display:none;margin-top:1rem;padding:1rem;background:#fff;border:1px solid var(--x-line);border-radius:14px}
+  #thjw-explorer .x-sidetoggle[aria-expanded="true"] + .x-facets{display:block}
+  #thjw-explorer .x-badge{background:var(--x-navy);color:#fff;border-radius:999px;font-size:.72rem;padding:.1rem .45rem}
+  #thjw-explorer .x-hero{padding:1.8rem 1rem 1.6rem}
+  #thjw-explorer .x-tabs{padding:0 .5rem}
+  #thjw-explorer .x-tabs-in,#thjw-explorer .x-tablist{gap:0}
+  #thjw-explorer .x-nav{padding:.55rem .5rem}
+  #thjw-explorer .x-nav span{display:none}
+  #thjw-explorer .x-sep{margin:0 .15rem}
+  #thjw-explorer .x-tab{padding:1rem .55rem .85rem;font-size:.88rem}
+  #thjw-explorer .x-layout{padding-left:1rem;padding-right:1rem}
+  #thjw-explorer .x-tool span,#thjw-explorer .x-seg button span{display:none}
+  #thjw-explorer .x-row{grid-template-columns:minmax(0,1fr) 2rem;gap:.3rem .75rem}
+  #thjw-explorer .x-row-time{grid-column:1}
+  #thjw-explorer .x-row-main{grid-column:1}
+  #thjw-explorer .x-row .x-fmt-cell,#thjw-explorer .x-row .x-reg-cell{grid-column:1;display:inline-flex}
+  #thjw-explorer .x-row .x-star{grid-column:2;grid-row:1}
+  #thjw-explorer .x-d-body{padding:1.3rem 1.1rem 2rem}
+  #thjw-explorer .x-d-stripe{margin:-1.3rem -1.1rem 1.2rem}
+}
+@media (max-width:480px){
+  #thjw-explorer .x-grid,#thjw-explorer .x-themes{grid-template-columns:minmax(0,1fr)}
+  #thjw-explorer .x-orgs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (prefers-reduced-motion:reduce){
+  #thjw-explorer .x-card,#thjw-explorer .x-theme,#thjw-explorer .x-org{transition:none}
+  #thjw-explorer .x-drawer,#thjw-explorer .x-live{animation:none}
+}
+</style>
+
+<script>
+(function(){
+  // Where the data lives. A test page can point these elsewhere with window.THJW_EXPLORER.
+  var CFG = window.THJW_EXPLORER || {};
+  var ROOT = CFG.eventsRoot || "https://cdn.jsdelivr.net/gh/thehaguehumanityhub/justice-week-events@main/";
+  var ORGS_ROOT = CFG.orgsRoot || "https://cdn.jsdelivr.net/gh/thehaguehumanityhub/thjw@main/";
+  var STORE = "thjw-explorer-v1";            // the visitor's saved activities and list/cards choice
+  var TZ = "Europe/Amsterdam";
+
+  var root = document.getElementById("thjw-explorer");
+  if(!root || root.hasAttribute("data-ready")) return;      // injected twice: run once
+  root.setAttribute("data-ready","");
+  // Full width without a sideways scrollbar: 100vw includes the page's own scrollbar, so take it off.
+  function fitWidth(){ root.style.setProperty("--x-sbw", Math.max(0, window.innerWidth - document.documentElement.clientWidth) + "px"); }
+  fitWidth();
+  window.addEventListener("resize", fitWidth);
+  function $(s){ return root.querySelector(s); }
+  var viewEl = $("#x-view"), summaryEl = $("#x-summary"), qEl = $("#x-q"),
+      drawer = $("#x-drawer"), scrim = $("#x-scrim"), dBody = $("#x-d-body"), toastEl = $("#x-toast");
+
+  // One colour and one icon per theme, so a theme looks the same on every card, chip and tile.
+  // A theme not listed here (a new one in the workbook) takes the next spare colour and a plain dot.
+  // Colours are checked for contrast: white text on them, and them on their own light tint, both pass AA.
+  var THEME_COLOURS = {
+    "International Law & Accountability":"#1f4e8c",
+    "Access to Justice":"#0c6e60",
+    "Democracy & Authoritarianism":"#7b3f8c",
+    "Business & Human Rights":"#9a5b00",
+    "Women & Gender":"#b8336a",
+    "Universal Jurisdiction":"#3949ab",
+    "Environmental & Climate Law":"#276d2b",
+    "Peace & Security":"#006b7c",
+    "Children & Youth Rights":"#a84a08",
+    "Visual Arts, Culture & Politics":"#a33a3a",
+    "Artificial Intelligence":"#4f5d75",
+    "Transitional Justice":"#6d4c41",
+    // In the v2 template's Topics list, not used by any activity yet
+    "Anti-Corruption":"#5a6b2e",
+    "Corruption & Rule of Law":"#7a5c1e",
+    "Technology & Digital Rights":"#2f6f8f"
+  };
+  var SPARE = ["#8c3f6b","#4b3f8c","#33694f"];
+  var THEME_ICONS = {
+    "International Law & Accountability":"M10 3v13M6.5 16.5h7M4 6h12M6 6l-2.5 5.5h5zM14 6l-2.5 5.5h5z",
+    "Access to Justice":"M5 17V3.5h10V17M3 17h14M12 10v.5",
+    "Democracy & Authoritarianism":"M3.5 10h13v7h-13zM7 10V4h6v6M8.3 7.2l1.3 1.3 2.3-2.6",
+    "Business & Human Rights":"M3 7h14v9H3zM7.5 7V5h5v2M3 11h14",
+    "Women & Gender":"M10 3.5a4 4 0 110 8 4 4 0 010-8zM10 11.5V17M7.5 14.5h5",
+    "Universal Jurisdiction":"M10 3a7 7 0 110 14 7 7 0 010-14zM3 10h14M10 3c2.4 2 2.4 12 0 14M10 3c-2.4 2-2.4 12 0 14",
+    "Environmental & Climate Law":"M4 16C4 9 9 4 16 4c0 7-5 12-12 12zM4 16l6.5-6.5",
+    "Peace & Security":"M10 3l6 2.5V10c0 3.5-2.6 6-6 7-3.4-1-6-3.5-6-7V5.5z",
+    "Children & Youth Rights":"M10 3.5a2 2 0 110 4 2 2 0 010-4zM6 10.2h8M10 7.5V13M8 17l2-4 2 4",
+    "Visual Arts, Culture & Politics":"M10 3a7 7 0 100 14c1 0 1.5-.7 1.5-1.5S11 14 11 13.2c0-.9.7-1.5 1.6-1.5H14a3 3 0 003-3C17 5.6 13.9 3 10 3zM6.5 9.5v.01M8.8 6.5v.01M12.4 6.8v.01",
+    "Artificial Intelligence":"M6 6h8v8H6zM8 3v3M12 3v3M8 14v3M12 14v3M3 8h3M3 12h3M14 8h3M14 12h3",
+    "Transitional Justice":"M2 14.5h16M4 14.5V9M16 14.5V9M2 9c3.5-3 12.5-3 16 0M8 14.5v-4M12 14.5v-4",
+    "Anti-Corruption":"M10 3l6 2.5V10c0 3.5-2.6 6-6 7-3.4-1-6-3.5-6-7V5.5zM7.5 10l2 2 3.5-4",
+    "Corruption & Rule of Law":"M4 16h12M5 16V9M8.3 16V9M11.7 16V9M15 16V9M3 9h14L10 4z",
+    "Technology & Digital Rights":"M3 4h14v9H3zM7 17h6M10 13v4"
+  };
+  var STAR = "M10 2.8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L2.8 8.1l5-.7z";
+
+  var DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+  // Lookup tables have no prototype, so a link such as #a=constructor finds nothing instead of a built-in.
+  var EVENTS = [], BY_SLUG = Object.create(null), ORGS = [], HOSTS = [], HOST_BY_KEY = Object.create(null),
+      TAGS = [], DAY_KEYS = [], DAY_LABEL = Object.create(null), colourOf = {};
+  var state = { view:"day", q:"", qRaw:"", tags:[], days:[], formats:[], aud:[], reg:[], host:null, open:null, tday:null, layout:"cards", picks:null };
+  var lastFocus = null;
+
+  /* ---------- helpers ---------- */
+  function norm(s){ return (s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""); }
+  function el(tag, cls, text){
+    var n = document.createElement(tag);
+    if(cls) n.className = cls;
+    if(text != null) n.textContent = text;
+    return n;
+  }
+  function svg(d, cls){
+    var s = document.createElementNS("http://www.w3.org/2000/svg","svg");
+    s.setAttribute("viewBox","0 0 20 20");
+    s.setAttribute("aria-hidden","true");
+    if(cls) s.setAttribute("class", cls);
+    var p = document.createElementNS("http://www.w3.org/2000/svg","path");
+    p.setAttribute("d", d);
+    s.appendChild(p);
+    return s;
+  }
+  function themeIcon(t){ return svg(THEME_ICONS[t] || "M10 6.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7z", "x-ico"); }
+  function parseDate(s){
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s||"");
+    return m ? new Date(+m[1], +m[2]-1, +m[3]) : null;
+  }
+  function ymd(d){ return d.getFullYear() + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" + ("0"+d.getDate()).slice(-2); }
+  function endDate(e){
+    var d = parseDate(e.date), x = parseDate(e.end_date);
+    return d && x && x > d ? x : null;
+  }
+  function mins(hm){ var m = /^(\d{1,2}):(\d{2})$/.exec(hm||""); return m ? +m[1]*60 + +m[2] : null; }
+  function endMins(e){                       // a missing or impossible end time counts as one hour
+    var s = mins(e.start), x = mins(e.end);
+    return s == null ? null : (x != null && x > s ? x : Math.min(s + 60, 24*60 - 1));
+  }
+  function hm(m){ return ("0"+Math.floor(m/60)).slice(-2) + ":" + ("0"+(m%60)).slice(-2); }
+  function shortDay(d){ return DAYS[d.getDay()].slice(0,3) + " " + d.getDate() + " " + MONTHS[d.getMonth()].slice(0,3); }
+  function longDay(d){ return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()]; }
+  function timeLabel(e){ return e.start ? (e.end ? e.start + "–" + e.end : e.start) : ""; }
+  function whenLabel(e){
+    var d = parseDate(e.date), x = endDate(e), t = timeLabel(e);
+    if(!d) return "Date to follow";
+    var day = x ? (shortDay(d) + " – " + shortDay(x)) : shortDay(d);
+    return t ? day + " · " + t : day;
+  }
+  function slugify(s){
+    var x = norm(s).replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+    return x.length > 70 ? x.slice(0,70).replace(/-[^-]*$/,"") : x;
+  }
+  function hash4(s){                         // short, stable fingerprint of a whole title
+    var h = 5381;
+    for(var i = 0; i < s.length; i++) h = (h * 33 + s.charCodeAt(i)) >>> 0;
+    return h.toString(36).slice(-4);
+  }
+  function activitySlug(e){
+    // A shared link, a saved star and a calendar entry all point at this, so it must not depend
+    // on the activity's position in the file. Long titles are cut short for the link and get a
+    // fingerprint of the full title, which keeps "Panel 1" and "Panel 2" of a series apart.
+    var full = norm(e.title).replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,""), s = slugify(e.title);
+    if(!s) return "a-" + hash4(e.title);
+    return full.length > 70 ? s + "-" + hash4(norm(e.title)) : s;
+  }
+  function cleanTime(s){                     // "9:00", "14.00", "14h00" become "09:00", "14:00"; anything else no time
+    var m = /^\s*(\d{1,2})\s*[:.hH]\s*(\d{2})\s*$/.exec(s||"");
+    return m && +m[1] < 24 && +m[2] < 60 ? ("0" + +m[1]).slice(-2) + ":" + m[2] : "";
+  }
+  function hexToRgba(hex, a){
+    var n = parseInt(hex.slice(1), 16);
+    return "rgba(" + (n>>16 & 255) + "," + (n>>8 & 255) + "," + (n & 255) + "," + a + ")";
+  }
+  function themeColour(t){
+    if(!colourOf[t]) colourOf[t] = THEME_COLOURS[t] || SPARE[Object.keys(colourOf).length % SPARE.length];
+    return colourOf[t];
+  }
+  function paint(n, t){ var c = t ? themeColour(t) : "#17345e"; n.style.setProperty("--c", c); n.style.setProperty("--bg", hexToRgba(c, .11)); return n; }
+  function stripe(e){ return e.tags.length ? themeColour(e.tags[0]) : "var(--x-navy)"; }
+  function label(t, asButton){
+    var n = paint(el(asButton ? "button" : "li", "x-label"), t);
+    n.appendChild(themeIcon(t));
+    n.appendChild(document.createTextNode(t));
+    if(asButton){
+      n.type = "button";
+      n.title = "Show all activities on " + t;
+      n.addEventListener("click", function(){ closeDrawer(); setOnly({ tags:[t] }); });
+    }
+    return n;
+  }
+  function plural(n, one, many){ return n + " " + (n === 1 ? one : many); }
+  var toastTimer;
+  function toast(msg){
+    toastEl.textContent = msg; toastEl.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.hidden = true; }, 2600);
+  }
+  function copy(text, done){
+    function fallback(){
+      var t = el("textarea"); t.value = text; t.setAttribute("readonly",""); t.style.position = "fixed"; t.style.opacity = "0";
+      root.appendChild(t); t.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch(err){}
+      if(ok) toast(done); else window.prompt("Copy this link:", text);
+      t.remove();
+    }
+    if(navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(function(){ toast(done); }, fallback);
+    else fallback();
+  }
+
+  /* ---------- the visitor's own choices, kept in their browser only ---------- */
+  var saved = { mine:[], layout:"cards" };
+  try { var raw = JSON.parse(localStorage.getItem(STORE) || "null"); if(raw && Array.isArray(raw.mine)) saved = { mine:raw.mine, layout:raw.layout === "list" ? "list" : "cards" }; } catch(err){}
+  function persist(){ try { localStorage.setItem(STORE, JSON.stringify(saved)); } catch(err){} }
+  function isMine(e){ return saved.mine.indexOf(e._slug) !== -1; }
+  function toggleMine(e){
+    var i = saved.mine.indexOf(e._slug);
+    if(i === -1) saved.mine.push(e._slug); else saved.mine.splice(i,1);
+    persist();
+    toast(i === -1 ? "Saved to My programme" : "Removed from My programme");
+    syncMineCount();
+  }
+  function syncMineCount(){
+    var n = saved.mine.filter(function(s){ return BY_SLUG[s]; }).length, b = $("#x-mine-n");
+    b.textContent = n; b.hidden = !n;
+  }
+  function starButton(e, onChange){
+    var b = el("button","x-star");
+    b.type = "button";
+    function sync(){
+      var on = isMine(e);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      b.setAttribute("aria-label", (on ? "Remove from" : "Save to") + " My programme: " + e.title);
+      b.title = on ? "Saved to My programme" : "Save to My programme";
+    }
+    b.appendChild(svg(STAR));
+    sync();
+    b.addEventListener("click", function(ev){ ev.stopPropagation(); toggleMine(e); sync(); if(onChange) onChange(); });
+    return b;
+  }
+
+  /* ---------- "now", in The Hague's time zone ---------- */
+  function nowHere(){
+    // A test page can fix the clock with THJW_EXPLORER.now = "2026-11-18T14:10" (Hague time).
+    var m = /^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})/.exec(CFG.now || "");
+    if(m) return { date:m[1], mins:mins(m[2]) };
+    try {
+      var p = {}, f = new Intl.DateTimeFormat("en-GB",{ timeZone:TZ, year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", hourCycle:"h23" });
+      f.formatToParts(new Date()).forEach(function(x){ p[x.type] = x.value; });
+      return { date:p.year + "-" + p.month + "-" + p.day, mins:+p.hour*60 + +p.minute };
+    } catch(err){ var d = new Date(); return { date:ymd(d), mins:d.getHours()*60 + d.getMinutes() }; }
+  }
+  function todayKey(){ var t = nowHere().date; return DAY_KEYS.indexOf(t) !== -1 ? t : null; }
+
+  /* ---------- organisations and logos ---------- */
+  // Needles: the organisation's name with and without its bracketed part, its display name,
+  // an acronym in brackets or dashes, and the extra spellings in host-aliases.json.
+  function clean(s){ return norm(s).replace(/[‐-―\-]/g," ").replace(/[^a-z0-9&]+/g," ").trim(); }
+  function isAcronym(s){ return !/\s/.test(s) && /[A-Z][^A-Z]*[A-Z]/.test(s); }
+  function needlesFor(o, aliases){
+    var out = [], names = [o.name, o.display, o.extra];
+    var exact = {};                             // bracketed acronyms and aliases match case-sensitively
+    names.forEach(function(nm){
+      if(!nm) return;
+      out.push(nm);
+      var base = nm.replace(/\s*\(.*?\)\s*/g," ").replace(/\s+[–—-]\s+.*$/,"").replace(/\s+-[A-Z]+-\s*$/,"").trim();
+      out.push(base);
+      out.push(base.split(/[;,]/)[0]);         // "Columbia Society of International Law, in partnership with ..."
+      var m, re = /[(\-]([A-Z][A-Za-z]{1,9})[)\-]/g;
+      while((m = re.exec(nm))) if(isAcronym(m[1])){ out.push(m[1]); exact[m[1]] = 1; }   // not "(Europe)"
+    });
+    (aliases[o.slug] || []).forEach(function(a){ out.push(a); exact[a] = 1; });
+    var seen = {}, res = [];
+    out.slice().forEach(function(n){ out.push((n||"").replace(/^the\s+/i,"")); });
+    out.forEach(function(n){
+      n = (n||"").trim();
+      if(!n) return;
+      var acr = exact[n] && isAcronym(n);
+      var key = acr ? "A:" + n : "W:" + clean(n);
+      if(seen[key] || (!acr && clean(n).length < 4)) return;
+      seen[key] = 1;
+      res.push(acr ? { acr:true, re:new RegExp("(^|[^A-Za-z0-9])" + n.replace(/[.*+?^${}()|[\]\\]/g,"\\$&") + "([^A-Za-z0-9]|$)") }
+                   : { acr:false, s:" " + clean(n) + " " });
+    });
+    return res;
+  }
+  function matchHosts(host){
+    if(!host) return [];
+    var plain = host.normalize("NFD").replace(/[̀-ͯ]/g,""), cl = " " + clean(host) + " ", hits = [];
+    ORGS.forEach(function(o){
+      var pos = -1;
+      o.needles.forEach(function(nd){
+        var p = nd.acr ? (function(){ var m = nd.re.exec(plain); return m ? m.index : -1; })()
+                       : (cl.indexOf(nd.s) === -1 ? -1 : cl.indexOf(nd.s) / cl.length * plain.length);
+        if(p !== -1 && (pos === -1 || p < pos)) pos = p;
+      });
+      if(pos !== -1) hits.push({ o:o, pos:pos });
+    });
+    hits.sort(function(a,b){ return a.pos - b.pos; });
+    return hits.map(function(h){ return h.o; });
+  }
+  function initials(name){
+    var w = name.replace(/\(.*?\)/g,"").split(/[\s\-–,&]+/).filter(function(x){ return x && !/^(the|of|and|for|in|to|de|la|van)$/i.test(x); });
+    return (w.length > 1 ? w.slice(0,3).map(function(x){ return x[0]; }).join("") : (w[0]||"?").slice(0,3)).toUpperCase();
+  }
+  function logo(o, cls){
+    // Always ask for logos/<slug>.png, as the co-hosts grid does; fall back to initials.
+    var box = el("span", cls + (o.dark ? " is-dark" : ""));
+    if(o.slug){
+      var img = document.createElement("img");
+      img.alt = ""; img.loading = "lazy"; img.decoding = "async";
+      img.onerror = function(){ box.className = cls; box.textContent = ""; box.appendChild(el("span","x-mono", o.i)); };
+      img.src = ORGS_ROOT + "logos/" + encodeURIComponent(o.slug) + ".png";
+      box.appendChild(img);
+    } else {
+      box.appendChild(el("span","x-mono", o.i));
+    }
+    return box;
+  }
+
+  /* ---------- filtering ---------- */
+  function dayKey(e){ return endDate(e) ? "run" : parseDate(e.date) ? e.date : "tbc"; }
+  function regKey(e){ return e.register ? "open" : "soon"; }
+  function passes(e, skip){
+    if(state.q && e._search.indexOf(state.q) === -1) return false;
+    if(skip !== "tags" && state.tags.length && !state.tags.some(function(t){ return e.tags.indexOf(t) !== -1; })) return false;
+    if(skip !== "days" && state.view !== "timeline" && state.days.length && !state.days.some(function(d){ return e._days.indexOf(d) !== -1; })) return false;
+    if(skip !== "formats" && state.formats.length && state.formats.indexOf(e.format) === -1) return false;
+    if(skip !== "aud" && state.aud.length && !state.aud.some(function(a){ return e.audience.indexOf(a) !== -1; })) return false;
+    if(skip !== "reg" && state.reg.length && state.reg.indexOf(regKey(e)) === -1) return false;
+    if(state.host && e._hosts.indexOf(state.host) === -1) return false;
+    return true;
+  }
+  function filtered(){ return EVENTS.filter(function(e){ return passes(e); }); }
+  function nFilters(){                      // the timeline has its own day picker, so the Day filter does not count there
+    return state.tags.length + (state.view === "timeline" ? 0 : state.days.length) + state.formats.length + state.aud.length +
+      state.reg.length + (state.host ? 1 : 0) + (state.q ? 1 : 0);
+  }
+  function setOnly(patch){
+    state.tags = []; state.days = []; state.formats = []; state.aud = []; state.reg = []; state.host = null; state.picks = null;
+    Object.keys(patch).forEach(function(k){ state[k] = patch[k]; });
+    if(patch.view == null) state.view = "day";
+    render();
+    root.scrollIntoView({ behavior:"smooth", block:"start" });
+  }
+
+  /* ---------- shareable links: the whole view lives in the address after # ---------- */
+  function hostParam(){ return !state.host ? null : state.host.indexOf("o:") === 0 ? ["org", state.host.slice(2)] : ["host", state.host.slice(2)]; }
+  function writeHash(){
+    var p = new URLSearchParams();
+    if(state.view !== "day") p.set("view", state.view);
+    if(state.qRaw) p.set("q", state.qRaw);
+    state.tags.forEach(function(v){ p.append("theme", v); });
+    if(state.view !== "timeline") state.days.forEach(function(v){ p.append("day", v); });
+    state.formats.forEach(function(v){ p.append("format", v); });
+    state.aud.forEach(function(v){ p.append("audience", v); });
+    state.reg.forEach(function(v){ p.append("registration", v); });
+    var h = hostParam(); if(h) p.set(h[0], h[1]);
+    if(state.view === "timeline" && state.tday) p.set("date", state.tday);
+    if(state.view === "mine" && state.picks) state.picks.forEach(function(v){ p.append("pick", v); });
+    if(state.open) p.set("a", state.open);
+    var s = p.toString();
+    var url = location.pathname + location.search + (s ? "#" + s : "");
+    if(url !== location.pathname + location.search + location.hash) history.replaceState(null, "", url);
+  }
+  function linkTo(params){
+    var p = new URLSearchParams(params || "");
+    return location.href.split("#")[0] + (p.toString() ? "#" + p.toString() : "");
+  }
+  function readHash(){
+    var h = location.hash.replace(/^#/,"");
+    if(!/(^|&)(view|q|theme|day|format|audience|registration|org|host|date|pick|a)=/.test(h)) return false;
+    var p = new URLSearchParams(h);
+    function only(list, ok){ return list.filter(function(v){ return ok.indexOf(v) !== -1; }); }
+    var v = p.get("view");
+    state.view = ["day","timeline","theme","org","mine"].indexOf(v) !== -1 ? v : "day";
+    state.qRaw = p.get("q") || ""; state.q = norm(state.qRaw.trim()); qEl.value = state.qRaw;
+    state.tags = only(p.getAll("theme"), TAGS);
+    state.days = only(p.getAll("day"), DAY_KEYS);
+    state.formats = only(p.getAll("format"), facetValues.formats.map(function(x){ return x.value; }));
+    state.aud = only(p.getAll("audience"), facetValues.aud.map(function(x){ return x.value; }));
+    state.reg = only(p.getAll("registration"), ["open","soon"]);
+    var org = p.get("org"), host = p.get("host");
+    state.host = org && HOST_BY_KEY["o:" + org] ? "o:" + org : host && HOST_BY_KEY["h:" + host] ? "h:" + host : null;
+    state.tday = DAY_KEYS.indexOf(p.get("date")) !== -1 ? p.get("date") : null;
+    var picks = p.getAll("pick").filter(function(s){ return BY_SLUG[s]; });
+    state.picks = state.view === "mine" && picks.length ? picks : null;
+    state.open = BY_SLUG[p.get("a")] ? p.get("a") : null;
+    return true;
+  }
+
+  /* ---------- facets ---------- */
+  var FACETS = [
+    { key:"tags", el:"#x-f-tags", themed:true },
+    { key:"days", el:"#x-f-days" },
+    { key:"reg", el:"#x-f-reg" },
+    { key:"formats", el:"#x-f-formats" },
+    { key:"aud", el:"#x-f-aud" }
+  ];
+  var facetValues = {};
+  function buildFacets(){
+    FACETS.forEach(function(f){
+      var box = $(f.el);
+      box.textContent = "";
+      f.chips = {};
+      facetValues[f.key].forEach(function(v){
+        var b = el("button","x-chip");
+        b.type = "button";
+        b.setAttribute("aria-pressed","false");
+        if(f.themed){ b.style.setProperty("--c", themeColour(v.value)); b.appendChild(themeIcon(v.value)); }
+        b.appendChild(el("span", null, v.label));
+        var n = el("span","x-n");
+        b.appendChild(n);
+        b.addEventListener("click", function(){
+          var arr = state[f.key], i = arr.indexOf(v.value);
+          if(i === -1) arr.push(v.value); else arr.splice(i,1);
+          if(state.view === "mine" || state.view === "theme" && f.key === "tags") state.view = "day";
+          render();
+        });
+        box.appendChild(b);
+        f.chips[v.value] = { b:b, n:n };
+      });
+    });
+  }
+  function updateFacets(){
+    FACETS.forEach(function(f){
+      var pool = EVENTS.filter(function(e){ return passes(e, f.key); });
+      facetValues[f.key].forEach(function(v){
+        var c = f.chips[v.value], count = pool.filter(function(e){ return v.test(e); }).length;
+        c.n.textContent = count;
+        c.b.setAttribute("aria-pressed", state[f.key].indexOf(v.value) !== -1 ? "true" : "false");
+        if(count) c.b.removeAttribute("data-empty"); else c.b.setAttribute("data-empty","");
+      });
+    });
+    var n = nFilters() - (state.q ? 1 : 0), badge = $("#x-nfilters");
+    badge.textContent = n; badge.hidden = !n;
+  }
+
+  /* ---------- summary ---------- */
+  function renderSummary(shown){
+    summaryEl.textContent = "";
+    if(state.view === "mine"){ summaryEl.appendChild(el("strong", null, state.picks ? "A programme shared with you" : "Your saved activities")); return; }
+    var s = el("span");
+    s.appendChild(el("strong", null, plural(shown.length, "activity", "activities")));
+    if(nFilters()) s.appendChild(document.createTextNode(" of " + EVENTS.length));
+    summaryEl.appendChild(s);
+    function pill(text, colour, onRemove){
+      var p = el("button","x-pill", text);
+      p.type = "button";
+      p.setAttribute("aria-label","Remove filter: " + text);
+      if(colour) p.style.setProperty("--c", colour);
+      p.addEventListener("click", function(){ onRemove(); render(); });
+      summaryEl.appendChild(p);
+    }
+    if(state.q) pill("“" + state.qRaw.trim() + "”", null, function(){ qEl.value = ""; state.q = ""; state.qRaw = ""; });
+    if(state.host){ var h = HOST_BY_KEY[state.host]; pill(h ? h.name : state.host, null, function(){ state.host = null; }); }
+    state.tags.forEach(function(t){ pill(t, themeColour(t), function(){ state.tags.splice(state.tags.indexOf(t),1); }); });
+    if(state.view !== "timeline") state.days.forEach(function(d){ pill(DAY_LABEL[d] || d, null, function(){ state.days.splice(state.days.indexOf(d),1); }); });
+    state.reg.forEach(function(r){ pill(r === "open" ? "Registration open" : "Registration soon", null, function(){ state.reg.splice(state.reg.indexOf(r),1); }); });
+    state.formats.forEach(function(f){ pill(f, null, function(){ state.formats.splice(state.formats.indexOf(f),1); }); });
+    state.aud.forEach(function(a){ pill(a, null, function(){ state.aud.splice(state.aud.indexOf(a),1); }); });
+    if(nFilters()){
+      var c = el("button","x-link","Clear all");
+      c.type = "button";
+      c.addEventListener("click", function(){ qEl.value = ""; state.q = ""; state.qRaw = ""; setOnly({ view:state.view }); });
+      summaryEl.appendChild(c);
+    }
+  }
+
+  /* ---------- cards and list rows ---------- */
+  function openButton(e, text, cls){
+    var b = el("button","x-open" + (cls ? " " + cls : ""), text);
+    b.type = "button";
+    b.addEventListener("click", function(){ openDrawer(e, b); });
+    return b;
+  }
+  function regLine(e){ return el("p","x-reg" + (e.register ? " is-open" : ""), e.register ? "Registration open" : "Registration soon"); }
+  function cardTime(e){ return e._days.length > 1 ? whenLabel(e) : (timeLabel(e) || (parseDate(e.date) ? "Time to follow" : "Date to follow")); }
+  function card(e){
+    var c = el("article","x-card");
+    c.style.setProperty("--stripe", stripe(e));
+    var when = el("div","x-when");
+    when.appendChild(el("span", null, cardTime(e)));
+    if(e.format){ var f = el("span","x-fmt", e.format); f.setAttribute("data-f", e.format); when.appendChild(f); }
+    when.appendChild(starButton(e));
+    c.appendChild(when);
+    var h = el("h4","x-title");
+    h.appendChild(openButton(e, e.title));
+    c.appendChild(h);
+    if(e.tags.length){
+      var ul = el("ul","x-labels");
+      e.tags.forEach(function(t){ ul.appendChild(label(t)); });
+      c.appendChild(ul);
+    }
+    c.appendChild(regLine(e));
+    var hosts = el("div","x-hosts");
+    if(e._orgs.length){
+      var lg = el("span","x-logos");
+      e._orgs.slice(0,4).forEach(function(o){ lg.appendChild(logo(o, "x-lg")); });
+      hosts.appendChild(lg);
+    }
+    hosts.appendChild(el("span","x-hosttext", e.host || "Host to be confirmed"));
+    c.appendChild(hosts);
+    return c;
+  }
+  function row(e, extra){
+    var r = el("div","x-row");
+    r.style.setProperty("--stripe", stripe(e));
+    r.appendChild(el("span","x-row-time", cardTime(e)));
+    var main = el("div","x-row-main"), t = el("p","x-row-title");
+    if(e.tags.length){
+      var dots = el("span","x-dots");
+      e.tags.forEach(function(x){ var i = el("i"); i.style.setProperty("--c", themeColour(x)); i.title = x; dots.appendChild(i); });
+      t.appendChild(dots);
+    }
+    t.appendChild(openButton(e, e.title));
+    main.appendChild(t);
+    main.appendChild(el("p","x-row-host", e.host || "Host to be confirmed"));
+    if(extra) main.appendChild(extra);
+    r.appendChild(main);
+    var fc = el("span","x-fmt-cell");
+    if(e.format){ var f = el("span","x-fmt", e.format); f.setAttribute("data-f", e.format); fc.appendChild(f); }
+    r.appendChild(fc);
+    var rc = el("span","x-reg-cell"); rc.appendChild(regLine(e)); r.appendChild(rc);
+    r.appendChild(starButton(e, state.view === "mine" ? render : null));
+    return r;
+  }
+  function byTime(a,b){ return (a.date||"9").localeCompare(b.date||"9") || (a.start||"99").localeCompare(b.start||"99") || a.title.localeCompare(b.title); }
+
+  /* ---------- today: happening now and up next ---------- */
+  function renderToday(shown){
+    var t = todayKey();
+    if(!t || (state.days.length && state.days.indexOf(t) === -1)) return null;
+    var now = nowHere().mins, list = shown.filter(function(e){ return e._days.indexOf(t) !== -1 && e.start; }).sort(byTime);
+    var live = list.filter(function(e){ return mins(e.start) <= now && endMins(e) > now; }),
+        next = list.filter(function(e){ return mins(e.start) > now; }).slice(0,4);
+    var box = el("section","x-today"), h = el("h3");
+    h.appendChild(el("span","x-live"));
+    h.appendChild(document.createTextNode("Today at Justice Week · " + hm(now)));
+    box.appendChild(h);
+    var cols = el("div","x-today-cols");
+    function col(title, items, isNow, empty){
+      var c = el("div");
+      c.appendChild(el("h4", null, title));
+      if(!items.length){ c.appendChild(el("p", null, empty)); cols.appendChild(c); return; }
+      var ul = el("ul");
+      items.forEach(function(e){
+        var li = el("li"), b = el("button","x-tl-item" + (isNow ? " is-now" : ""));
+        b.type = "button";
+        b.appendChild(el("b", null, isNow ? "until " + hm(endMins(e)) : e.start));
+        b.appendChild(el("span", null, e.title));
+        b.addEventListener("click", function(){ openDrawer(e, b); });
+        li.appendChild(b); ul.appendChild(li);
+      });
+      c.appendChild(ul); cols.appendChild(c);
+    }
+    col("Happening now", live, true, "Nothing is running right now.");
+    col("Up next", next, false, "Nothing else starts today.");
+    box.appendChild(cols);
+    return box;
+  }
+
+  /* ---------- views ---------- */
+  function empty(){ viewEl.appendChild(el("p","x-status","No activity matches those filters. Try removing one.")); }
+  function renderDay(shown){
+    viewEl.textContent = "";
+    var today = renderToday(shown);
+    if(today) viewEl.appendChild(today);
+    if(!shown.length){ empty(); return; }
+    var groups = {}, order = [], tk = todayKey();
+    shown.forEach(function(e){
+      var k = dayKey(e);
+      if(!groups[k]){ groups[k] = []; order.push(k); }
+      groups[k].push(e);
+    });
+    order.sort(function(a,b){
+      function rank(k){ return k === "run" ? "0" : k === "tbc" ? "9" : "1" + k; }
+      return rank(a) < rank(b) ? -1 : 1;
+    });
+    order.forEach(function(k){
+      var list = groups[k].sort(byTime);
+      var sec = el("section","x-day"), head = el("div","x-dayhead");
+      head.appendChild(el("h3", null, k === "run" ? "Running across the week" : k === "tbc" ? "Date to follow" : longDay(parseDate(k))));
+      if(k === tk) head.appendChild(el("span","x-todaytag","Today"));
+      head.appendChild(el("span", null, plural(list.length, "activity", "activities")));
+      sec.appendChild(head);
+      var wrap = el("div", state.layout === "list" ? "x-list" : "x-grid");
+      list.forEach(function(e){ wrap.appendChild(state.layout === "list" ? row(e) : card(e)); });
+      sec.appendChild(wrap);
+      viewEl.appendChild(sec);
+    });
+  }
+  function renderThemes(shown){
+    viewEl.textContent = "";
+    viewEl.appendChild(el("p","x-note","Every activity carries up to three themes. Pick one to see its activities day by day."));
+    var wrap = el("div","x-themes");
+    TAGS.map(function(t){ return { t:t, list:shown.filter(function(e){ return e.tags.indexOf(t) !== -1; }) }; })
+      .filter(function(x){ return x.list.length; })
+      .sort(function(a,b){ return b.list.length - a.list.length || a.t.localeCompare(b.t); })
+      .forEach(function(x){
+        var b = el("button","x-theme");
+        b.type = "button";
+        b.style.setProperty("--c", themeColour(x.t));
+        b.appendChild(themeIcon(x.t));
+        var ico = el("span","x-theme-ico"); ico.appendChild(themeIcon(x.t)); b.appendChild(ico);
+        b.appendChild(el("h3", null, x.t));
+        var orgs = {};
+        x.list.forEach(function(e){ e._hosts.forEach(function(h){ orgs[h] = 1; }); });
+        b.appendChild(el("span","x-big", plural(x.list.length, "activity", "activities") + " · " + plural(Object.keys(orgs).length, "host", "hosts")));
+        var ul = el("ul");
+        x.list.slice().sort(byTime).slice(0,3).forEach(function(e){ ul.appendChild(el("li", null, e.title)); });
+        b.appendChild(ul);
+        b.appendChild(el("span","x-more","See all " + x.list.length + " →"));
+        b.addEventListener("click", function(){ setOnly({ tags:[x.t] }); });
+        wrap.appendChild(b);
+      });
+    if(!wrap.children.length) empty(); else viewEl.appendChild(wrap);
+  }
+  function orgTile(h, n){
+    var t = el("div","x-org");
+    var main = el("button","x-org-main");
+    main.type = "button";
+    main.title = "Show the activities of " + h.name;
+    main.appendChild(logo(h, "x-logo"));
+    main.appendChild(el("span","x-org-name", h.name));
+    main.appendChild(el("span","x-org-n", plural(n, "activity", "activities")));
+    main.addEventListener("click", function(){ setOnly({ host:h.key }); });
+    t.appendChild(main);
+    if(h.url){
+      var a = el("a","x-ext","Website ↗");
+      a.href = h.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+      a.setAttribute("aria-label", h.name + " website (opens in a new tab)");
+      t.appendChild(a);
+    }
+    return t;
+  }
+  function renderOrgs(shown){
+    viewEl.textContent = "";
+    var counts = {};
+    shown.forEach(function(e){ e._hosts.forEach(function(k){ counts[k] = (counts[k]||0) + 1; }); });
+    var list = HOSTS.filter(function(h){ return counts[h.key]; }).sort(function(a,b){ return a.sort.localeCompare(b.sort); });
+    var withLogo = list.filter(function(h){ return h.slug; }), others = list.filter(function(h){ return !h.slug; });
+    if(!list.length){ empty(); return; }
+    viewEl.appendChild(el("p","x-note","Pick an organisation to see the activities it hosts or co-hosts. The website link opens the organisation's own site."));
+    var g = el("div","x-orgs");
+    withLogo.forEach(function(h){ g.appendChild(orgTile(h, counts[h.key])); });
+    viewEl.appendChild(g);
+    if(others.length){
+      viewEl.appendChild(el("h3","x-subhead","Also hosting"));
+      var g2 = el("div","x-orgs");
+      others.forEach(function(h){ g2.appendChild(orgTile(h, counts[h.key])); });
+      viewEl.appendChild(g2);
+    }
+  }
+  function renderTimeline(shown){
+    viewEl.textContent = "";
+    var counts = {};
+    DAY_KEYS.forEach(function(k){ counts[k] = shown.filter(function(e){ return e._days.indexOf(k) !== -1; }).length; });
+    if(!state.tday || !counts[state.tday]){
+      var tk = todayKey(), first = DAY_KEYS.filter(function(k){ return counts[k]; });
+      state.tday = tk && counts[tk] ? tk : (first.filter(function(k){ return k >= "2026-11-16"; })[0] || first[0] || null);
+    }
+    var pick = el("div","x-daypick");
+    pick.setAttribute("role","group"); pick.setAttribute("aria-label","Day");
+    DAY_KEYS.forEach(function(k){
+      var b = el("button");
+      b.type = "button";
+      b.appendChild(document.createTextNode(DAY_LABEL[k]));
+      b.appendChild(el("span", null, plural(counts[k], "activity", "activities")));
+      b.setAttribute("aria-pressed", k === state.tday ? "true" : "false");
+      b.disabled = !counts[k];
+      b.addEventListener("click", function(){ state.tday = k; render(); });
+      pick.appendChild(b);
+    });
+    viewEl.appendChild(pick);
+    if(!state.tday){ empty(); return; }
+
+    var day = shown.filter(function(e){ return e._days.indexOf(state.tday) !== -1; });
+    var timed = day.filter(function(e){ return !endDate(e) && e.start; }).sort(byTime),
+        runs = day.filter(function(e){ return endDate(e); }),
+        untimed = day.filter(function(e){ return !endDate(e) && !e.start; });
+
+    // Lanes: each activity takes the first lane that is free when it starts.
+    var lanes = [];
+    timed.forEach(function(e){
+      var s = mins(e.start), i = 0;
+      while(i < lanes.length && lanes[i] > s) i++;
+      lanes[i] = endMins(e); e._lane = i;
+    });
+    var from = Math.min.apply(null, [9*60].concat(timed.map(function(e){ return Math.floor(mins(e.start)/60)*60; }))),
+        to = Math.max.apply(null, [18*60].concat(timed.map(function(e){ return Math.ceil(endMins(e)/60)*60; }))),
+        span = to - from, hours = span / 60;
+
+    viewEl.appendChild(el("p","x-tl-meta", longDay(parseDate(state.tday)) + " · " + plural(timed.length, "activity", "activities") +
+      (lanes.length > 1 ? " · up to " + lanes.length + " at the same time" : "")));
+    function band(title, list){
+      if(!list.length) return;
+      var b = el("div","x-tl-band");
+      b.appendChild(el("span", null, title));
+      list.forEach(function(e){ var x = paint(el("button", null, e.title), e.tags[0] || ""); x.type = "button"; x.addEventListener("click", function(){ openDrawer(e, x); }); b.appendChild(x); });
+      viewEl.appendChild(b);
+    }
+    band("Over several days:", runs);
+    band("Time to follow:", untimed);
+
+    var scroll = el("div","x-tl-scroll"), tl = el("div","x-tl");
+    tl.style.setProperty("--hours", hours);
+    tl.setAttribute("data-from", from); tl.setAttribute("data-span", span);
+    var axis = el("div","x-tl-axis");
+    for(var m = from; m <= to; m += 60){
+      var pct = (m - from) / span * 100;
+      var lab = el("span", null, hm(m)); lab.style.left = "calc(" + pct + "% + " + (m === from ? 20 : m === to ? -20 : 0) + "px)";
+      axis.appendChild(lab);
+      var g = el("div","x-tl-grid"); g.style.left = pct + "%"; tl.appendChild(g);
+    }
+    tl.appendChild(axis);
+    var area = el("div","x-tl-lanes");
+    area.style.height = (Math.max(lanes.length,1) * 68 + 8) + "px";
+    timed.forEach(function(e){
+      var s = mins(e.start), x = endMins(e);
+      var b = paint(el("button","x-tl-bar" + (isMine(e) ? " is-mine" : "")), e.tags[0] || "");
+      b.type = "button";
+      b.style.left = "calc(" + ((s - from) / span * 100) + "% + 2px)";
+      b.style.width = "calc(" + ((x - s) / span * 100) + "% - 4px)";
+      b.style.top = (e._lane * 68) + "px";
+      b.appendChild(el("b", null, timeLabel(e)));
+      b.appendChild(el("span", null, e.title));
+      b.title = e.title + " · " + timeLabel(e) + (e.host ? " · " + e.host : "");
+      b.addEventListener("click", function(){ openDrawer(e, b); });
+      area.appendChild(b);
+    });
+    tl.appendChild(area);
+    var now = nowHere();
+    if(now.date === state.tday && now.mins >= from && now.mins <= to){
+      var line = el("div","x-tl-now"); line.style.left = ((now.mins - from) / span * 100) + "%"; tl.appendChild(line);
+    }
+    scroll.appendChild(tl);
+    viewEl.appendChild(scroll);
+    // Scroll to "now" once per day shown, not on every redraw, so a visitor scrolling sideways is not pulled back.
+    if(now.date === state.tday && autoScrolled !== state.tday){
+      autoScrolled = state.tday;
+      requestAnimationFrame(function(){ scroll.scrollLeft = Math.max(0, (now.mins - from - 60) / span * tl.offsetWidth); });
+    } else if(prevScroll.day === state.tday){
+      requestAnimationFrame(function(){ scroll.scrollLeft = prevScroll.left; });
+    }
+    scroll.addEventListener("scroll", function(){ prevScroll = { day:state.tday, left:scroll.scrollLeft }; });
+  }
+  var autoScrolled = null, prevScroll = { day:null, left:0 };
+  function clashes(list){
+    var out = {};
+    list.forEach(function(a){
+      list.forEach(function(b){
+        if(a === b || !a.start || !b.start || endDate(a) || endDate(b) || a.date !== b.date) return;
+        if(mins(a.start) < endMins(b) && mins(b.start) < endMins(a)) (out[a._slug] = out[a._slug] || []).push(b);
+      });
+    });
+    return out;
+  }
+  function renderMine(){
+    viewEl.textContent = "";
+    var shared = state.picks, slugs = shared || saved.mine;
+    var list = slugs.map(function(s){ return BY_SLUG[s]; }).filter(Boolean).sort(byTime);
+    if(shared){
+      var bar = el("div","x-shared");
+      bar.appendChild(el("span", null, "Someone shared " + plural(list.length, "activity", "activities") + " with you."));
+      var add = el("button","x-ghost","Add them all to My programme");
+      add.type = "button";
+      add.addEventListener("click", function(){
+        list.forEach(function(e){ if(!isMine(e)) saved.mine.push(e._slug); });
+        persist(); syncMineCount(); state.picks = null; toast("Added to My programme"); render();
+      });
+      bar.appendChild(add);
+      viewEl.appendChild(bar);
+    }
+    if(!list.length){
+      var em = el("div","x-empty");
+      em.appendChild(svg(STAR));
+      em.appendChild(el("h3", null, "Nothing saved yet"));
+      em.appendChild(el("p", null, "Tap the star on any activity to keep it here. Your list stays in this browser: no account needed. From here you can add everything to your calendar or share the list."));
+      viewEl.appendChild(em);
+      return;
+    }
+    var head = el("div","x-mine-head");
+    head.appendChild(el("h3", null, plural(list.length, "activity", "activities")));
+    var cal = el("button","x-ghost");
+    cal.type = "button";
+    cal.appendChild(svg("M4 5h12v11H4zM4 8.5h12M7.5 3v3M12.5 3v3"));
+    cal.appendChild(document.createTextNode("Add all to calendar"));
+    cal.addEventListener("click", function(){ downloadIcs(list, "justice-week-my-programme.ics"); });
+    head.appendChild(cal);
+    if(!shared){
+      var sh = el("button","x-ghost");
+      sh.type = "button";
+      sh.appendChild(svg("M8.5 11.5a3.5 3.5 0 005 0l2.5-2.5a3.5 3.5 0 00-5-5l-1 1M11.5 8.5a3.5 3.5 0 00-5 0L4 11a3.5 3.5 0 005 5l1-1"));
+      sh.appendChild(document.createTextNode("Share my programme"));
+      sh.addEventListener("click", function(){
+        var p = new URLSearchParams(); p.set("view","mine"); list.forEach(function(e){ p.append("pick", e._slug); });
+        copy(linkTo(p), "Link to your programme copied");
+      });
+      head.appendChild(sh);
+    }
+    viewEl.appendChild(head);
+    var cl = clashes(list), groups = {}, order = [];
+    list.forEach(function(e){ var k = dayKey(e); if(!groups[k]){ groups[k] = []; order.push(k); } groups[k].push(e); });
+    order.forEach(function(k){
+      var sec = el("section","x-day"), h = el("div","x-dayhead");
+      h.appendChild(el("h3", null, k === "run" ? "Running across the week" : k === "tbc" ? "Date to follow" : longDay(parseDate(k))));
+      sec.appendChild(h);
+      var wrap = el("div","x-list");
+      groups[k].forEach(function(e){
+        var note = cl[e._slug] ? el("p","x-clash","Overlaps with " + cl[e._slug].map(function(o){ return o.title; }).join("; ")) : null;
+        wrap.appendChild(row(e, note));
+      });
+      sec.appendChild(wrap);
+      viewEl.appendChild(sec);
+    });
+  }
+
+  function render(){
+    root.setAttribute("data-view", state.view);
+    syncTabs();
+    var shown = filtered();
+    renderSummary(shown);
+    updateFacets();
+    root.querySelectorAll("#x-layout-toggle button").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-layout") === state.layout ? "true" : "false"); });
+    if(state.view === "theme") renderThemes(shown);
+    else if(state.view === "org") renderOrgs(shown);
+    else if(state.view === "timeline") renderTimeline(shown);
+    else if(state.view === "mine") renderMine();
+    else renderDay(shown);
+    writeHash();
+  }
+
+  /* ---------- calendar files ---------- */
+  function icsText(s){ return String(s||"").replace(/\\/g,"\\\\").replace(/\r\n|\r|\n/g,"\\n").replace(/,/g,"\\,").replace(/;/g,"\\;"); }
+  function fold(line){
+    // Calendar lines may be at most 75 bytes; split between characters, never inside one (emoji included).
+    var out = "", cur = "", bytes = 0, limit = 75;
+    Array.from(line).forEach(function(ch){
+      var b = unescape(encodeURIComponent(ch)).length;
+      if(bytes + b > limit){ out += cur + "\r\n "; cur = ""; bytes = 0; limit = 74; }
+      cur += ch; bytes += b;
+    });
+    return out + cur;
+  }
+  function compact(d){ return d.replace(/-/g,""); }
+  function nextDay(d){ var x = parseDate(d); x.setDate(x.getDate()+1); return ymd(x); }
+  function calTimes(e){
+    // Timed activities in Hague time; runs over several days, or with no time yet, as all-day entries.
+    var x = endDate(e);
+    if(x || !e.start) return { allDay:true, start:compact(e.date), end:compact(nextDay(x ? ymd(x) : e.date)) };
+    return { allDay:false, start:compact(e.date) + "T" + e.start.replace(":","") + "00", end:compact(e.date) + "T" + hm(endMins(e)).replace(":","") + "00" };
+  }
+  function calDetails(e){
+    var parts = [];
+    if(endDate(e) && timeLabel(e)) parts.push("Times: " + timeLabel(e) + " (check the programme for the exact days)");
+    if(e.host) parts.push("Hosted by " + e.host);
+    if(e.register) parts.push("Register: " + e.register);
+    parts.push("The Hague Justice Week programme: " + linkTo({ a:e._slug }));
+    if(e.description) parts.push("", e.description.length > 900 ? e.description.slice(0, 900) + "…" : e.description);
+    return parts.join("\n");
+  }
+  function icsFor(list){
+    var stamp = new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d+Z$/,"Z");
+    var L = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//The Hague Humanity Hub//Justice Week 2026//EN","CALSCALE:GREGORIAN","METHOD:PUBLISH",
+      "BEGIN:VTIMEZONE","TZID:Europe/Amsterdam",
+      "BEGIN:DAYLIGHT","TZOFFSETFROM:+0100","TZOFFSETTO:+0200","TZNAME:CEST","DTSTART:19700329T020000","RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU","END:DAYLIGHT",
+      "BEGIN:STANDARD","TZOFFSETFROM:+0200","TZOFFSETTO:+0100","TZNAME:CET","DTSTART:19701025T030000","RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU","END:STANDARD",
+      "END:VTIMEZONE"];
+    list.forEach(function(e){
+      if(!parseDate(e.date)) return;
+      var t = calTimes(e);
+      L.push("BEGIN:VEVENT", "UID:" + e._slug + "@justiceweek2026.humanityhub.org", "DTSTAMP:" + stamp);
+      if(t.allDay){ L.push("DTSTART;VALUE=DATE:" + t.start, "DTEND;VALUE=DATE:" + t.end); }
+      else { L.push("DTSTART;TZID=Europe/Amsterdam:" + t.start, "DTEND;TZID=Europe/Amsterdam:" + t.end); }
+      L.push("SUMMARY:" + icsText(e.title));
+      L.push("LOCATION:" + icsText(e.venue || (e.format === "Online" ? "Online" : "The Hague")));
+      L.push("DESCRIPTION:" + icsText(calDetails(e)));
+      if(e.register) L.push("URL:" + e.register);
+      L.push("END:VEVENT");
+    });
+    L.push("END:VCALENDAR");
+    return L.map(fold).join("\r\n") + "\r\n";
+  }
+  function downloadIcs(list, name){
+    var blob = new Blob([icsFor(list)], { type:"text/calendar;charset=utf-8" });
+    var a = el("a"); a.href = URL.createObjectURL(blob); a.download = name;
+    root.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 4000);
+  }
+  function googleLink(e){
+    var t = calTimes(e), p = new URLSearchParams();
+    p.set("action","TEMPLATE"); p.set("text", e.title); p.set("dates", t.start + "/" + t.end);
+    if(!t.allDay) p.set("ctz", TZ);
+    p.set("details", calDetails(e).slice(0, 1500));
+    p.set("location", e.venue || (e.format === "Online" ? "Online" : "The Hague"));
+    return "https://calendar.google.com/calendar/render?" + p.toString();
+  }
+
+  /* ---------- drawer ---------- */
+  function related(e){
+    return EVENTS.filter(function(o){ return o !== e; }).map(function(o){
+      var s = 0;
+      o.tags.forEach(function(t){ if(e.tags.indexOf(t) !== -1) s += 2; });
+      o._hosts.forEach(function(h){ if(e._hosts.indexOf(h) !== -1) s += 3; });
+      if(o._days.some(function(d){ return e._days.indexOf(d) !== -1; })) s += 1;
+      return { o:o, s:s };
+    }).filter(function(x){ return x.s >= 3; }).sort(function(a,b){ return b.s - a.s || byTime(a.o, b.o); }).slice(0,3).map(function(x){ return x.o; });
+  }
+  function ghost(text, icon, href){
+    var b = el(href ? "a" : "button","x-ghost");
+    if(href){ b.href = href; b.target = "_blank"; b.rel = "noopener noreferrer"; } else b.type = "button";
+    if(icon) b.appendChild(svg(icon));
+    b.appendChild(document.createTextNode(text));
+    return b;
+  }
+  function openDrawer(e, from){
+    if(drawer.hidden) lastFocus = from || document.activeElement;
+    state.open = e._slug;
+    dBody.textContent = "";
+    var st = el("div","x-d-stripe"); st.style.setProperty("--stripe", stripe(e)); dBody.appendChild(st);
+    dBody.appendChild(el("p","x-d-when", whenLabel(e)));
+    var h = el("h2","x-d-title", e.title); h.id = "x-d-title"; dBody.appendChild(h);
+    if(e.tags.length){
+      var labels = el("div","x-labels x-d-labels");
+      e.tags.forEach(function(t){ labels.appendChild(label(t, true)); });
+      dBody.appendChild(labels);
+    }
+    var cta = el("div","x-d-cta");
+    if(e.register){
+      var a = el("a","x-btn","Register");
+      a.href = e.register; a.target = "_blank"; a.rel = "noopener noreferrer";
+      cta.appendChild(a);
+    } else {
+      cta.appendChild(el("span","x-btn is-pending","Registration opens soon"));
+    }
+    if(e.contact){
+      var c = el("span","x-d-contact");
+      c.appendChild(document.createTextNode("Contact: "));
+      if(/^[^@\s]+@[^@\s]+$/.test(e.contact)){ var m = el("a", null, e.contact); m.href = "mailto:" + e.contact; c.appendChild(m); }
+      else c.appendChild(document.createTextNode(e.contact));
+      cta.appendChild(c);
+    }
+    dBody.appendChild(cta);
+
+    var acts = el("div","x-d-actions");
+    var save = ghost("", STAR);
+    function syncSave(){
+      var on = isMine(e);
+      save.setAttribute("aria-pressed", on ? "true" : "false");
+      save.lastChild.textContent = on ? "Saved to My programme" : "Save to My programme";
+    }
+    save.appendChild(document.createTextNode(""));
+    syncSave();
+    save.addEventListener("click", function(){ toggleMine(e); syncSave(); if(state.view === "mine" || state.view === "timeline") render(); });
+    acts.appendChild(save);
+    if(parseDate(e.date)){
+      var ics = ghost("Add to calendar", "M4 5h12v11H4zM4 8.5h12M7.5 3v3M12.5 3v3");
+      ics.title = "Download a calendar file for Outlook, Apple Calendar and others";
+      ics.addEventListener("click", function(){ downloadIcs([e], "justice-week-" + e._slug.slice(0,50) + ".ics"); });
+      acts.appendChild(ics);
+      acts.appendChild(ghost("Google Calendar ↗", null, googleLink(e)));
+    }
+    var share = ghost("Copy link", "M8.5 11.5a3.5 3.5 0 005 0l2.5-2.5a3.5 3.5 0 00-5-5l-1 1M11.5 8.5a3.5 3.5 0 00-5 0L4 11a3.5 3.5 0 005 5l1-1");
+    share.addEventListener("click", function(){ copy(linkTo({ a:e._slug }), "Link to this activity copied"); });
+    acts.appendChild(share);
+    dBody.appendChild(acts);
+
+    var facts = el("dl","x-d-facts");
+    function fact(k, v){ if(!v) return; facts.appendChild(el("dt", null, k)); facts.appendChild(el("dd", null, v)); }
+    fact("Where", e.venue || (e.format === "Online" ? "Online" : "Venue to be confirmed"));
+    fact("Format", e.format);
+    fact("Who it is for", e.audience.join(", "));
+    dBody.appendChild(facts);
+
+    dBody.appendChild(el("h3","x-d-h", e._orgs.length ? "Hosted by" : "Host"));
+    if(e._orgs.length){
+      var hs = el("div","x-d-hosts");
+      e._orgs.forEach(function(o){
+        var t = el(o.url ? "a" : "div","x-d-host");
+        if(o.url){ t.href = o.url; t.target = "_blank"; t.rel = "noopener noreferrer"; t.setAttribute("aria-label", o.name + " website (opens in a new tab)"); }
+        t.appendChild(logo(o, "x-logo"));
+        t.appendChild(el("span","x-d-hname", o.name));
+        hs.appendChild(t);
+      });
+      dBody.appendChild(hs);
+    }
+    dBody.appendChild(el("p","x-d-hostline", e.host || "Host to be confirmed"));
+    if(e.description) dBody.appendChild(el("p","x-d-desc", e.description));
+
+    var rel = related(e);
+    if(rel.length){
+      dBody.appendChild(el("h3","x-d-h","You might also like"));
+      var rl = el("div","x-related");
+      rel.forEach(function(o){
+        var b = paint(el("button","x-rel"), o.tags[0] || "");
+        b.type = "button";
+        b.appendChild(el("small", null, whenLabel(o)));
+        b.appendChild(el("b", null, o.title));
+        b.addEventListener("click", function(){ openDrawer(o); });
+        rl.appendChild(b);
+      });
+      dBody.appendChild(rl);
+    }
+    var more = el("div","x-d-more");
+    e._hosts.forEach(function(k){
+      var hh = HOST_BY_KEY[k];
+      if(!hh || hh.count < 2 || state.host === k) return;
+      var b = el("button","x-ghost","All " + hh.count + " activities by " + hh.name);
+      b.type = "button";
+      b.addEventListener("click", function(){ closeDrawer(); setOnly({ host:k }); });
+      more.appendChild(b);
+    });
+    if(more.children.length){ dBody.appendChild(el("h3","x-d-h","Keep exploring")); dBody.appendChild(more); }
+
+    var wasHidden = drawer.hidden;
+    drawer.hidden = false; scrim.hidden = false;
+    drawer.scrollTop = 0;
+    $("#x-close").focus();
+    if(wasHidden) document.addEventListener("keydown", onKey);
+    writeHash();
+  }
+  function closeDrawer(){
+    if(drawer.hidden) return;
+    drawer.hidden = true; scrim.hidden = true;
+    state.open = null;
+    document.removeEventListener("keydown", onKey);
+    writeHash();
+    // Back to what opened the panel; if it came from a link, or that element has been redrawn, to the current tab.
+    if(lastFocus && lastFocus !== document.body && root.contains(lastFocus) && !drawer.contains(lastFocus)) lastFocus.focus();
+    else { var t = root.querySelector('.x-tab[aria-selected="true"]'); if(t) t.focus(); }
+  }
+  function onKey(ev){
+    if(ev.key === "Escape"){ ev.preventDefault(); closeDrawer(); return; }
+    if(ev.key === "Tab"){                       // keep focus inside the open panel
+      var f = drawer.querySelectorAll("a[href],button");
+      if(!f.length) return;
+      var first = f[0], last = f[f.length-1];
+      if(ev.shiftKey && document.activeElement === first){ last.focus(); ev.preventDefault(); }
+      else if(!ev.shiftKey && document.activeElement === last){ first.focus(); ev.preventDefault(); }
+    }
+  }
+  $("#x-close").addEventListener("click", closeDrawer);
+  scrim.addEventListener("click", closeDrawer);
+
+  /* ---------- chrome ---------- */
+  function syncTabs(){
+    root.querySelectorAll(".x-tab").forEach(function(t){
+      var on = t.getAttribute("data-view") === state.view;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+    });
+    viewEl.setAttribute("aria-labelledby", "x-tab-" + state.view);
+  }
+  var tabs = Array.prototype.slice.call(root.querySelectorAll(".x-tab"));
+  viewEl.setAttribute("role","tabpanel");
+  tabs.forEach(function(t, i){
+    t.id = "x-tab-" + t.getAttribute("data-view");
+    t.setAttribute("aria-controls","x-view");
+    t.addEventListener("click", function(){
+      state.view = t.getAttribute("data-view");
+      if(state.view !== "mine") state.picks = null;
+      render();
+    });
+    t.addEventListener("keydown", function(ev){          // arrow keys move between tabs, as in any tab list
+      var j = ev.key === "ArrowRight" ? i + 1 : ev.key === "ArrowLeft" ? i - 1 : ev.key === "Home" ? 0 : ev.key === "End" ? tabs.length - 1 : null;
+      if(j == null) return;
+      ev.preventDefault();
+      var n = tabs[(j + tabs.length) % tabs.length];
+      n.focus(); n.click();
+    });
+  });
+  root.querySelectorAll("#x-layout-toggle button").forEach(function(b){
+    b.addEventListener("click", function(){ state.layout = saved.layout = b.getAttribute("data-layout"); persist(); render(); });
+  });
+  $("#x-share").addEventListener("click", function(){
+    if(state.view === "mine" && !state.picks){        // "this view" of someone's own list means the list itself
+      var p = new URLSearchParams(); p.set("view","mine");
+      saved.mine.filter(function(s){ return BY_SLUG[s]; }).forEach(function(s){ p.append("pick", s); });
+      copy(linkTo(p), "Link to your programme copied");
+      return;
+    }
+    writeHash(); copy(location.href, "Link to this view copied");
+  });
+  // "Back to website" goes to the Justice Week page unless the test page or snippet names another.
+  if(CFG.backUrl) $("#x-back").href = CFG.backUrl;
+  if(CFG.heroImage) $("#x-hero").style.backgroundImage = "linear-gradient(rgba(23,52,94,.82),rgba(15,39,72,.9)),url(\"" + CFG.heroImage + "\")";
+  // Home: back to the starting state - day view, no search, no filters, panel closed.
+  var qTimer;
+  $("#x-home").addEventListener("click", function(){
+    closeDrawer();
+    clearTimeout(qTimer);
+    qEl.value = ""; state.q = ""; state.qRaw = ""; state.tday = null;
+    $("#x-sidetoggle").setAttribute("aria-expanded","false");
+    setOnly({ view:"day" });
+  });
+  qEl.addEventListener("input", function(){
+    clearTimeout(qTimer);
+    qTimer = setTimeout(function(){
+      state.qRaw = qEl.value; state.q = norm(qEl.value.trim());
+      if(state.view === "mine") state.view = "day";
+      render();
+    }, 150);
+  });
+  $("#x-sidetoggle").addEventListener("click", function(){
+    var b = $("#x-sidetoggle");
+    b.setAttribute("aria-expanded", b.getAttribute("aria-expanded") === "true" ? "false" : "true");
+  });
+  var fsBtn = $("#x-fs");
+  if(!root.requestFullscreen) fsBtn.hidden = true;
+  fsBtn.addEventListener("click", function(){
+    if(document.fullscreenElement) document.exitFullscreen(); else root.requestFullscreen();
+  });
+  document.addEventListener("fullscreenchange", function(){
+    var on = document.fullscreenElement === root;
+    fsBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    fsBtn.querySelector("span").textContent = on ? "Exit full screen" : "Full screen";
+  });
+  window.addEventListener("hashchange", function(){
+    if(!EVENTS.length) return;
+    if(!readHash()) return;
+    render();
+    if(state.open) openDrawer(BY_SLUG[state.open]); else closeDrawer();
+  });
+  // During the week, keep "now" current: a display at the venue can be left running.
+  // Only the Today panel and the timeline's Now line are redrawn, so focus and scrolling are left alone.
+  setInterval(function(){
+    if(!EVENTS.length || !todayKey()) return;
+    var old = viewEl.querySelector(".x-today");
+    if(state.view === "day" && old && !old.contains(document.activeElement)){
+      var fresh = renderToday(filtered());
+      if(fresh) old.replaceWith(fresh); else old.remove();
+    }
+    var tl = viewEl.querySelector(".x-tl"), line = tl && tl.querySelector(".x-tl-now");
+    if(state.view === "timeline" && tl){
+      var now = nowHere(), from = +tl.getAttribute("data-from"), span = +tl.getAttribute("data-span");
+      var on = now.date === state.tday && now.mins >= from && now.mins <= from + span;
+      if(on && !line){ line = el("div","x-tl-now"); tl.appendChild(line); }
+      if(line){ if(on) line.style.left = ((now.mins - from) / span * 100) + "%"; else line.remove(); }
+    }
+  }, 60000);
+
+  /* ---------- load ---------- */
+  function getJSON(url, optional){
+    return fetch(url, { cache:"no-cache" }).then(function(r){
+      if(!r.ok){ if(optional) return null; throw new Error("http " + r.status); }
+      return r.json();
+    }).catch(function(err){ if(optional) return null; throw err; });
+  }
+  Promise.all([
+    getJSON(ROOT + "events.json"),
+    getJSON(ROOT + "host-aliases.json", true),
+    // The co-hosts grid keeps its roster in orgs-embed.html, as the ORGS array; read it from there
+    // so the names, links and logos here are always the grid's own.
+    fetch(ORGS_ROOT + "orgs-embed.html", { cache:"no-cache" }).then(function(r){ return r.ok ? r.text() : ""; })
+      .then(function(t){ var m = /ORGS = (\[.*?\]);/.exec(t || ""); return m ? JSON.parse(m[1]) : []; })
+      .catch(function(){ return []; }),
+    getJSON(ORGS_ROOT + "overrides.json", true)
+  ]).then(function(r){
+    var data = r[0], aliases = r[1] || {}, orgs = Array.isArray(r[2]) ? r[2] : [], ov = r[3] || {};
+
+    // The same corrections the logo grid applies, keyed by the organisation's original name (k).
+    ORGS = orgs.map(function(o){
+      var p = ov[o.k] && typeof ov[o.k] === "object" ? ov[o.k] : {};
+      var x = { name:p.n || o.n, slug:o.s, url:o.u || "", dark:!!o.d, i:p.i || o.i };
+      if(typeof p.u === "string") x.url = p.u;
+      if(p.d === 0 || p.d === 1) x.dark = !!p.d;
+      x.needles = needlesFor({ name:o.k, display:o.n, extra:p.n, slug:o.s }, aliases);
+      x.key = "o:" + o.s;
+      x.sort = norm(x.name.replace(/^the\s+/i,""));
+      return x;
+    });
+
+    EVENTS = (data && data.events ? data.events : []).filter(function(e){ return e && e.title; });
+    if(!EVENTS.length){ viewEl.textContent = ""; viewEl.appendChild(el("p","x-status","The programme will be published here shortly.")); return; }
+
+    var tagSet = {}, fmtSet = {}, audSet = {}, daySet = {};
+    EVENTS.forEach(function(e){
+      // Partners type into the workbook, so tidy what arrives rather than trusting it:
+      // dates that are not YYYY-MM-DD count as "date to follow", times must be HH:MM,
+      // an end time must come after the start, and only a web address becomes a Register button.
+      e.title = String(e.title).replace(/\s+/g," ").trim();
+      e.tags = Array.isArray(e.tags) ? e.tags.filter(Boolean) : [];
+      e.audience = Array.isArray(e.audience) ? e.audience.filter(Boolean) : [];
+      if(!parseDate(e.date)) e.date = "";
+      if(!e.date || !parseDate(e.end_date) || (parseDate(e.end_date) - parseDate(e.date)) / 864e5 > 14) e.end_date = "";
+      e.start = cleanTime(e.start); e.end = cleanTime(e.end);
+      if(!e.start || (e.end && mins(e.end) <= mins(e.start))) e.end = "";
+      e.register = /^https?:\/\/\S+$/i.test((e.register||"").trim()) ? e.register.trim() : "";
+      // A link to an activity uses its title, not its id: ids change whenever the programme is rebuilt.
+      var s = activitySlug(e), base = s;
+      if(BY_SLUG[s] && e.date) s = base + "-" + compact(e.date);      // two activities with the same title
+      for(var n = 2; BY_SLUG[s]; n++) s = base + "-" + n;
+      e._slug = s; BY_SLUG[s] = e;
+      e._orgs = matchHosts(e.host);
+      e._hosts = e._orgs.map(function(o){ return o.key; });
+      if(!e._orgs.length && e.host){
+        // No logo for this host yet: still list it, under its own name.
+        var key = "h:" + slugify(e.host);
+        if(!HOST_BY_KEY[key]) HOST_BY_KEY[key] = { key:key, name:e.host, url:"", slug:"", dark:false, i:initials(e.host), sort:norm(e.host.replace(/^the\s+/i,"")) };
+        e._hosts = [key];
+      }
+      e._orgs.forEach(function(o){ HOST_BY_KEY[o.key] = o; });
+      var d = parseDate(e.date), x = endDate(e);
+      e._days = [];
+      if(d){ for(var t = new Date(d); t <= (x || d); t.setDate(t.getDate()+1)){
+        var k = ymd(t);
+        e._days.push(k); daySet[k] = 1; DAY_LABEL[k] = shortDay(t);
+      } }
+      e.tags.forEach(function(t){ tagSet[t] = 1; });
+      e.audience.forEach(function(a){ audSet[a] = 1; });
+      if(e.format) fmtSet[e.format] = 1;
+      e._search = norm([e.title, e.host, e.tags.join(" "), e.audience.join(" "), e.description, e.format, e.venue,
+                        e._orgs.map(function(o){ return o.name; }).join(" ")].join(" "));
+    });
+    HOSTS = Object.keys(HOST_BY_KEY).map(function(k){
+      var h = HOST_BY_KEY[k];
+      h.count = EVENTS.filter(function(e){ return e._hosts.indexOf(k) !== -1; }).length;
+      return h;
+    });
+    function countTag(t){ return EVENTS.filter(function(e){ return e.tags.indexOf(t) !== -1; }).length; }
+    TAGS = Object.keys(tagSet).sort(function(a,b){ return countTag(b) - countTag(a) || a.localeCompare(b); });
+    TAGS.forEach(themeColour);
+    DAY_KEYS = Object.keys(daySet).sort();
+    facetValues.tags = TAGS.map(function(t){ return { value:t, label:t, test:function(e){ return e.tags.indexOf(t) !== -1; } }; });
+    facetValues.days = DAY_KEYS.map(function(k){ return { value:k, label:DAY_LABEL[k], test:function(e){ return e._days.indexOf(k) !== -1; } }; });
+    facetValues.reg = [{ value:"open", label:"Open now", test:function(e){ return !!e.register; } },
+                       { value:"soon", label:"Opens soon", test:function(e){ return !e.register; } }];
+    facetValues.formats = Object.keys(fmtSet).sort().map(function(f){ return { value:f, label:f, test:function(e){ return e.format === f; } }; });
+    facetValues.aud = Object.keys(audSet).sort().map(function(a){ return { value:a, label:a, test:function(e){ return e.audience.indexOf(a) !== -1; } }; });
+
+    // Headline numbers and date span.
+    var stats = $("#x-stats");
+    [[EVENTS.length, "activities"], [HOSTS.length, "organisations"], [TAGS.length, "themes"], [DAY_KEYS.length, "days"]].forEach(function(s){
+      var li = el("li"); li.appendChild(el("b", null, s[0])); li.appendChild(document.createTextNode(s[1])); stats.appendChild(li);
+    });
+    var week = DAY_KEYS.filter(function(k){ return k >= "2026-11-16" && k <= "2026-11-20"; });
+    if(week.length) $("#x-span").textContent = parseDate(week[0]).getDate() + "–" + parseDate(week[week.length-1]).getDate() + " " + MONTHS[parseDate(week[0]).getMonth()];
+
+    state.layout = saved.layout;
+    buildFacets();
+    syncMineCount();
+    readHash();
+    render();
+    if(state.open) openDrawer(BY_SLUG[state.open]);
+  }).catch(function(){
+    viewEl.textContent = "";
+    viewEl.appendChild(el("p","x-status","The programme could not be loaded just now. Please try again shortly."));
+  });
+})();
+</script>

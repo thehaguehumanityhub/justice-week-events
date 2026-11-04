@@ -1,0 +1,26 @@
+{
+  "_readme": [
+    "Extra names under which a co-hosting organisation appears in the programme's host field.",
+    "Used only by explorer-embed.html to put the right logo next to an activity.",
+    "Key = the organisation's slug in the thjw repo (its logo is logos/<slug>.png there).",
+    "Value = the other spellings hosts use. Matching ignores case, accents and punctuation,",
+    "except for a single word with two or more capitals (an acronym such as HiiL), which must match exactly.",
+    "The organisation's own name, and an acronym in brackets after it, are matched without being listed here."
+  ],
+  "gemeente-den-haag": ["City of The Hague", "The Hague Municipality", "Municipality of the Hague"],
+  "the-global-pro-bono-bar-association": ["Global ProBono Bar Association", "Global Pro Bono Bar Association"],
+  "nowhere-bookstore-netherlands": ["Stichting NowHere"],
+  "undp": ["United Nations Development Programme", "UNDP"],
+  "hague-institute-for-innovation-of-law-hiil": ["HiiL"],
+  "international-development-law-organization-idlo": ["International Development Law Organisation", "IDLO"],
+  "netherlands-helsinki-committee": ["NHC"],
+  "embassy-of-ukraine-in-the-kingdom-of-the-netherl": ["Embassy of Ukraine"],
+  "embassy-of-the-kingdom-of-the-netherlands-to-col": ["Embassy of the Kingdom of the Netherlands in Colombia"],
+  "omnijuris-law-justice-advocates-olja": ["Omnijuris", "OLJA"],
+  "baltasar-garz-n-international-foundation-fibgar": ["FIBGAR"],
+  "international-federation-of-library-associations": ["International Federation of Library Association", "IFLA"],
+  "ministry-of-justice-of-cameroon": ["Cameroon Ministry of Justice"],
+  "american-bar-association-center-for-human-rights": ["ABA Center for Human Rights"],
+  "kosovo-specialist-chambers": ["KSC"],
+  "ucla-s-the-promise-institute-for-human-rights-eu": ["Promise Institute for Human Rights"]
+}

@@ -9,6 +9,24 @@ Each version is tagged in git (`v1.1.0`), so an older widget can be served
 from jsDelivr by tag if a release ever needs rolling back:
 `https://cdn.jsdelivr.net/gh/thehaguehumanityhub/justice-week-events@v1.0.0/events-embed.html`
 
+## Explorer 0.2.1 — 2026-11-04
+
+A new, separate view, `explorer-embed.html`, with its own version number. The
+programme widget and the script are unchanged at 1.1.1.
+
+- Views by day, timeline, theme and organisation, and a "My programme" list kept
+  in the visitor's browser, with clashes flagged.
+- Co-host logos from the thjw grid, matched to the host field, with
+  `host-aliases.json` for other spellings.
+- Colour and icon per theme; filters with counts for theme, day, registration,
+  format and audience; search; cards or compact list.
+- Every view and activity has a shareable link. Activity links use the title,
+  not the id, since ids change on every regeneration.
+- Calendar file and Google Calendar link per activity, or for the whole list.
+- During the week: a "Today" panel and a "Now" line in the timeline.
+- Tolerates text dates and times from the workbook, and only turns a web
+  address into a Register button.
+
 ## 1.1.1 — 2026-10-19
 
 Script

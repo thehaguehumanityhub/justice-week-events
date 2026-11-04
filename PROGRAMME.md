@@ -109,3 +109,63 @@ for that purpose.
   *Authoritarism* → Authoritarianism, *Policmakers* → Policymakers. Better to fix the form.
 - The registration field mixes URLs, e-mail addresses and free text. Only a real URL becomes
   a working button.
+
+# Programme explorer (`explorer-embed.html`)
+
+A second, full-width view of the same programme: by day, timeline, by theme, by organisation,
+and a "My programme" list visitors keep in their own browser. It reads the same `events.json`,
+so every programme update reaches both views at once. It does not replace `events-embed.html`.
+
+It also reads, from this repo, `host-aliases.json` (other spellings of a co-host's name, so
+the right logo appears), and from `thehaguehumanityhub/thjw` the organisations, links and
+logos of the co-hosts grid.
+
+## Shortcoder snippet
+
+```html
+<div id="thjw-x-host">Loading the programme…</div>
+<script>
+(function(){
+  // Optional: where "Back to website" goes, and a photo behind the header.
+  window.THJW_EXPLORER = {
+    backUrl: "https://humanityhub.org/the-hague-justice-week/"
+    // , heroImage: "https://humanityhub.org/wp-content/uploads/…/photo.jpg"
+  };
+  var URL = "https://cdn.jsdelivr.net/gh/thehaguehumanityhub/justice-week-events@main/explorer-embed.html";
+  fetch(URL).then(function(r){ return r.text(); }).then(function(html){
+    var host = document.getElementById("thjw-x-host");
+    host.innerHTML = html;
+    host.querySelectorAll("script").forEach(function(old){
+      var s = document.createElement("script");
+      if (old.src) s.src = old.src; else s.textContent = old.textContent;
+      old.parentNode.replaceChild(s, old);
+    });
+  }).catch(function(){
+    document.getElementById("thjw-x-host").textContent = "Could not load the programme.";
+  });
+})();
+</script>
+```
+
+Name the snippet `jw-explorer`, then put `[sc name="jw-explorer"]` on its own page. The
+explorer spreads to the full width of the window, so a page without a sidebar suits it best.
+
+## Updating
+
+- The programme: nothing extra. The usual `events.json` update and purge covers both views.
+- A host shows initials instead of its logo although it is in the co-hosts grid: add the
+  spelling it uses to `host-aliases.json`, commit, and purge that file.
+- After changing `explorer-embed.html` itself, purge it:
+
+  ```
+  https://purge.jsdelivr.net/gh/thehaguehumanityhub/justice-week-events@main/explorer-embed.html
+  ```
+
+## Testing on this computer
+
+```
+python3 -m http.server 8765 --bind 127.0.0.1 --directory ~/Developer
+```
+
+then open `http://localhost:8765/justice-week-events/dev/explorer.html`. It loads the local
+files, not the CDN. Add `?now=2026-11-18T14:10` to preview the "today" features of the week.

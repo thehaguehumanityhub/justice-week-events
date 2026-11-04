@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explorer test page</title>
+<style>
+  /* Stand-in for the WordPress page: a narrow content column, as the theme has. */
+  body{margin:0;font-family:"Helvetica Neue",Arial,sans-serif;background:#fff;overflow-x:hidden}
+  .wp-header{background:#fff;border-bottom:1px solid #dfe4ea;padding:1rem 1.25rem;font-weight:700;color:#17345e}
+  .wp-content{max-width:760px;margin:0 auto;padding:1.5rem 1.25rem}
+  .wp-content p{color:#5c6b82}
+</style>
+</head>
+<body>
+<div class="wp-header">humanityhub.org (local test page)</div>
+<div class="wp-content">
+  <p>Local test of explorer-embed.html. The fragment is loaded the way the Shortcoder snippet does it,
+     but from this computer: events.json and host-aliases.json from this repo, logos and the
+     organisations list from ../thjw.</p>
+  <div id="jw-explorer-slot"></div>
+</div>
+<script>
+  // ?now=2026-11-18T14:10 pretends it is that moment in The Hague, to preview the week's "today" features.
+  var fakeNow = new URLSearchParams(location.search).get("now");
+  window.THJW_EXPLORER = { eventsRoot: "/justice-week-events/", orgsRoot: "/thjw/", now: fakeNow || undefined };
+  // Same as the Shortcoder snippet: fetch the fragment, inject it, re-create its scripts so they run.
+  fetch("/justice-week-events/explorer-embed.html", { cache: "no-cache" })
+    .then(function(r){ return r.text(); })
+    .then(function(html){
+      var slot = document.getElementById("jw-explorer-slot");
+      slot.innerHTML = html;
+      slot.querySelectorAll("script").forEach(function(old){
+        var s = document.createElement("script");
+        s.textContent = old.textContent;
+        old.replaceWith(s);
+      });
+    });
+</script>
+</body>
+</html>

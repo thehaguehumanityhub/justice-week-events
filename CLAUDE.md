@@ -14,6 +14,9 @@ SharePoint and which is downloaded as an input and deliberately never committed.
 |---|---|
 | `events-embed.html` | The widget. Self-contained HTML fragment, scoped CSS, no dependencies. Changes rarely. |
 | `events.json` | The programme. Changes constantly. This is the file you almost always want. |
+| `explorer-embed.html` | A second, full-width view of the same programme (by day, timeline, theme, organisation, My programme). Secondary: it does not replace `events-embed.html`. See "The explorer" below. |
+| `host-aliases.json` | Other spellings of co-host names, so the explorer shows the right logo. Data, edited by hand. |
+| `dev/explorer.html` | Local test page for the explorer. Not used by the website. |
 | `template_to_events.py` | Turns filled-in Excel templates into `events.json`. The normal path. |
 | `gen_events.py` | Turns a Google Form `.xlsx` export into `events.json`. Legacy, kept in case the form is used again. |
 | `PROGRAMME.md` | Human-facing notes: the Shortcoder snippet and the update ritual. |
@@ -140,9 +143,35 @@ patch for fixes, minor for anything new but backward compatible (1.1.0 added
 working. Programme updates to `events.json` are never versioned; `git log
 events.json` is their history.
 
-After a widget release, purge `events-embed.html` as well as `events.json`. To
+After a widget release, purge `events-embed.html` as well as `events.json`; after an explorer
+change, purge `explorer-embed.html` (and `host-aliases.json` if it changed). To
 check which widget a visitor is getting, inspect `#thjw-events` on the live page
 and read its `data-version`.
+
+## The explorer
+
+`explorer-embed.html` is delivered like the widget (Shortcoder snippet `jw-explorer`, in
+`PROGRAMME.md`) and reads the same `events.json`, so the update loop covers it with no extra
+step. It also reads `host-aliases.json` here, and from the thjw repo the `ORGS` array in
+`orgs-embed.html` (parsed by regex, so do not rename it), `overrides.json` and `logos/`.
+A logo or link fix in thjw therefore reaches the explorer too.
+
+- It has its own version (0.2.1), in its header comment, `data-version` and `CHANGELOG.md`.
+  The widget and script version does not move when only the explorer changes.
+- Host matching: names and bracketed acronyms from the thjw roster, plus `host-aliases.json`.
+  After a programme update with new hosts, a co-host in the grid that shows initials needs an
+  alias. Check by host, not by count: a false match puts a wrong logo on an activity.
+- Shared links, saved stars and calendar entries identify an activity by a slug of its
+  title (with a fingerprint for titles over 70 characters), not its id. Renaming an activity
+  in the workbook breaks old links to it and drops it from visitors' saved lists.
+- It cleans what it reads: non-ISO dates become "Date to follow", times must parse as HH:MM,
+  and only an http(s) address becomes a Register button.
+- Test locally with `dev/explorer.html` (instructions in `PROGRAMME.md`). `?now=` fakes the
+  time to preview the week's "today" features. An independent review on 4 November found and
+  fixed nine bugs; not yet tested on Safari/iPhone, inside the WordPress theme, or by
+  importing a calendar file.
+- Not built: a venue map. It needs a decision on map tiles (cookie consent) and somewhere to
+  keep venue coordinates.
 
 ## Submissions: one SharePoint workbook
 
