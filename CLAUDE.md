@@ -156,7 +156,7 @@ step. It also reads `host-aliases.json` here, and from the thjw repo the `ORGS` 
 `orgs-embed.html` (parsed by regex, so do not rename it), `overrides.json` and `logos/`.
 A logo or link fix in thjw therefore reaches the explorer too.
 
-- It has its own version (0.2.1), in its header comment, `data-version` and `CHANGELOG.md`.
+- It has its own version (0.2.2), in its header comment, `data-version` and `CHANGELOG.md`.
   The widget and script version does not move when only the explorer changes.
 - Host matching: names and bracketed acronyms from the thjw roster, plus `host-aliases.json`.
   After a programme update with new hosts, a co-host in the grid that shows initials needs an

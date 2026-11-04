@@ -1,16 +1,26 @@
-<!-- The Hague Justice Week 2026 - programme explorer. Version 0.2.1 (prototype, not yet published).
+<!-- The Hague Justice Week 2026 - programme explorer. Version 0.2.2.
      A secondary, full-width view of the same programme as events-embed.html, which it does not replace.
      Data: events.json and host-aliases.json in this repo; the co-hosts roster (the ORGS array in
      orgs-embed.html), overrides.json and logos/ in thehaguehumanityhub/thjw.
      No change here is needed to update the programme.
      Optional settings, set by the page before this loads: window.THJW_EXPLORER =
        { backUrl, heroImage, eventsRoot, orgsRoot, now } - the last three are for testing on a computer. -->
-<div id="thjw-explorer" class="thjw-x" data-version="0.2.1" data-view="day">
+<div id="thjw-explorer" class="thjw-x" data-version="0.2.2" data-view="day">
   <header class="x-hero" id="x-hero">
     <div class="x-hero-in">
       <p class="x-eyebrow">The Hague Justice Week 2026 <span aria-hidden="true">·</span> <span id="x-span">16–20 November</span></p>
       <h2 class="x-h">Explore the programme</h2>
       <ul class="x-stats" id="x-stats" aria-label="Programme at a glance"></ul>
+      <ul class="x-howto" aria-label="How to use this page">
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h6v6H3zM11 3h6v6h-6zM3 11h6v6H3zM11 11h6v6h-6z"/></svg>
+          <span><b>Browse</b> by day, timeline, theme or organisation</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.8l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L2.8 8.1l5-.7z"/></svg>
+          <span><b>Save</b> activities with the star to build your own programme</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 5h12v11H4zM4 8.5h12M7.5 3v3M12.5 3v3"/></svg>
+          <span><b>Add</b> them to your calendar in one click</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8.5 11.5a3.5 3.5 0 005 0l2.5-2.5a3.5 3.5 0 00-5-5l-1 1M11.5 8.5a3.5 3.5 0 00-5 0L4 11a3.5 3.5 0 005 5l1-1"/></svg>
+          <span><b>Share</b> any view or activity with a link</span></li>
+      </ul>
       <div class="x-herobar">
         <label class="x-search">
           <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9 2a7 7 0 105.3 11.6l3.5 3.6 1.4-1.4-3.5-3.6A7 7 0 009 2zm0 2a5 5 0 110 10A5 5 0 019 4z"/></svg>
@@ -119,6 +129,12 @@
 #thjw-explorer .x-stats{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin:0 0 1.6rem;padding:0;list-style:none}
 #thjw-explorer .x-stats li{display:flex;align-items:baseline;gap:.45rem;font-size:.92rem;color:rgba(255,255,255,.8)}
 #thjw-explorer .x-stats b{font-size:1.6rem;font-weight:800;color:#fff;font-variant-numeric:tabular-nums}
+#thjw-explorer .x-howto{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.6rem 1.5rem;max-width:1100px;
+  margin:0 0 1.6rem;padding:1rem 0 0;list-style:none;border-top:1px solid rgba(255,255,255,.16)}
+#thjw-explorer .x-howto li{display:flex;align-items:flex-start;gap:.6rem;font-size:.88rem;line-height:1.4;color:rgba(255,255,255,.85)}
+#thjw-explorer .x-howto b{color:#fff;font-weight:700}
+#thjw-explorer .x-howto svg{width:18px;height:18px;flex:0 0 auto;margin-top:.05rem;fill:none;stroke:#cbe0c8;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round}
 #thjw-explorer .x-herobar{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
 #thjw-explorer .x-search{position:relative;display:flex;align-items:center;flex:1 1 320px;max-width:560px}
 #thjw-explorer .x-search svg{position:absolute;left:1rem;width:18px;height:18px;fill:var(--x-muted);pointer-events:none}
