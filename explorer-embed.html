@@ -1,15 +1,14 @@
-<!-- The Hague Justice Week 2026 - programme explorer. Version 0.2.2.
+<!-- The Hague Justice Week 2026 - programme explorer. Version 0.2.3.
      A secondary, full-width view of the same programme as events-embed.html, which it does not replace.
      Data: events.json and host-aliases.json in this repo; the co-hosts roster (the ORGS array in
      orgs-embed.html), overrides.json and logos/ in thehaguehumanityhub/thjw.
      No change here is needed to update the programme.
      Optional settings, set by the page before this loads: window.THJW_EXPLORER =
        { backUrl, heroImage, eventsRoot, orgsRoot, now } - the last three are for testing on a computer. -->
-<div id="thjw-explorer" class="thjw-x" data-version="0.2.2" data-view="day">
+<div id="thjw-explorer" class="thjw-x" data-version="0.2.3" data-view="day">
   <header class="x-hero" id="x-hero">
     <div class="x-hero-in">
-      <p class="x-eyebrow">The Hague Justice Week 2026 <span aria-hidden="true">·</span> <span id="x-span">16–20 November</span></p>
-      <h2 class="x-h">Explore the programme</h2>
+      <!-- The page title and dates are in the website's own page header, so not repeated here. -->
       <ul class="x-stats" id="x-stats" aria-label="Programme at a glance"></ul>
       <ul class="x-howto" aria-label="How to use this page">
         <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h6v6H3zM11 3h6v6h-6zM3 11h6v6H3zM11 11h6v6h-6z"/></svg>
@@ -120,12 +119,10 @@
 #thjw-explorer .x-ico{width:1em;height:1em;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 
 /* hero */
-#thjw-explorer .x-hero{background:var(--x-navy);color:#fff;padding:2.6rem 1.25rem 2.2rem;background-size:cover;background-position:center;
+#thjw-explorer .x-hero{background:var(--x-navy);color:#fff;padding:2rem 1.25rem 2rem;background-size:cover;background-position:center;
   background-image:radial-gradient(circle at 85% -20%,rgba(255,255,255,.12),transparent 55%),
                    radial-gradient(circle at 0% 120%,rgba(203,224,200,.18),transparent 50%)}
 #thjw-explorer .x-hero-in,#thjw-explorer .x-tabs-in{max-width:1440px;margin:0 auto}
-#thjw-explorer .x-eyebrow{margin:0 0 .5rem;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#cbe0c8}
-#thjw-explorer .x-h{margin:0 0 1.2rem;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.1;font-weight:800;color:#fff}
 #thjw-explorer .x-stats{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin:0 0 1.6rem;padding:0;list-style:none}
 #thjw-explorer .x-stats li{display:flex;align-items:baseline;gap:.45rem;font-size:.92rem;color:rgba(255,255,255,.8)}
 #thjw-explorer .x-stats b{font-size:1.6rem;font-weight:800;color:#fff;font-variant-numeric:tabular-nums}
@@ -428,7 +425,7 @@
   #thjw-explorer .x-facets{display:none;margin-top:1rem;padding:1rem;background:#fff;border:1px solid var(--x-line);border-radius:14px}
   #thjw-explorer .x-sidetoggle[aria-expanded="true"] + .x-facets{display:block}
   #thjw-explorer .x-badge{background:var(--x-navy);color:#fff;border-radius:999px;font-size:.72rem;padding:.1rem .45rem}
-  #thjw-explorer .x-hero{padding:1.8rem 1rem 1.6rem}
+  #thjw-explorer .x-hero{padding:1.4rem 1rem 1.5rem}
   #thjw-explorer .x-tabs{padding:0 .5rem}
   #thjw-explorer .x-tabs-in,#thjw-explorer .x-tablist{gap:0}
   #thjw-explorer .x-nav{padding:.55rem .5rem}
@@ -1656,8 +1653,6 @@
     [[EVENTS.length, "activities"], [HOSTS.length, "organisations"], [TAGS.length, "themes"], [DAY_KEYS.length, "days"]].forEach(function(s){
       var li = el("li"); li.appendChild(el("b", null, s[0])); li.appendChild(document.createTextNode(s[1])); stats.appendChild(li);
     });
-    var week = DAY_KEYS.filter(function(k){ return k >= "2026-11-16" && k <= "2026-11-20"; });
-    if(week.length) $("#x-span").textContent = parseDate(week[0]).getDate() + "–" + parseDate(week[week.length-1]).getDate() + " " + MONTHS[parseDate(week[0]).getMonth()];
 
     state.layout = saved.layout;
     buildFacets();

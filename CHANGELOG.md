@@ -9,6 +9,11 @@ Each version is tagged in git (`v1.1.0`), so an older widget can be served
 from jsDelivr by tag if a release ever needs rolling back:
 `https://cdn.jsdelivr.net/gh/thehaguehumanityhub/justice-week-events@v1.0.0/events-embed.html`
 
+## Explorer 0.2.3 — 2026-11-05
+
+- The header no longer repeats "The Hague Justice Week 2026 · 16–20 November" and
+  "Explore the programme": the website's own page header carries them.
+
 ## Explorer 0.2.2 — 2026-11-04
 
 - Four short "how to use" tips in the header: browse, save, add to calendar, share.
