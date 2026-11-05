@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03",
+ "updated": "2026-11-05",
  "events": [
   {
    "id": "e01",
@@ -27,6 +27,30 @@
   },
   {
    "id": "e02",
+   "title": "‘30 Years of the Death of Yugoslavia: A Generational Perspective’",
+   "host": "The Hague University of Applied Sciences (THUAS)",
+   "date": "2026-11-13",
+   "end_date": "",
+   "start": "17:00",
+   "end": "19:00",
+   "venue": "The Hague University of Applied Sciences",
+   "format": "In-person",
+   "tags": [
+    "International Law & Accountability",
+    "Artificial Intelligence",
+    "Democracy & Authoritarianism"
+   ],
+   "audience": [
+    "General Public",
+    "Students/Youth",
+    "Legal Professionals"
+   ],
+   "description": "Join us as we look back at the BBC’s The Death of Yugoslavia documentary, 30 years later, and explore how the media, misinformation, and propaganda shaped the conflicts. We’ll also discuss how AI and social media have changed the way we receive and understand information today. Expect an interactive session with real-world examples, thought-provoking conversations, and open discussions where everyone is encouraged to share their thoughts. Whether you’re interested in history, politics, or modern technology, this is a great opportunity to explore how the past connects to the world we live in today!",
+   "register": "https://docs.google.com/forms/d/e/1FAIpQLSdkyYrDbshMRdMOLbTg7C1OdI5nxIAr7XjTcs6TI6Ri8kNd0g/viewform",
+   "contact": "karloskonstantinos9@gmail.com"
+  },
+  {
+   "id": "e03",
    "title": "Conscientious Lawyering: Realizing the Promise of International Law: International Lawyering",
    "host": "Global ProBono Bar Association",
    "date": "2026-11-16",
@@ -49,7 +73,7 @@
    "contact": "contact@probonobar.org"
   },
   {
-   "id": "e03",
+   "id": "e04",
    "title": "Blue on the beauty of De Stijl and the strength of NATO - Exhibit",
    "host": "Kunstmuseum Den Haag",
    "date": "2026-11-16",
@@ -73,7 +97,7 @@
    "contact": "info@kunstmuseum.nl"
   },
   {
-   "id": "e04",
+   "id": "e05",
    "title": "Justice and Redress for Survivors of Conflict-Related Sexual Violence at the International Court of Justice.\n\nPanel 1 — Redress for Survivors at the ICJ: Implementation of the DRC v. Uganda Reparations Order",
    "host": "Mukwege Foundation",
    "date": "2026-11-16",
@@ -97,7 +121,7 @@
    "contact": "info@mukwegefoundation.org"
   },
   {
-   "id": "e05",
+   "id": "e06",
    "title": "Justice as Critical Infrastructure for Peace and Resilience",
    "host": "International IDEA, Hague Institute for Innovation of Law (HiiL)",
    "date": "2026-11-16",
@@ -121,7 +145,7 @@
    "contact": "s.hickey@idea.int"
   },
   {
-   "id": "e06",
+   "id": "e07",
    "title": "Justice in wartime: How Ukraine is building accountability during war",
    "host": "International Development Law Organisation (IDLO), T.M.Asser Institute, Center for International Legal Cooperation (CILC), the Netherlands Helsinki Committee (NHC), The Embassy of Ukraine to The Netherlands and The Dutch Ministry of Foreign Affairs",
    "date": "2026-11-16",
@@ -145,9 +169,9 @@
    "contact": "amuzergues@idlo.int"
   },
   {
-   "id": "e07",
+   "id": "e08",
    "title": "Cities, Conflict and Recovery: Cultural Rights and Transitional Justice",
-   "host": "Global Cities Hub, United Nations Development Programme (UNDP)",
+   "host": "Global Cities Hub,, Geneva Peacebuilding Platform,  United Nations Development Programme (UNDP)",
    "date": "2026-11-16",
    "end_date": "",
    "start": "14:00",
@@ -169,7 +193,7 @@
    "contact": "info@globalcitieshub.org"
   },
   {
-   "id": "e08",
+   "id": "e09",
    "title": "Justice and Redress for Survivors of Conflict-Related Sexual Violence at the International Court of Justice.  \n\nPanel 2 — Justice for Survivors at the ICJ: The Gambia v. Myanmar Case",
    "host": "Mukwege Foundation",
    "date": "2026-11-16",
@@ -193,7 +217,7 @@
    "contact": "info@mukwegefoundation.org"
   },
   {
-   "id": "e09",
+   "id": "e10",
    "title": "International Justice and the Digital Realm: Addressing the Legislative and Adjudicative Gaps",
    "host": "ProtectNGO, Embassy of The Kingdom of The Netherlands, and City of The Hague",
    "date": "2026-11-16",
@@ -217,7 +241,7 @@
    "contact": "LON-PA@minbuza.nl"
   },
   {
-   "id": "e10",
+   "id": "e11",
    "title": "Bridging the Gap, Renewing the Promise:  International law and Global Solidarity in the Palestinian Quest for Justice",
    "host": "Council of Arab Ambassadors & Legal Mobilisation Platform",
    "date": "2026-11-16",
@@ -239,7 +263,7 @@
    "contact": "lmp@iss.nl"
   },
   {
-   "id": "e11",
+   "id": "e12",
    "title": "International Law as a Compass for Foreign Policy",
    "host": "Advisory Committee on Public International Law (CAVV)",
    "date": "2026-11-16",
@@ -262,7 +286,7 @@
    "contact": "CAVV@minbuza.nl"
   },
   {
-   "id": "e12",
+   "id": "e13",
    "title": "Making Human Rights Law Work: Building new alliances between business, finance & civil society",
    "host": "European Center for Non-Profit Law (ECNL), ABN AMRO",
    "date": "2026-11-16",
@@ -286,7 +310,7 @@
    "contact": "maria@ecnl.org"
   },
   {
-   "id": "e13",
+   "id": "e14",
    "title": "The Role of Non-State Actors in International Public Law",
    "host": "City of The Hague",
    "date": "2026-11-17",
@@ -310,7 +334,7 @@
    "contact": "Bjm.vanBolhuis@gmail.com"
   },
   {
-   "id": "e14",
+   "id": "e15",
    "title": "Heritage on Trial: Can International Law Still Protect What War Destroys?",
    "host": "Embassy of Ukraine in the Kingdom of the Netherlands, Embassy of the United Kingdom",
    "date": "2026-11-17",
@@ -333,7 +357,7 @@
    "contact": "emb_nl@mfa.gov.ua"
   },
   {
-   "id": "e15",
+   "id": "e16",
    "title": "Historic The Hague: The Origins of the City of Peace and Justice",
    "host": "The Hague Municipality",
    "date": "2026-11-17",
@@ -357,7 +381,7 @@
    "contact": "engage@humanityhub.org"
   },
   {
-   "id": "e16",
+   "id": "e17",
    "title": "Justice and Redress for Survivors of Conflict-Related Sexual Violence at the International Court of Justice.\n\nPanel 3 — Beyond the Courtroom: Survivor-Led Advocacy and the Future of Justice for Conflict-Related Sexual Violence (Closing Panel)",
    "host": "Mukwege Foundation",
    "date": "2026-11-17",
@@ -381,7 +405,7 @@
    "contact": "info@mukwegefoundation.org"
   },
   {
-   "id": "e17",
+   "id": "e18",
    "title": "Justice has no Passport: A Global Conversation on Universal Jurisdiction",
    "host": "FIBGAR",
    "date": "2026-11-17",
@@ -405,7 +429,7 @@
    "contact": "contacto@fibgar.org"
   },
   {
-   "id": "e18",
+   "id": "e19",
    "title": "Mapping the Gaps in International Law: Introducing the OLJA International Law Gap Report",
    "host": "Omnijuris Law & Justice Advocates (OLJA)",
    "date": "2026-11-17",
@@ -429,9 +453,9 @@
    "contact": "info@omnijuris.org"
   },
   {
-   "id": "e19",
+   "id": "e20",
    "title": "Storytime at the City Farm: Every Child Has Rights!",
-   "host": "Stadsboerderijen Municipality of The City of The Hague",
+   "host": "Stadsboerderijen Municipality of The City of The Hague, Colors for Peace",
    "date": "2026-11-17",
    "end_date": "2026-11-21",
    "start": "13:00",
@@ -444,12 +468,12 @@
    "audience": [
     "General Public"
    ],
-   "description": "Did you know that you have rights? It's true, just like grown-ups! For example, you have the right to play, to go to school, to grow up safely and to be heard. But what are rights, really? Who decides what they are? And how can we all work together to make sure that every child has them?\n\nDuring The Hague Justice Week, we're setting out to find the answers among the chickens, goats and rabbits of The Hague's city farms. 🐐🐔🐰 At our storytime sessions, we'll read stories about children's rights and human rights. We'll talk about them in a way that children understand and enjoy. Because when you learn at a young age that everyone matters, you help build a fairer world.\n\nThe Hague is the international city of peace and justice. So where better to learn about this than right here, in your own neighbourhood?\n\n 🌟 Extra festive on Wednesday 18 November\n\nAt Molenweide City Farm, we're making an afternoon of it! After storytime, everyone can join the creative Colors for Peace workshop. It's a wonderful chance to show what matters to you.\n\nTuesday, 17th November - Stadsboerderij Woelige Stal (Transvaalpark)\n\nWednesday, 18th November - Stadsboerderij Waaygat (Havenkade 75) / Stadsboerderij Molenweide (Stuwstraat 31)\n\nFriday, 20th November - Stadsboerderij Landzigt (Aristoteleslaan 143)\n\nSaturday 21st November - Stadsboerderij Kakelhof (Puccinistraat 215)",
+   "description": "Did you know that you have rights? It's true, just like grown-ups! For example, you have the right to play, to go to school, to grow up safely and to be heard. But what are rights, really? Who decides what they are? And how can we all work together to make sure that every child has them?\n\nDuring The Hague Justice Week, we're setting out to find the answers among the chickens, goats and rabbits of The Hague's city farms. 🐐🐔🐰 At our storytime sessions, we'll read stories about children's rights and human rights. We'll talk about them in a way that children understand and enjoy. Because when you learn at a young age that everyone matters, you help build a fairer world.\n\nThe Hague is the international city of peace and justice. So where better to learn about this than right here, in your own neighbourhood?\n\n 🌟 Extra festive on Wednesday 18 November - At Molenweide City Farm, we're making an afternoon of it! After storytime, everyone can join the creative Colors for Peace workshop. It's a wonderful chance to show what matters to you.\n\nTuesday, 17th November - Stadsboerderij Woelige Stal (Transvaalpark)\n\nWednesday, 18th November - Stadsboerderij Waaygat (Havenkade 75) / Stadsboerderij Molenweide (Stuwstraat 31)\n\nFriday, 20th November - Stadsboerderij Landzigt (Aristoteleslaan 143)\n\nSaturday 21st November - Stadsboerderij Kakelhof (Puccinistraat 215)",
    "register": "",
    "contact": "stadsboerderijen@denhaag.nl"
   },
   {
-   "id": "e20",
+   "id": "e21",
    "title": "The ICJ at 100: Realistic Expectations on the World Court’s Next 20 Years",
    "host": "European Society of International Law (ESIL)",
    "date": "2026-11-17",
@@ -473,7 +497,7 @@
    "contact": "james.devaney@glasgow.ac.uk"
   },
   {
-   "id": "e21",
+   "id": "e22",
    "title": "From Ukraine to Global Accountability: Presenting the Manual on Prosecuting International Environmental Crimes",
    "host": "Embassy of Ukraine in the Kingdom of the Netherlands, Climate Counsel and UCLA Promise Institute for Human Rights",
    "date": "2026-11-17",
@@ -497,7 +521,7 @@
    "contact": "uclapromiseeurope@law.ucla.edu"
   },
   {
-   "id": "e22",
+   "id": "e23",
    "title": "Who Owns the Truth?",
    "host": "Asymmetrical Haircuts, Leiden University",
    "date": "2026-11-17",
@@ -521,7 +545,7 @@
    "contact": "editors@asymmetricalhaircuts.com"
   },
   {
-   "id": "e23",
+   "id": "e24",
    "title": "What Does Gender Have to Do with It?\nGender, the ICJ Judge, and the International Rule of Law",
    "host": "The City Law School, City St George's University, University of London, The Working Group on Gender Parity for the ICJ, Gender Justice in International Law Committee of the American Branch of the International Law Association (ABILA)",
    "date": "2026-11-17",
@@ -545,7 +569,7 @@
    "contact": "jessica.corsi@city.ac.uk"
   },
   {
-   "id": "e24",
+   "id": "e25",
    "title": "No Peace Without Justice: Survivor Voices and Accountability for Crimes in Ukraine",
    "host": "Netherlands Helsinki Committee, Eastern Ukrainian Centre for Civil Initiatives (EUCCI), Dutch Ministry of Foreign Affairs, Embassy of Switzerland to The Netherlands",
    "date": "2026-11-17",
@@ -567,7 +591,7 @@
    "contact": "office@nhc.nl"
   },
   {
-   "id": "e25",
+   "id": "e26",
    "title": "The Hague Justice Week Networking Breakfast",
    "host": "The Hague Humanity Hub",
    "date": "2026-11-18",
@@ -589,7 +613,7 @@
    "contact": "engage@humanityhub.org"
   },
   {
-   "id": "e26",
+   "id": "e27",
    "title": "Safeguarding women and girls’ rights in digital spaces: Unpacking rule of law approaches to address online violence against women and girls",
    "host": "International Development Law Organisation (IDLO), Embassy of Australia, The Philippines and the United Kingdom, The Hague Municipality and International Gender Champions",
    "date": "2026-11-18",
@@ -613,7 +637,7 @@
    "contact": "vwitula@idlo.int"
   },
   {
-   "id": "e27",
+   "id": "e28",
    "title": "When Discomfort Becomes Dialogue: Practising Relational Justice",
    "host": "The Hague University of Applied Sciences (THUAS)",
    "date": "2026-11-18",
@@ -636,7 +660,7 @@
    "contact": "peermediationthuas@hhs.nl"
   },
   {
-   "id": "e28",
+   "id": "e29",
    "title": "The Consensus Trap:  Why Governance Organisations Cannot Decide and What to Do About It",
    "host": "Legitmov",
    "date": "2026-11-18",
@@ -659,7 +683,7 @@
    "contact": "fambreen521@gmail.com"
   },
   {
-   "id": "e29",
+   "id": "e30",
    "title": "Conscientious Lawyering: Realizing the Promise of International Law: Artificial Intelligence Law",
    "host": "Global ProBono Bar Association",
    "date": "2026-11-18",
@@ -682,7 +706,7 @@
    "contact": "contact@probonobar.org"
   },
   {
-   "id": "e30",
+   "id": "e31",
    "title": "Scaling People-Centred Justice with AI",
    "host": "Hope Behind Bars Africa, HiiL",
    "date": "2026-11-18",
@@ -705,7 +729,7 @@
    "contact": "hello@hopebehindbarsafrica.org"
   },
   {
-   "id": "e31",
+   "id": "e32",
    "title": "One World, One Home, One Law for All: Commemoration Centenary ICJ Judge and Vice-President Christopher Weeramantry (17.11.1926)",
    "host": "Judicap, Sri Lanka Embassy to The Netherlands",
    "date": "2026-11-18",
@@ -713,7 +737,7 @@
    "start": "14:00",
    "end": "16:30",
    "venue": "Embassy of Sri Lanka",
-   "format": "Hybrid",
+   "format": "In-person",
    "tags": [
     "International Law & Accountability",
     "Environmental & Climate Law",
@@ -729,7 +753,7 @@
    "contact": "arthur@judicap.com"
   },
   {
-   "id": "e32",
+   "id": "e33",
    "title": "Arrest Warrants and Peace Negotiations: Charting New Pathways Towards Peace and Justice",
    "host": "Leiden University",
    "date": "2026-11-18",
@@ -751,7 +775,7 @@
    "contact": "grotiuscentre@law.leidenuniv.nl"
   },
   {
-   "id": "e33",
+   "id": "e34",
    "title": "Civic Actors Between Authoritarianism and International Power",
    "host": "Democracy and Rule of Law Collective, World Liberty Congress, Lex Populi",
    "date": "2026-11-18",
@@ -773,7 +797,7 @@
    "contact": "andrea@worldlibertycongress.org"
   },
   {
-   "id": "e34",
+   "id": "e35",
    "title": "Prevention at 80: The ICJ, the Duty to Prevent, and the Structural Limits of Anticipatory Justice",
    "host": "American Bar Association Center for Human Rights, Stichting ABA ROLI Netherlands",
    "date": "2026-11-18",
@@ -796,7 +820,7 @@
    "contact": "roli-outreach@americanbar.org"
   },
   {
-   "id": "e35",
+   "id": "e36",
    "title": "Legal Clinic for Civil Societal Organizations",
    "host": "Pro Bono Connect, Partos",
    "date": "2026-11-18",
@@ -818,7 +842,7 @@
    "contact": "l.derijck@probonoconnect.nl"
   },
   {
-   "id": "e36",
+   "id": "e37",
    "title": "Judging International Justice - featuring Judge Hilary Charlesworth of the International Court of Justice, in conversation with Professor Anna Spain Bradley of UCLA Law",
    "host": "UCLA Law's The Promise Institute for Human Rights (Europe)",
    "date": "2026-11-18",
@@ -842,7 +866,7 @@
    "contact": "uclapromiseeurope@law.ucla.edu"
   },
   {
-   "id": "e37",
+   "id": "e38",
    "title": "Verhalenhuis Workshop Series",
    "host": "Pitztop, Olivscent",
    "date": "2026-11-18",
@@ -866,7 +890,7 @@
    "contact": "emmylou.aben@pitztop.eu"
   },
   {
-   "id": "e38",
+   "id": "e39",
    "title": "The Latest Front in the Fight for Free Speech: Screening of the \"The Librarians\"",
    "host": "International Federation of Library Association and Institutions (IFLA)",
    "date": "2026-11-18",
@@ -890,7 +914,7 @@
    "contact": "ifla@ifla.org"
   },
   {
-   "id": "e39",
+   "id": "e40",
    "title": "Jeune Fille, Droit et Souveraineté Économique en Afrique",
    "host": "Cameroon Ministry of Justice, Reknow Femmes D'Expertise",
    "date": "2026-11-19",
@@ -914,7 +938,7 @@
    "contact": "cwinfotsing@yahoo.fr"
   },
   {
-   "id": "e40",
+   "id": "e41",
    "title": "Justice in an Age of Authoritarianism",
    "host": "World Liberty Congress",
    "date": "2026-11-19",
@@ -938,7 +962,7 @@
    "contact": "info@worldlibertycongress.org"
   },
   {
-   "id": "e41",
+   "id": "e42",
    "title": "Not Just Upheld, Reimagined: Seeing Children as Children in International Law",
    "host": "Save The Children, Global Rights Compliance",
    "date": "2026-11-19",
@@ -961,7 +985,7 @@
    "contact": "hagueaccountabilityhub@savethechildren.nl"
   },
   {
-   "id": "e42",
+   "id": "e43",
    "title": "The Hague’s International Zone: A Journey from War to Peace",
    "host": "The Hague Municipality",
    "date": "2026-11-19",
@@ -983,30 +1007,6 @@
    "description": "This 2-hour walking tour takes you through The Hague’s International Zone, home to many of the world’s leading international organizations. Along the way, you will discover how this area transformed from a wartime landscape into a symbol of peace, justice, and international cooperation. Through its landmarks, institutions, and stories, the walk reveals how The Hague became known around the world as the International City of Peace and Justice.",
    "register": "https://www.eventbrite.nl/e/the-hagues-international-zone-a-journey-from-war-to-peace-tickets-2003355235438?aff=oddtdtcreator&keep_tld=true",
    "contact": "engage@humanityhub.org"
-  },
-  {
-   "id": "e43",
-   "title": "Film Screening: Surviving Genocide – The Rohingya Quest for Justice",
-   "host": "Legal Action Worldwide (LAW)",
-   "date": "2026-11-19",
-   "end_date": "",
-   "start": "14:00",
-   "end": "16:00",
-   "venue": "",
-   "format": "In-person",
-   "tags": [
-    "International Law & Accountability",
-    "Women & Gender",
-    "Access to Justice"
-   ],
-   "audience": [
-    "General Public",
-    "Policymakers/Diplomats",
-    "Civil Society Practitioners"
-   ],
-   "description": "A screening of a documentary movie, featuring victims and witnesses’ stories and their role in international justice process – and what it means to them and their community. The screening will be followed by a discussion about the first genocide case in decades and potential outcome and the role of victims and witnesses. The documentary focuses on the realities and significance of having victim voices before the International Court of Justice (ICJ). The discussion will also broadly highlight the positive impact of international law at a time that international law and justice institutions are under attack.\n\nThis short and poignant documentary offers a unique window into what international legal proceedings mean in practice for the people they are designed to serve. Looking into both technical and humane aspects, the film highlights the importance of the full inclusion of victims in legal processes. It shows what can be achieved when frontline organisations work hand in hand with UN mechanisms and states to support the most vulnerable people. Moving between the front and back stages of the first genocide case in nearly two decades, “Surviving Genocide – The Rohingya Quest for Justice” is a powerful testament to hope and the impact of collective action against hatred and impunity.",
-   "register": "",
-   "contact": "info@legalactionworldwide.org"
   },
   {
    "id": "e44",
@@ -1339,30 +1339,6 @@
   },
   {
    "id": "e58",
-   "title": "‘30 Years of the Death of Yugoslavia: A Generational Perspective’",
-   "host": "The Hague University of Applied Sciences (THUAS)",
-   "date": "2026-11-20",
-   "end_date": "",
-   "start": "20:00",
-   "end": "22:00",
-   "venue": "The Hague University of Applied Sciences",
-   "format": "In-person",
-   "tags": [
-    "International Law & Accountability",
-    "Artificial Intelligence",
-    "Democracy & Authoritarianism"
-   ],
-   "audience": [
-    "General Public",
-    "Students/Youth",
-    "Legal Professionals"
-   ],
-   "description": "Join us as we look back at the BBC’s The Death of Yugoslavia documentary, 30 years later, and explore how the media, misinformation, and propaganda shaped the conflicts. We’ll also discuss how AI and social media have changed the way we receive and understand information today. Expect an interactive session with real-world examples, thought-provoking conversations, and open discussions where everyone is encouraged to share their thoughts. Whether you’re interested in history, politics, or modern technology, this is a great opportunity to explore how the past connects to the world we live in today!",
-   "register": "https://docs.google.com/forms/d/e/1FAIpQLSdkyYrDbshMRdMOLbTg7C1OdI5nxIAr7XjTcs6TI6Ri8kNd0g/viewform",
-   "contact": "karloskonstantinos9@gmail.com"
-  },
-  {
-   "id": "e59",
    "title": "Renewing the Memories #2 - The Taoyuan Airport Incident Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-21",
@@ -1383,13 +1359,13 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e60",
+   "id": "e59",
    "title": "Renewing the Memories #3 - Three Castrated Goats - Screening & Discussion",
    "host": "Stichting NowHere",
    "date": "2026-11-22",
    "end_date": "",
-   "start": "18:30",
-   "end": "20:30",
+   "start": "14:30",
+   "end": "17:00",
    "venue": "Stichting NowHere",
    "format": "In-person",
    "tags": [
@@ -1404,7 +1380,7 @@
    "contact": "nowhere.netherlands@gmail.com"
   },
   {
-   "id": "e61",
+   "id": "e60",
    "title": "Conscientious Lawyering: Realizing the Promise of International Law: International Human Rights Law",
    "host": "Global ProBono Bar Association",
    "date": "2026-11-23",
