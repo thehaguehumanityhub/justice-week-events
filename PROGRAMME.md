@@ -21,7 +21,7 @@ To update the listing, replace that one file and purge it. `events-embed.html` n
 <script>
 (function(){
   var URL = "https://cdn.jsdelivr.net/gh/thehaguehumanityhub/justice-week-events@main/events-embed.html";
-  fetch(URL).then(function(r){ return r.text(); }).then(function(html){
+  fetch(URL, { cache: "no-cache" }).then(function(r){ return r.text(); }).then(function(html){
     var host = document.getElementById("thjw-ev-host");
     host.innerHTML = html;
     host.querySelectorAll("script").forEach(function(old){
@@ -132,7 +132,7 @@ logos of the co-hosts grid.
     // , heroImage: "https://humanityhub.org/wp-content/uploads/…/photo.jpg"
   };
   var URL = "https://cdn.jsdelivr.net/gh/thehaguehumanityhub/justice-week-events@main/explorer-embed.html";
-  fetch(URL).then(function(r){ return r.text(); }).then(function(html){
+  fetch(URL, { cache: "no-cache" }).then(function(r){ return r.text(); }).then(function(html){
     var host = document.getElementById("thjw-x-host");
     host.innerHTML = html;
     host.querySelectorAll("script").forEach(function(old){
@@ -148,6 +148,8 @@ logos of the co-hosts grid.
 ```
 
 Name the snippet `jw-explorer`, then put `[sc name="jw-explorer"]` on its own page. The
+`cache: "no-cache"` option matters: without it a browser keeps its copy of the explorer for up
+to seven days after a purge, so an update seems not to have arrived. The
 explorer spreads to the full width of the window, so a page without a sidebar suits it best.
 
 ## Updating
